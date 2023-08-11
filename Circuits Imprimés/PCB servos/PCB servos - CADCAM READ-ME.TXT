@@ -1,0 +1,44 @@
+LABCENTER PROTEUS TOOL INFORMATION FILE
+=======================================
+
+In case of difficulty, please e-mail support@labcenter.co.uk
+
+Tool set up for Proteus layout 'PCB servos.pdsprj'.
+CADCAM generated at 08:53:14 on mardi 2 mai 2023.
+
+File List
+---------
+Bottom Copper           : PCB servos - CADCAM Bottom Copper.GBR
+Mechanical 1            : PCB servos - CADCAM Mechanical 1.GBR
+Drill, Plated, 1-16     : PCB servos - CADCAM Drill TOP-BOT Plated.GBR
+Drill, Filled, 1-16     : PCB servos - CADCAM Drill TOP-BOT Filled and Plated.GBR
+Netlist                 : PCB servos - CADCAM Netlist.IPC
+
+Photoplotter Setup
+------------------
+Format: X2, ASCII, 4.3, metric, absolute, eob=*, LZO
+Notes:  D=Diameter, S=Side, W=Width, H=Height, C=Chamfer, I=Index
+
+D10	CIRCLE  D=0.762mm                                                         DRAW  Conductor
+D11	SQUARE  S=2.032mm                                                         FLASH OtherPad,Unknown
+D12	DIL     W=2.54mm              H=1.524mm             C=0.305mm             FLASH ComponentPad
+D13	CIRCLE  D=2.032mm                                                         FLASH ComponentPad
+D14	CIRCLE  D=1.524mm                                                         FLASH ComponentPad
+D15	DIL     W=1.524mm             H=2.54mm              C=0.305mm             FLASH ComponentPad
+D16	CIRCLE  D=3.1mm                                                           FLASH OtherPad,Unknown
+D17	CIRCLE  D=0.381mm                                                         DRAW  NonConductor
+D18	CIRCLE  D=0.203mm                                                         DRAW  Material
+D19	CIRCLE  D=1.016mm                                                         FLASH OtherDrill,Unknown
+D70	CIRCLE  D=1.016mm                                                         FLASH ComponentDrill
+D71	CIRCLE  D=0.762mm                                                         FLASH ComponentDrill
+D20	CIRCLE  D=1mm                                                             FLASH ComponentDrill
+D21	CIRCLE  D=3mm                                                             FLASH OtherDrill,Unknown
+
+Layer Stackup
+-------------
+Core                     : 0.32mm     FR4
+Bottom Copper            : 0.036mm    Copper
+Bottom Solder Resist     : 0.01mm     Resist
+
+
+[END OF FILE]

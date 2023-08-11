@@ -1,0 +1,8 @@
+-servo moteurs x 8 : 
+-carte pour moteurs : FeatherWing 8 servos ou PWM ADA2928
+
+-led infra rouge : SFH409-2T1OSR
+-photo transistor : SFH309FA-3/4T1
+-connecteur : LEXTRONIC grove universal 4-pin (coudé)
+
+

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<WORKSPACE>
+ <FRAME activewindow="1">
+  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff00000000000000008e0700000d040000</PLACEMENT>
+  <WINDOW type="default" module="ISIS">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="337" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+    <world y1="-55880000" x1="-40640000" y2="55880000" x2="40640000"/>
+    <centre x="-31750000" y="50673000"/>
+    <origin x="0" y="0"/>
+   </editor>
+  </WINDOW>
+  <WINDOW type="default" module="ARES">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="432" flipped="0" gridminor="63500" gridmode="32" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="31750">
+    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
+    <centre x="-181280" y="388280"/>
+    <origin x="0" y="0"/>
+   </editor>
+  </WINDOW>
+ </FRAME>
+ <MODULE name="ARES">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="432" flipped="0" gridminor="63500" gridmode="32" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="31750">
+   <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
+   <centre x="-181280" y="388280"/>
+   <origin x="0" y="0"/>
+  </editor>
+ </MODULE>
+ <MODULE name="GVIEW">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="684" flipped="0" gridminor="127000" gridmode="32" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="63500">
+   <world y1="-1750000" x1="-1500000" y2="2250000" x2="1500000"/>
+   <centre x="506761" y="686494"/>
+   <origin x="0" y="0"/>
+  </editor>
+ </MODULE>
+ <MODULE name="ISIS">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="337" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+   <world y1="-55880000" x1="-40640000" y2="55880000" x2="40640000"/>
+   <centre x="-31750000" y="50673000"/>
+   <origin x="0" y="0"/>
+  </editor>
+ </MODULE>
+ <MODULE name="VSMDEBUG">
+  <PWI/>
+ </MODULE>
+</WORKSPACE>

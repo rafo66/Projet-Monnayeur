@@ -1,0 +1,39 @@
+<mxfile host="app.diagrams.net" modified="2023-04-24T10:02:16.706Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" version="21.1.2" etag="sbeOyZYovkrkLswOOOXn" type="device">
+  <diagram id="r5rcazjRIvtqmAQvdxJ0" name="Page-1">
+    <mxGraphModel dx="842" dy="444" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XjI0-NNS-NnsT9itMaTU-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XjI0-NNS-NnsT9itMaTU-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XjI0-NNS-NnsT9itMaTU-1" value="START" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XjI0-NNS-NnsT9itMaTU-8" value="NON" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XjI0-NNS-NnsT9itMaTU-4">
+          <mxGeometry x="-0.8462" y="-20" relative="1" as="geometry">
+            <mxPoint x="100" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="170" y="160" />
+              <mxPoint x="170" y="110" />
+            </Array>
+            <mxPoint x="20" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XjI0-NNS-NnsT9itMaTU-10" value="OUI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XjI0-NNS-NnsT9itMaTU-4" target="XjI0-NNS-NnsT9itMaTU-9">
+          <mxGeometry x="-1" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XjI0-NNS-NnsT9itMaTU-4" value="Pièce insérée ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XjI0-NNS-NnsT9itMaTU-9" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
