@@ -1,0 +1,5572 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[v F1089 `(v ~T0 @X0 1 tf1`ul ]
+"153 C:\PROGRA~2\Flowcode\Common\COMPIL~1\pic\include\pic.h
+[v __delay `JF1089 ~T0 @X0 0 e ]
+[p i __delay ]
+"45 C:\ProgramData\MatrixTSL\FlowcodeV8\CAL\PIC\PIC_CAL_Delay.c
+[v _Wdt_Delay_Ms `(v ~T0 @X0 0 ef1`uc ]
+"31 C:\PROGRA~2\Flowcode\Common\COMPIL~1\pic\include\math.h
+[v _floor `(d ~T0 @X0 0 ef1`d ]
+"1435 C:\PROGRA~2\Flowcode\Common\COMPIL~1\pic\include\pic16f877a.h
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"276
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"813
+[v _SSPCON `Vuc ~T0 @X0 0 e@20 ]
+"819
+[s S32 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S32 . SSPM CKP SSPEN SSPOV WCOL ]
+"826
+[s S33 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S33 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"818
+[u S31 `S32 1 `S33 1 ]
+[n S31 . . . ]
+"833
+[v _SSPCONbits `VS31 ~T0 @X0 0 e@20 ]
+"1834
+[s S73 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S73 . BF UA R_nW S P D_nA CKE SMP ]
+"1844
+[s S74 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S74 . . R . D ]
+"1850
+[s S75 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S75 . . I2C_READ I2C_START I2C_STOP I2C_DATA ]
+"1857
+[s S76 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S76 . . nW . nA ]
+"1863
+[s S77 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S77 . . nWRITE . nADDRESS ]
+"1869
+[s S78 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S78 . . R_W . D_A ]
+"1875
+[s S79 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S79 . . READ_WRITE . DATA_ADDRESS ]
+"1833
+[u S72 `S73 1 `S74 1 `S75 1 `S76 1 `S77 1 `S78 1 `S79 1 ]
+[n S72 . . . . . . . . ]
+"1882
+[v _SSPSTATbits `VS72 ~T0 @X0 0 e@148 ]
+"806
+[v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
+"1828
+[v _SSPSTAT `Vuc ~T0 @X0 0 e@148 ]
+"1373
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"214
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"195 test 3.c
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__Print `(v ~T0 @X0 0 ef6`*uc`us`us`us`uc`uc ]
+"189
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot `(v ~T0 @X0 0 ef2`us`us ]
+"194
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__Window `(v ~T0 @X0 0 ef4`us`us`us`us ]
+[p mainexit ]
+"2227 C:\PROGRA~2\Flowcode\Common\COMPIL~1\pic\include\pic16f877a.h
+[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
+"1253
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+"52 C:\PROGRA~2\Flowcode\Common\COMPIL~1\pic\include\pic16f877a.h
+[; <" INDF equ 00h ;# ">
+"59
+[; <" TMR0 equ 01h ;# ">
+"66
+[; <" PCL equ 02h ;# ">
+"73
+[; <" STATUS equ 03h ;# ">
+"159
+[; <" FSR equ 04h ;# ">
+"166
+[; <" PORTA equ 05h ;# ">
+"216
+[; <" PORTB equ 06h ;# ">
+"278
+[; <" PORTC equ 07h ;# ">
+"340
+[; <" PORTD equ 08h ;# ">
+"402
+[; <" PORTE equ 09h ;# ">
+"434
+[; <" PCLATH equ 0Ah ;# ">
+"454
+[; <" INTCON equ 0Bh ;# ">
+"532
+[; <" PIR1 equ 0Ch ;# ">
+"594
+[; <" PIR2 equ 0Dh ;# ">
+"634
+[; <" TMR1 equ 0Eh ;# ">
+"641
+[; <" TMR1L equ 0Eh ;# ">
+"648
+[; <" TMR1H equ 0Fh ;# ">
+"655
+[; <" T1CON equ 010h ;# ">
+"730
+[; <" TMR2 equ 011h ;# ">
+"737
+[; <" T2CON equ 012h ;# ">
+"808
+[; <" SSPBUF equ 013h ;# ">
+"815
+[; <" SSPCON equ 014h ;# ">
+"885
+[; <" CCPR1 equ 015h ;# ">
+"892
+[; <" CCPR1L equ 015h ;# ">
+"899
+[; <" CCPR1H equ 016h ;# ">
+"906
+[; <" CCP1CON equ 017h ;# ">
+"964
+[; <" RCSTA equ 018h ;# ">
+"1059
+[; <" TXREG equ 019h ;# ">
+"1066
+[; <" RCREG equ 01Ah ;# ">
+"1073
+[; <" CCPR2 equ 01Bh ;# ">
+"1080
+[; <" CCPR2L equ 01Bh ;# ">
+"1087
+[; <" CCPR2H equ 01Ch ;# ">
+"1094
+[; <" CCP2CON equ 01Dh ;# ">
+"1152
+[; <" ADRESH equ 01Eh ;# ">
+"1159
+[; <" ADCON0 equ 01Fh ;# ">
+"1255
+[; <" OPTION_REG equ 081h ;# ">
+"1325
+[; <" TRISA equ 085h ;# ">
+"1375
+[; <" TRISB equ 086h ;# ">
+"1437
+[; <" TRISC equ 087h ;# ">
+"1499
+[; <" TRISD equ 088h ;# ">
+"1561
+[; <" TRISE equ 089h ;# ">
+"1618
+[; <" PIE1 equ 08Ch ;# ">
+"1680
+[; <" PIE2 equ 08Dh ;# ">
+"1720
+[; <" PCON equ 08Eh ;# ">
+"1754
+[; <" SSPCON2 equ 091h ;# ">
+"1816
+[; <" PR2 equ 092h ;# ">
+"1823
+[; <" SSPADD equ 093h ;# ">
+"1830
+[; <" SSPSTAT equ 094h ;# ">
+"1999
+[; <" TXSTA equ 098h ;# ">
+"2080
+[; <" SPBRG equ 099h ;# ">
+"2087
+[; <" CMCON equ 09Ch ;# ">
+"2157
+[; <" CVRCON equ 09Dh ;# ">
+"2222
+[; <" ADRESL equ 09Eh ;# ">
+"2229
+[; <" ADCON1 equ 09Fh ;# ">
+"2288
+[; <" EEDATA equ 010Ch ;# ">
+"2295
+[; <" EEADR equ 010Dh ;# ">
+"2302
+[; <" EEDATH equ 010Eh ;# ">
+"2309
+[; <" EEADRH equ 010Fh ;# ">
+"2316
+[; <" EECON1 equ 018Ch ;# ">
+"2361
+[; <" EECON2 equ 018Dh ;# ">
+"34 test 3.c
+[p x FOSC=XT ]
+[p x WDTE=OFF ]
+[p x PWRTE=ON ]
+[p x BOREN=ON ]
+[p x LVP=OFF ]
+[p x CPD=OFF ]
+[p x WRT=OFF ]
+[p x DEBUG=OFF ]
+[p x CP=OFF ]
+"76 C:\ProgramData\MatrixTSL\FlowcodeV8\CAL\internals.c
+[v _FCI_TMP_STR `uc ~T0 @X0 -> 20 `i e ]
+"77
+[v _FCI_TMP_INT `i ~T0 @X0 1 e ]
+"197 C:\ProgramData\MatrixTSL\FlowcodeV8\CAL\PIC\PIC_CAL_IO.c
+[v _FC_CAL_Port_Out__x `(v ~T0 @X0 1 ef3`*uc`uc`uc ]
+"198
+{
+[e :U _FC_CAL_Port_Out__x ]
+"197
+[v _Port `*uc ~T0 @X0 1 r1 ]
+[v _OutMask `uc ~T0 @X0 1 r2 ]
+[v _OutValue `uc ~T0 @X0 1 r3 ]
+"198
+[f ]
+"199
+[e = *U _Port -> | & -> *U _Port `i ~ -> _OutMask `i & -> _OutValue `i -> _OutMask `i `uc ]
+"200
+[e :UE 97 ]
+}
+"203
+[v _FC_CAL_Port_Out_DDR__x `(v ~T0 @X0 1 ef4`*uc`*uc`uc`uc ]
+"204
+{
+[e :U _FC_CAL_Port_Out_DDR__x ]
+"203
+[v _Port `*uc ~T0 @X0 1 r1 ]
+[v _Tris `*uc ~T0 @X0 1 r2 ]
+[v _OutMask `uc ~T0 @X0 1 r3 ]
+[v _OutValue `uc ~T0 @X0 1 r4 ]
+"204
+[f ]
+"205
+[e = *U _Tris -> & -> *U _Tris `i ~ -> _OutMask `i `uc ]
+"206
+[e = *U _Port -> | & -> *U _Port `i ~ -> _OutMask `i & -> _OutValue `i -> _OutMask `i `uc ]
+"207
+[e :UE 98 ]
+}
+"210
+[v _FC_CAL_Port_In__x `(uc ~T0 @X0 1 ef3`*uc`uc`uc ]
+"211
+{
+[e :U _FC_CAL_Port_In__x ]
+"210
+[v _Port `*uc ~T0 @X0 1 r1 ]
+[v _InMask `uc ~T0 @X0 1 r2 ]
+[v _Shift `uc ~T0 @X0 1 r3 ]
+"211
+[f ]
+"212
+[e ) -> >> & -> *U _Port `i -> _InMask `i _Shift `uc ]
+[e $UE 99  ]
+"213
+[e :UE 99 ]
+}
+[v F1196 `(uc ~T0 @X0 1 tf4`*Vuc`*Vuc`uc`uc ]
+"216
+[v _FC_CAL_Port_In_DDR__x `TF1196 ~T0 @X0 1 e ]
+"217
+{
+[e :U _FC_CAL_Port_In_DDR__x ]
+"216
+[v _Port `*Vuc ~T0 @X0 1 r1 ]
+[v _Tris `*Vuc ~T0 @X0 1 r2 ]
+[v _InMask `uc ~T0 @X0 1 r3 ]
+[v _Shift `uc ~T0 @X0 1 r4 ]
+"217
+[f ]
+"218
+[e = *U _Tris -> | -> *U _Tris `i -> _InMask `i `uc ]
+"219
+[e ) -> >> & -> *U _Port `i -> _InMask `i _Shift `uc ]
+[e $UE 100  ]
+"220
+[e :UE 100 ]
+}
+"75 C:\ProgramData\MatrixTSL\FlowcodeV8\CAL\PIC\PIC_CAL_Delay.c
+[v _delay_10us `(v ~T0 @X0 1 ef1`uc ]
+"76
+{
+[e :U _delay_10us ]
+"75
+[v _del `uc ~T0 @X0 1 r1 ]
+"76
+[f ]
+"77
+[e $U 102  ]
+[e :U 103 ]
+"78
+{
+"79
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"80
+}
+[e :U 102 ]
+"77
+[e $ != -> -- _del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 103  ]
+[e :U 104 ]
+"81
+[e :UE 101 ]
+}
+"85
+[v _delay_us `(v ~T0 @X0 1 ef1`uc ]
+"86
+{
+[e :U _delay_us ]
+"85
+[v _del `uc ~T0 @X0 1 r1 ]
+"86
+[f ]
+"87
+[e $U 106  ]
+[e :U 107 ]
+"88
+{
+"89
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"90
+[e =- _del -> -> 100 `i `uc ]
+"91
+}
+[e :U 106 ]
+"87
+[e $ > -> _del `i -> 99 `i 107  ]
+[e :U 108 ]
+"92
+[e $U 109  ]
+[e :U 110 ]
+"93
+{
+"94
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"95
+[e =- _del -> -> 10 `i `uc ]
+"96
+}
+[e :U 109 ]
+"92
+[e $ > -> _del `i -> 9 `i 110  ]
+[e :U 111 ]
+"97
+[e $U 112  ]
+[e :U 113 ]
+"98
+{
+"99
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"100
+}
+[e :U 112 ]
+"97
+[e $ != -> -- _del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 113  ]
+[e :U 114 ]
+"101
+[e :UE 105 ]
+}
+"105
+[v _delay_ms `(v ~T0 @X0 1 ef1`uc ]
+"106
+{
+[e :U _delay_ms ]
+"105
+[v _del `uc ~T0 @X0 1 r1 ]
+"106
+[f ]
+"107
+[e $U 116  ]
+[e :U 117 ]
+"108
+{
+"109
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"110
+}
+[e :U 116 ]
+"107
+[e $ != -> -- _del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 117  ]
+[e :U 118 ]
+"111
+[e :UE 115 ]
+}
+"114
+[v _delay_s `(v ~T0 @X0 1 ef1`uc ]
+"115
+{
+[e :U _delay_s ]
+"114
+[v _del `uc ~T0 @X0 1 r1 ]
+"115
+[f ]
+"116
+[v _i `uc ~T0 @X0 1 a ]
+"117
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 123  ]
+"118
+[e :U 120 ]
+{
+"119
+[e ( _delay_ms (1 -> -> 250 `i `uc ]
+"120
+[e ( _delay_ms (1 -> -> 250 `i `uc ]
+"121
+[e ( _delay_ms (1 -> -> 250 `i `uc ]
+"122
+[e ( _delay_ms (1 -> -> 250 `i `uc ]
+"123
+}
+"117
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 123 ]
+[e $ < -> _i `i -> _del `i 120  ]
+[e :U 121 ]
+"123
+}
+"124
+[e :UE 119 ]
+}
+"128
+[v _Wdt_Delay_S `(v ~T0 @X0 1 ef1`uc ]
+"129
+{
+[e :U _Wdt_Delay_S ]
+"128
+[v _delay `uc ~T0 @X0 1 r1 ]
+"129
+[f ]
+"130
+[v _i `uc ~T0 @X0 1 a ]
+"131
+[v _j `us ~T0 @X0 1 a ]
+"132
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 128  ]
+"133
+[e :U 125 ]
+{
+"134
+{
+[e = _j -> -> 0 `i `us ]
+[e $ < -> _j `ui -> -> 999 `i `ui 129  ]
+[e $U 130  ]
+"135
+[e :U 129 ]
+{
+"136
+[e ( _Wdt_Delay_Ms (1 -> -> 1 `i `uc ]
+"137
+}
+"134
+[e ++ _j -> -> 1 `i `us ]
+[e $ < -> _j `ui -> -> 999 `i `ui 129  ]
+[e :U 130 ]
+"137
+}
+"138
+}
+"132
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 128 ]
+[e $ < -> _i `i -> _delay `i 125  ]
+[e :U 126 ]
+"138
+}
+"139
+[e :UE 124 ]
+}
+"141
+[v _Wdt_Delay_Ms `(v ~T0 @X0 1 ef1`uc ]
+"142
+{
+[e :U _Wdt_Delay_Ms ]
+"141
+[v _delay `uc ~T0 @X0 1 r1 ]
+"142
+[f ]
+"143
+[v _i `uc ~T0 @X0 1 a ]
+"144
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 136  ]
+"145
+[e :U 133 ]
+{
+"146
+[; <" clrwdt ;# ">
+"147
+[e ( _delay_ms (1 -> -> 1 `i `uc ]
+"148
+}
+"144
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 136 ]
+[e $ < -> _i `i -> _delay `i 133  ]
+[e :U 134 ]
+"148
+}
+"149
+[e :UE 132 ]
+}
+"152
+[v _FCI_DELAYINT_US `(v ~T0 @X0 1 ef1`us ]
+"153
+{
+[e :U _FCI_DELAYINT_US ]
+"152
+[v _Delay `us ~T0 @X0 1 r1 ]
+"153
+[f ]
+"154
+[e $U 138  ]
+[e :U 139 ]
+"155
+{
+"156
+[e ( _delay_us (1 -> -> 255 `i `uc ]
+"157
+[e = _Delay -> - -> _Delay `ui -> -> 255 `i `ui `us ]
+"158
+}
+[e :U 138 ]
+"154
+[e $ > -> _Delay `ui -> -> 255 `i `ui 139  ]
+[e :U 140 ]
+"159
+[e $ ! > -> _Delay `ui -> -> 0 `i `ui 141  ]
+"160
+[e ( _delay_us (1 -> & -> _Delay `ui -> -> 255 `i `ui `uc ]
+[e :U 141 ]
+"161
+[e :UE 137 ]
+}
+"163
+[v _FCI_DELAYINT_MS `(v ~T0 @X0 1 ef1`us ]
+"164
+{
+[e :U _FCI_DELAYINT_MS ]
+"163
+[v _Delay `us ~T0 @X0 1 r1 ]
+"164
+[f ]
+"165
+[e $U 143  ]
+[e :U 144 ]
+"166
+{
+"167
+[e ( _delay_ms (1 -> -> 255 `i `uc ]
+"168
+[e = _Delay -> - -> _Delay `ui -> -> 255 `i `ui `us ]
+"169
+}
+[e :U 143 ]
+"165
+[e $ > -> _Delay `ui -> -> 255 `i `ui 144  ]
+[e :U 145 ]
+"170
+[e $ ! > -> _Delay `ui -> -> 0 `i `ui 146  ]
+"171
+[e ( _delay_ms (1 -> & -> _Delay `ui -> -> 255 `i `ui `uc ]
+[e :U 146 ]
+"172
+[e :UE 142 ]
+}
+"174
+[v _FCI_DELAYINTWDT_MS `(v ~T0 @X0 1 ef1`us ]
+"175
+{
+[e :U _FCI_DELAYINTWDT_MS ]
+"174
+[v _Delay `us ~T0 @X0 1 r1 ]
+"175
+[f ]
+"176
+[e $U 148  ]
+[e :U 149 ]
+"177
+{
+"178
+[e ( _Wdt_Delay_Ms (1 -> -> 255 `i `uc ]
+"179
+[e = _Delay -> - -> _Delay `ui -> -> 255 `i `ui `us ]
+"180
+}
+[e :U 148 ]
+"176
+[e $ > -> _Delay `ui -> -> 255 `i `ui 149  ]
+[e :U 150 ]
+"181
+[e $ ! > -> _Delay `ui -> -> 0 `i `ui 151  ]
+"182
+[e ( _Wdt_Delay_Ms (1 -> & -> _Delay `ui -> -> 255 `i `ui `uc ]
+[e :U 151 ]
+"183
+[e :UE 147 ]
+}
+"185
+[v _FCI_DELAYINT_S `(v ~T0 @X0 1 ef1`us ]
+"186
+{
+[e :U _FCI_DELAYINT_S ]
+"185
+[v _Delay `us ~T0 @X0 1 r1 ]
+"186
+[f ]
+"187
+[e $U 153  ]
+[e :U 154 ]
+"188
+{
+"189
+[e ( _delay_s (1 -> -> 255 `i `uc ]
+"190
+[e = _Delay -> - -> _Delay `ui -> -> 255 `i `ui `us ]
+"191
+}
+[e :U 153 ]
+"187
+[e $ > -> _Delay `ui -> -> 255 `i `ui 154  ]
+[e :U 155 ]
+"192
+[e $ ! > -> _Delay `ui -> -> 0 `i `ui 156  ]
+"193
+[e ( _delay_s (1 -> & -> _Delay `ui -> -> 255 `i `ui `uc ]
+[e :U 156 ]
+"194
+[e :UE 152 ]
+}
+"196
+[v _FCI_DELAYINTWDT_S `(v ~T0 @X0 1 ef1`us ]
+"197
+{
+[e :U _FCI_DELAYINTWDT_S ]
+"196
+[v _Delay `us ~T0 @X0 1 r1 ]
+"197
+[f ]
+"198
+[e $U 158  ]
+[e :U 159 ]
+"199
+{
+"200
+[e ( _Wdt_Delay_S (1 -> -> 255 `i `uc ]
+"201
+[e = _Delay -> - -> _Delay `ui -> -> 255 `i `ui `us ]
+"202
+}
+[e :U 158 ]
+"198
+[e $ > -> _Delay `ui -> -> 255 `i `ui 159  ]
+[e :U 160 ]
+"203
+[e $ ! > -> _Delay `ui -> -> 0 `i `ui 161  ]
+"204
+[e ( _Wdt_Delay_S (1 -> & -> _Delay `ui -> -> 255 `i `ui `uc ]
+[e :U 161 ]
+"205
+[e :UE 157 ]
+}
+"124 C:\ProgramData\MatrixTSL\FlowcodeV8\CAL\PIC\PIC_CAL_String.c
+[v _FCI_GETCHAR `(uc ~T0 @X0 1 ef3`*uc`us`us ]
+"125
+{
+[e :U _FCI_GETCHAR ]
+"124
+[v _sStr1 `*uc ~T0 @X0 1 r1 ]
+[v _iStr1_len `us ~T0 @X0 1 r2 ]
+[v _iPos `us ~T0 @X0 1 r3 ]
+"125
+[f ]
+"126
+[e $ ! < -> _iPos `ui -> _iStr1_len `ui 167  ]
+"127
+[e ) *U + _sStr1 * -> _iPos `ux -> -> # *U _sStr1 `ui `ux ]
+[e $UE 166  ]
+[e :U 167 ]
+"128
+[e ) -> -> 0 `ui `uc ]
+[e $UE 166  ]
+"129
+[e :UE 166 ]
+}
+"132
+[v _FCI_GETLENGTH `(us ~T0 @X0 1 ef2`*uc`us ]
+"133
+{
+[e :U _FCI_GETLENGTH ]
+"132
+[v _sStr1 `*uc ~T0 @X0 1 r1 ]
+[v _iStr1_len `us ~T0 @X0 1 r2 ]
+"133
+[f ]
+"134
+[v _tmp `us ~T0 @X0 1 a ]
+"135
+{
+[e = _tmp -> -> 0 `i `us ]
+[e $U 172  ]
+[e :U 169 ]
+[e $ ! == -> *U + _sStr1 * -> _tmp `ux -> -> # *U _sStr1 `ui `ux `i -> 0 `i 173  ]
+[e $U 170  ]
+[e :U 173 ]
+[e ++ _tmp -> -> 1 `i `us ]
+[e :U 172 ]
+[e $ < -> _tmp `ui -> _iStr1_len `ui 169  ]
+[e :U 170 ]
+"136
+}
+[e ) _tmp ]
+[e $UE 168  ]
+"137
+[e :UE 168 ]
+}
+"140
+[v _FCI_MIDSTRING `(*uc ~T0 @X0 1 ef6`*uc`us`us`us`*uc`us ]
+"141
+{
+[e :U _FCI_MIDSTRING ]
+"140
+[v _sSrc `*uc ~T0 @X0 1 r1 ]
+[v _iSrc_len `us ~T0 @X0 1 r2 ]
+[v _iStart `us ~T0 @X0 1 r3 ]
+[v _iCount `us ~T0 @X0 1 r4 ]
+[v _sDst `*uc ~T0 @X0 1 r5 ]
+[v _iDst_len `us ~T0 @X0 1 r6 ]
+"141
+[f ]
+"142
+[e $ ! == -> _iDst_len `ui -> -> 0 `i `ui 175  ]
+[e ) _sDst ]
+[e $UE 174  ]
+[e :U 175 ]
+"143
+[v _idx `us ~T0 @X0 1 a ]
+"144
+{
+[e = _idx -> -> 0 `i `us ]
+[e $U 179  ]
+[e :U 176 ]
+[e $ ! == -> *U + _sSrc * -> _idx `ux -> -> # *U _sSrc `ui `ux `i -> 0 `i 180  ]
+[e $U 177  ]
+[e :U 180 ]
+[e ++ _idx -> -> 1 `i `us ]
+[e :U 179 ]
+[e $ < -> _idx `ui -> _iSrc_len `ui 176  ]
+[e :U 177 ]
+"146
+}
+[e $ ! >= -> _iStart `ui -> _idx `ui 181  ]
+"147
+{
+"148
+[e = *U + _sDst * -> -> 0 `i `x -> -> # *U _sDst `i `x -> -> 0 `ui `uc ]
+"149
+}
+[e $U 182  ]
+"150
+[e :U 181 ]
+"151
+{
+"152
+[e $ ! >= + -> _iStart `ui -> _iCount `ui -> _idx `ui 183  ]
+"153
+[e = _iCount -> - -> _idx `ui -> _iStart `ui `us ]
+[e :U 183 ]
+"154
+[e $ ! > -> _iCount `ui -> _iDst_len `ui 184  ]
+"155
+[e = _iCount _iDst_len ]
+[e :U 184 ]
+"157
+{
+[e = _idx -> -> 0 `i `us ]
+[e $U 188  ]
+"158
+[e :U 185 ]
+{
+"159
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux *U + _sSrc * -> + -> _idx `ui -> _iStart `ui `ux -> -> # *U _sSrc `ui `ux ]
+"160
+}
+"157
+[e ++ _idx -> -> 1 `i `us ]
+[e :U 188 ]
+[e $ < -> _idx `ui -> _iCount `ui 185  ]
+[e :U 186 ]
+"160
+}
+"161
+[e $ ! < -> _idx `ui -> _iDst_len `ui 189  ]
+"162
+{
+"163
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+"164
+}
+[e :U 189 ]
+"165
+}
+[e :U 182 ]
+"166
+[e ) _sDst ]
+[e $UE 174  ]
+"167
+[e :UE 174 ]
+}
+"170
+[v _FCI_LEFTSTRING `(*uc ~T0 @X0 1 ef5`*uc`us`us`*uc`us ]
+"171
+{
+[e :U _FCI_LEFTSTRING ]
+"170
+[v _sSrc `*uc ~T0 @X0 1 r1 ]
+[v _iSrc_len `us ~T0 @X0 1 r2 ]
+[v _iCount `us ~T0 @X0 1 r3 ]
+[v _sDst `*uc ~T0 @X0 1 r4 ]
+[v _iDst_len `us ~T0 @X0 1 r5 ]
+"171
+[f ]
+"172
+[e $ ! == -> _iDst_len `ui -> -> 0 `i `ui 191  ]
+[e ) _sDst ]
+[e $UE 190  ]
+[e :U 191 ]
+"173
+[v _idx `us ~T0 @X0 1 a ]
+"174
+{
+[e = _idx -> -> 0 `i `us ]
+[e $U 195  ]
+[e :U 192 ]
+[e $ ! == -> *U + _sSrc * -> _idx `ux -> -> # *U _sSrc `ui `ux `i -> 0 `i 196  ]
+[e $U 193  ]
+[e :U 196 ]
+[e ++ _idx -> -> 1 `i `us ]
+[e :U 195 ]
+[e $ < -> _idx `ui -> _iSrc_len `ui 192  ]
+[e :U 193 ]
+"176
+}
+[e $ ! > -> _iCount `ui -> _idx `ui 197  ]
+"177
+[e = _iCount _idx ]
+[e :U 197 ]
+"178
+[e $ ! > -> _iCount `ui -> _iDst_len `ui 198  ]
+"179
+[e = _iCount _iDst_len ]
+[e :U 198 ]
+"181
+{
+[e = _idx -> -> 0 `i `us ]
+[e $U 202  ]
+"182
+[e :U 199 ]
+{
+"183
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux *U + _sSrc * -> _idx `ux -> -> # *U _sSrc `ui `ux ]
+"184
+}
+"181
+[e ++ _idx -> -> 1 `i `us ]
+[e :U 202 ]
+[e $ < -> _idx `ui -> _iCount `ui 199  ]
+[e :U 200 ]
+"184
+}
+"186
+[e $ ! < -> _idx `ui -> _iDst_len `ui 203  ]
+"187
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+[e :U 203 ]
+"189
+[e ) _sDst ]
+[e $UE 190  ]
+"190
+[e :UE 190 ]
+}
+"193
+[v _FCI_RIGHTSTRING `(*uc ~T0 @X0 1 ef5`*uc`us`us`*uc`us ]
+"194
+{
+[e :U _FCI_RIGHTSTRING ]
+"193
+[v _sSrc `*uc ~T0 @X0 1 r1 ]
+[v _iSrc_len `us ~T0 @X0 1 r2 ]
+[v _iCount `us ~T0 @X0 1 r3 ]
+[v _sDst `*uc ~T0 @X0 1 r4 ]
+[v _iDst_len `us ~T0 @X0 1 r5 ]
+"194
+[f ]
+"195
+[e $ ! == -> _iDst_len `ui -> -> 0 `i `ui 205  ]
+[e ) _sDst ]
+[e $UE 204  ]
+[e :U 205 ]
+"196
+[v _idx `us ~T0 @X0 1 a ]
+"197
+[v _delta `us ~T0 @X0 1 a ]
+"199
+{
+[e = _idx -> -> 0 `i `us ]
+[e $U 209  ]
+[e :U 206 ]
+[e $ ! == -> *U + _sSrc * -> _idx `ux -> -> # *U _sSrc `ui `ux `i -> 0 `i 210  ]
+[e $U 207  ]
+[e :U 210 ]
+[e ++ _idx -> -> 1 `i `us ]
+[e :U 209 ]
+[e $ < -> _idx `ui -> _iSrc_len `ui 206  ]
+[e :U 207 ]
+"201
+}
+[e $ ! > -> _iCount `ui -> _idx `ui 211  ]
+"202
+[e = _iCount _idx ]
+[e :U 211 ]
+"204
+[e = _delta -> - -> _idx `ui -> _iCount `ui `us ]
+"206
+[e $ ! > -> _iCount `ui -> _iDst_len `ui 212  ]
+"207
+[e = _iCount _iDst_len ]
+[e :U 212 ]
+"209
+{
+[e = _idx -> -> 0 `i `us ]
+[e $U 216  ]
+"210
+[e :U 213 ]
+{
+"211
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux *U + _sSrc * -> + -> _idx `ui -> _delta `ui `ux -> -> # *U _sSrc `ui `ux ]
+"212
+}
+"209
+[e ++ _idx -> -> 1 `i `us ]
+[e :U 216 ]
+[e $ < -> _idx `ui -> _iCount `ui 213  ]
+[e :U 214 ]
+"212
+}
+"214
+[e $ ! < -> _idx `ui -> _iDst_len `ui 217  ]
+"215
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+[e :U 217 ]
+"217
+[e ) _sDst ]
+[e $UE 204  ]
+"218
+[e :UE 204 ]
+}
+"222
+[v _FCI_TOSTRS16 `(uc ~T0 @X0 1 ef3`s`*uc`us ]
+"223
+{
+[e :U _FCI_TOSTRS16 ]
+"222
+[v _iSrc1 `s ~T0 @X0 1 r1 ]
+[v _sDst `*uc ~T0 @X0 1 r2 ]
+[v _iDst_len `us ~T0 @X0 1 r3 ]
+"223
+[f ]
+"224
+[v _tmp1 `uc ~T0 @X0 1 a ]
+"225
+[v _iSrc `s ~T0 @X0 1 a ]
+[e = _iSrc _iSrc1 ]
+"226
+[v _top `us ~T0 @X0 1 a ]
+[e = _top -> -> 10000 `i `us ]
+"227
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> -> 0 `i `uc ]
+"229
+[e $ ! == -> _iDst_len `ui -> -> 0 `i `ui 219  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 218  ]
+[e :U 219 ]
+"233
+[e $ ! < -> _iSrc `i -> 0 `i 220  ]
+"234
+{
+"235
+[e = *U + _sDst * -> -> 0 `i `x -> -> # *U _sDst `i `x -> -> 45 `ui `uc ]
+"236
+[e ++ _idx -> -> 1 `i `uc ]
+"237
+[e = _iSrc -> -U -> _iSrc `i `s ]
+"238
+}
+[e :U 220 ]
+"240
+[e = _tmp1 -> -> 0 `i `uc ]
+"241
+[e $ ! == -> _iSrc `i -> 0 `i 221  ]
+"242
+{
+"243
+[e = _tmp1 -> -> 1 `i `uc ]
+"244
+[e = _top -> -> 1 `i `us ]
+"245
+}
+[e :U 221 ]
+"246
+[e $U 222  ]
+[e :U 223 ]
+"247
+{
+"248
+[e $ ! || >= -> _iSrc `ui -> _top `ui != -> _tmp1 `i -> -> -> 0 `i `uc `i 225  ]
+"249
+{
+"250
+[e = _tmp1 -> / -> _iSrc `ui -> _top `ui `uc ]
+"251
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> + -> 48 `ui -> _tmp1 `ui `uc ]
+"252
+[e ++ _idx -> -> 1 `i `uc ]
+"253
+[e =- _iSrc -> * -> _tmp1 `ui -> _top `ui `s ]
+"254
+[e = _tmp1 -> -> 1 `i `uc ]
+"255
+}
+[e :U 225 ]
+"256
+[e =/ _top -> -> 10 `uc `us ]
+"257
+}
+[e :U 222 ]
+"246
+[e $ && < -> _idx `ui -> _iDst_len `ui > -> _top `ui -> -> 0 `i `ui 223  ]
+[e :U 224 ]
+"259
+[e $ ! < -> _idx `ui -> _iDst_len `ui 226  ]
+"260
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+[e :U 226 ]
+"261
+[e ) _idx ]
+[e $UE 218  ]
+"262
+[e :UE 218 ]
+}
+"265
+[v _FCI_TOSTRS32 `(uc ~T0 @X0 1 ef3`l`*uc`us ]
+"266
+{
+[e :U _FCI_TOSTRS32 ]
+"265
+[v _iSrc1 `l ~T0 @X0 1 r1 ]
+[v _sDst `*uc ~T0 @X0 1 r2 ]
+[v _iDst_len `us ~T0 @X0 1 r3 ]
+"266
+[f ]
+"267
+[v _tmp1 `uc ~T0 @X0 1 a ]
+"268
+[v _iSrc `l ~T0 @X0 1 a ]
+[e = _iSrc _iSrc1 ]
+"269
+[v _top `ul ~T0 @X0 1 a ]
+[e = _top -> -> 1000000000 `l `ul ]
+"270
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> -> 0 `i `uc ]
+"272
+[e $ ! == -> _iDst_len `ui -> -> 0 `i `ui 228  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 227  ]
+[e :U 228 ]
+"276
+[e $ ! < _iSrc -> -> 0 `i `l 229  ]
+"277
+{
+"278
+[e = *U + _sDst * -> -> 0 `i `x -> -> # *U _sDst `i `x -> -> 45 `ui `uc ]
+"279
+[e ++ _idx -> -> 1 `i `uc ]
+"280
+[e = _iSrc -U _iSrc ]
+"281
+}
+[e :U 229 ]
+"283
+[e = _tmp1 -> -> 0 `i `uc ]
+"284
+[e $ ! == _iSrc -> -> 0 `i `l 230  ]
+"285
+{
+"286
+[e = _tmp1 -> -> 1 `i `uc ]
+"287
+[e = _top -> -> -> 1 `i `l `ul ]
+"288
+}
+[e :U 230 ]
+"289
+[e $U 231  ]
+[e :U 232 ]
+"290
+{
+"291
+[e $ ! || >= -> _iSrc `ul _top != -> _tmp1 `i -> -> -> 0 `i `uc `i 234  ]
+"292
+{
+"293
+[e = _tmp1 -> / -> _iSrc `ul _top `uc ]
+"294
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> + -> 48 `ui -> _tmp1 `ui `uc ]
+"295
+[e ++ _idx -> -> 1 `i `uc ]
+"296
+[e =- _iSrc -> * -> _tmp1 `ul _top `l ]
+"297
+[e = _tmp1 -> -> 1 `i `uc ]
+"298
+}
+[e :U 234 ]
+"299
+[e =/ _top -> -> 10 `uc `ul ]
+"300
+}
+[e :U 231 ]
+"289
+[e $ && < -> _idx `ui -> _iDst_len `ui > _top -> -> -> 0 `i `l `ul 232  ]
+[e :U 233 ]
+"302
+[e $ ! < -> _idx `ui -> _iDst_len `ui 235  ]
+"303
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+[e :U 235 ]
+"304
+[e ) _idx ]
+[e $UE 227  ]
+"305
+[e :UE 227 ]
+}
+"308
+[v _FCI_TOSTRU16 `(uc ~T0 @X0 1 ef3`us`*uc`us ]
+"309
+{
+[e :U _FCI_TOSTRU16 ]
+"308
+[v _iSrc1 `us ~T0 @X0 1 r1 ]
+[v _sDst `*uc ~T0 @X0 1 r2 ]
+[v _iDst_len `us ~T0 @X0 1 r3 ]
+"309
+[f ]
+"310
+[v _tmp1 `uc ~T0 @X0 1 a ]
+"311
+[v _iSrc `us ~T0 @X0 1 a ]
+[e = _iSrc _iSrc1 ]
+"312
+[v _top `us ~T0 @X0 1 a ]
+[e = _top -> -> 10000 `i `us ]
+"313
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> -> 0 `i `uc ]
+"315
+[e $ ! == -> _iDst_len `ui -> -> 0 `i `ui 237  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 236  ]
+[e :U 237 ]
+"317
+[e = _tmp1 -> -> 0 `i `uc ]
+"318
+[e $ ! == -> _iSrc `ui -> -> 0 `i `ui 238  ]
+"319
+{
+"320
+[e = _tmp1 -> -> 1 `i `uc ]
+"321
+[e = _top -> -> 1 `i `us ]
+"322
+}
+[e :U 238 ]
+"323
+[e $U 239  ]
+[e :U 240 ]
+"324
+{
+"325
+[e $ ! || >= -> _iSrc `ui -> _top `ui != -> _tmp1 `i -> -> -> 0 `i `uc `i 242  ]
+"326
+{
+"327
+[e = _tmp1 -> / -> _iSrc `ui -> _top `ui `uc ]
+"328
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> + -> 48 `ui -> _tmp1 `ui `uc ]
+"329
+[e ++ _idx -> -> 1 `i `uc ]
+"330
+[e =- _iSrc -> * -> _tmp1 `ui -> _top `ui `us ]
+"331
+[e = _tmp1 -> -> 1 `i `uc ]
+"332
+}
+[e :U 242 ]
+"333
+[e =/ _top -> -> 10 `uc `us ]
+"334
+}
+[e :U 239 ]
+"323
+[e $ && < -> _idx `ui -> _iDst_len `ui > -> _top `ui -> -> 0 `i `ui 240  ]
+[e :U 241 ]
+"336
+[e $ ! < -> _idx `ui -> _iDst_len `ui 243  ]
+"337
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+[e :U 243 ]
+"338
+[e ) _idx ]
+[e $UE 236  ]
+"339
+[e :UE 236 ]
+}
+"342
+[v _FCI_TOSTRU32 `(uc ~T0 @X0 1 ef3`ul`*uc`us ]
+"343
+{
+[e :U _FCI_TOSTRU32 ]
+"342
+[v _iSrc1 `ul ~T0 @X0 1 r1 ]
+[v _sDst `*uc ~T0 @X0 1 r2 ]
+[v _iDst_len `us ~T0 @X0 1 r3 ]
+"343
+[f ]
+"344
+[v _tmp1 `uc ~T0 @X0 1 a ]
+"345
+[v _iSrc `ul ~T0 @X0 1 a ]
+[e = _iSrc _iSrc1 ]
+"346
+[v _top `ul ~T0 @X0 1 a ]
+[e = _top -> -> 1000000000 `l `ul ]
+"347
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> -> 0 `i `uc ]
+"349
+[e $ ! == -> _iDst_len `ui -> -> 0 `i `ui 245  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 244  ]
+[e :U 245 ]
+"351
+[e = _tmp1 -> -> 0 `i `uc ]
+"352
+[e $ ! == _iSrc -> -> -> 0 `i `l `ul 246  ]
+"353
+{
+"354
+[e = _tmp1 -> -> 1 `i `uc ]
+"355
+[e = _top -> -> -> 1 `i `l `ul ]
+"356
+}
+[e :U 246 ]
+"357
+[e $U 247  ]
+[e :U 248 ]
+"358
+{
+"359
+[e $ ! || >= _iSrc _top != -> _tmp1 `i -> -> -> 0 `i `uc `i 250  ]
+"360
+{
+"361
+[e = _tmp1 -> / _iSrc _top `uc ]
+"362
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> + -> 48 `ui -> _tmp1 `ui `uc ]
+"363
+[e ++ _idx -> -> 1 `i `uc ]
+"364
+[e =- _iSrc * -> _tmp1 `ul _top ]
+"365
+[e = _tmp1 -> -> 1 `i `uc ]
+"366
+}
+[e :U 250 ]
+"367
+[e =/ _top -> -> 10 `uc `ul ]
+"368
+}
+[e :U 247 ]
+"357
+[e $ && < -> _idx `ui -> _iDst_len `ui > _top -> -> -> 0 `i `l `ul 248  ]
+[e :U 249 ]
+"370
+[e $ ! < -> _idx `ui -> _iDst_len `ui 251  ]
+"371
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+[e :U 251 ]
+"372
+[e ) _idx ]
+[e $UE 244  ]
+"373
+[e :UE 244 ]
+}
+"377
+[v _FCI_TOSTRING `(*uc ~T0 @X0 1 ef3`l`*uc`us ]
+"378
+{
+[e :U _FCI_TOSTRING ]
+"377
+[v _iSrc1 `l ~T0 @X0 1 r1 ]
+[v _sDst `*uc ~T0 @X0 1 r2 ]
+[v _iDst_len `us ~T0 @X0 1 r3 ]
+"378
+[f ]
+"379
+[v _tmp1 `uc ~T0 @X0 1 a ]
+"381
+[v _iSrc `l ~T0 @X0 1 a ]
+[e = _iSrc _iSrc1 ]
+"384
+[v _top `ul ~T0 @X0 1 a ]
+[e = _top -> -> 1000000000 `l `ul ]
+"389
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> -> 0 `i `uc ]
+"391
+[e $ ! == -> _iDst_len `ui -> -> 0 `i `ui 253  ]
+[e ) _sDst ]
+[e $UE 252  ]
+[e :U 253 ]
+"395
+[e $ ! < _iSrc -> -> 0 `i `l 254  ]
+"396
+{
+"397
+[e = *U + _sDst * -> -> 0 `i `x -> -> # *U _sDst `i `x -> -> 45 `ui `uc ]
+"398
+[e ++ _idx -> -> 1 `i `uc ]
+"399
+[e = _iSrc -U _iSrc ]
+"400
+}
+[e :U 254 ]
+"402
+[e = _tmp1 -> -> 0 `i `uc ]
+"403
+[e $ ! == _iSrc -> -> 0 `i `l 255  ]
+"404
+{
+"405
+[e = _tmp1 -> -> 1 `i `uc ]
+"406
+[e = _top -> -> -> 1 `i `l `ul ]
+"407
+}
+[e :U 255 ]
+"408
+[e $U 256  ]
+[e :U 257 ]
+"409
+{
+"411
+[e $ ! || >= -> _iSrc `ul _top != -> _tmp1 `i -> -> -> 0 `i `uc `i 259  ]
+"415
+{
+"417
+[e = _tmp1 -> / -> _iSrc `ul _top `uc ]
+"421
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> + -> 48 `ui -> _tmp1 `ui `uc ]
+"422
+[e ++ _idx -> -> 1 `i `uc ]
+"423
+[e =- _iSrc -> * -> _tmp1 `ul _top `l ]
+"424
+[e = _tmp1 -> -> 1 `i `uc ]
+"425
+}
+[e :U 259 ]
+"426
+[e =/ _top -> -> 10 `uc `ul ]
+"427
+}
+[e :U 256 ]
+"408
+[e $ && < -> _idx `ui -> _iDst_len `ui > _top -> -> -> 0 `i `l `ul 257  ]
+[e :U 258 ]
+"429
+[e $ ! < -> _idx `ui -> _iDst_len `ui 260  ]
+"430
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+[e :U 260 ]
+"431
+[e ) _sDst ]
+[e $UE 252  ]
+"432
+[e :UE 252 ]
+}
+"435
+[v _FCI_TOLOWER `(v ~T0 @X0 1 ef4`*uc`us`*uc`us ]
+"436
+{
+[e :U _FCI_TOLOWER ]
+"435
+[v _sSrc `*uc ~T0 @X0 1 r1 ]
+[v _iSrc_len `us ~T0 @X0 1 r2 ]
+[v _sDst `*uc ~T0 @X0 1 r3 ]
+[v _iDst_len `us ~T0 @X0 1 r4 ]
+"436
+[f ]
+"437
+[e $ ! == -> _iDst_len `ui -> -> 0 `i `ui 262  ]
+[e $UE 261  ]
+[e :U 262 ]
+"438
+[v _idx `us ~T0 @X0 1 a ]
+"439
+[v _ch `us ~T0 @X0 1 a ]
+"441
+[e $ ! < -> _iSrc_len `ui -> _iDst_len `ui 263  ]
+[e = _iSrc_len _iDst_len ]
+[e :U 263 ]
+"443
+{
+[e = _idx -> -> 0 `i `us ]
+[e $U 267  ]
+"444
+[e :U 264 ]
+{
+"445
+[e = _ch -> *U + _sSrc * -> _idx `ux -> -> # *U _sSrc `ui `ux `us ]
+"446
+[e $ ! && >= -> _ch `ui -> 65 `ui <= -> _ch `ui -> 90 `ui 268  ]
+"447
+{
+"448
+[e =^ _ch -> -> 32 `i `us ]
+"449
+}
+[e :U 268 ]
+"450
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> _ch `uc ]
+"451
+[e $ ! == -> _ch `ui -> -> 0 `i `ui 269  ]
+"452
+{
+"453
+[e $U 265  ]
+"454
+}
+[e :U 269 ]
+"455
+}
+"443
+[e ++ _idx -> -> 1 `i `us ]
+[e :U 267 ]
+[e $ < -> _idx `ui -> _iSrc_len `ui 264  ]
+[e :U 265 ]
+"455
+}
+"456
+[e $ ! < -> _idx `ui -> _iDst_len `ui 270  ]
+"457
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+[e :U 270 ]
+"458
+[e :UE 261 ]
+}
+"461
+[v _FCI_TOUPPER `(v ~T0 @X0 1 ef4`*uc`us`*uc`us ]
+"462
+{
+[e :U _FCI_TOUPPER ]
+"461
+[v _sSrc `*uc ~T0 @X0 1 r1 ]
+[v _iSrc_len `us ~T0 @X0 1 r2 ]
+[v _sDst `*uc ~T0 @X0 1 r3 ]
+[v _iDst_len `us ~T0 @X0 1 r4 ]
+"462
+[f ]
+"463
+[e $ ! == -> _iDst_len `ui -> -> 0 `i `ui 272  ]
+[e $UE 271  ]
+[e :U 272 ]
+"464
+[v _idx `us ~T0 @X0 1 a ]
+"465
+[v _ch `us ~T0 @X0 1 a ]
+"467
+[e $ ! < -> _iSrc_len `ui -> _iDst_len `ui 273  ]
+[e = _iSrc_len _iDst_len ]
+[e :U 273 ]
+"469
+{
+[e = _idx -> -> 0 `i `us ]
+[e $U 277  ]
+"470
+[e :U 274 ]
+{
+"471
+[e = _ch -> *U + _sSrc * -> _idx `ux -> -> # *U _sSrc `ui `ux `us ]
+"472
+[e $ ! && >= -> _ch `ui -> 97 `ui <= -> _ch `ui -> 122 `ui 278  ]
+"473
+{
+"474
+[e =^ _ch -> -> 32 `i `us ]
+"475
+}
+[e :U 278 ]
+"476
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> _ch `uc ]
+"477
+[e $ ! == -> _ch `ui -> -> 0 `i `ui 279  ]
+"478
+{
+"479
+[e $U 275  ]
+"480
+}
+[e :U 279 ]
+"481
+}
+"469
+[e ++ _idx -> -> 1 `i `us ]
+[e :U 277 ]
+[e $ < -> _idx `ui -> _iSrc_len `ui 274  ]
+[e :U 275 ]
+"481
+}
+"482
+[e $ ! < -> _idx `ui -> _iDst_len `ui 280  ]
+"483
+[e = *U + _sDst * -> _idx `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+[e :U 280 ]
+"484
+[e :UE 271 ]
+}
+"487
+[v _FCI_COMPARE `(uc ~T0 @X0 1 ef5`*uc`us`*uc`us`uc ]
+"488
+{
+[e :U _FCI_COMPARE ]
+"487
+[v _sSrc1 `*uc ~T0 @X0 1 r1 ]
+[v _iSrc1_len `us ~T0 @X0 1 r2 ]
+[v _sSrc2 `*uc ~T0 @X0 1 r3 ]
+[v _iSrc2_len `us ~T0 @X0 1 r4 ]
+[v _iNoCase `uc ~T0 @X0 1 r5 ]
+"488
+[f ]
+"489
+[v _idx `us ~T0 @X0 1 a ]
+[e = _idx -> -> 0 `i `us ]
+"490
+[v _ch1 `uc ~T0 @X0 1 a ]
+[v _ch2 `uc ~T0 @X0 1 a ]
+"492
+[e $U 282  ]
+[e :U 283 ]
+"493
+{
+"494
+[e = _ch1 *U + _sSrc1 * -> _idx `ux -> -> # *U _sSrc1 `ui `ux ]
+"495
+[e = _ch2 *U + _sSrc2 * -> _idx `ux -> -> # *U _sSrc2 `ui `ux ]
+"497
+[e $ ! != -> _iNoCase `i -> -> -> 0 `i `uc `i 285  ]
+"498
+{
+"499
+[e $ ! && >= -> _ch1 `ui -> 97 `ui <= -> _ch1 `ui -> 122 `ui 286  ]
+"500
+[e = _ch1 -> & -> _ch1 `i -> 223 `i `uc ]
+[e :U 286 ]
+"502
+[e $ ! && >= -> _ch2 `ui -> 97 `ui <= -> _ch2 `ui -> 122 `ui 287  ]
+"503
+[e = _ch2 -> & -> _ch2 `i -> 223 `i `uc ]
+[e :U 287 ]
+"504
+}
+[e :U 285 ]
+"506
+[e $ ! == -> _ch2 `i -> 0 `i 288  ]
+"507
+{
+"508
+[e $ ! == -> _ch1 `i -> 0 `i 289  ]
+"509
+[e ) -> -> 0 `i `uc ]
+[e $UE 281  ]
+[e $U 290  ]
+"510
+[e :U 289 ]
+"511
+[e ) -> -> 1 `i `uc ]
+[e $UE 281  ]
+[e :U 290 ]
+"512
+}
+[e $U 291  ]
+"513
+[e :U 288 ]
+[e $ ! == -> _ch1 `i -> 0 `i 292  ]
+"514
+[e ) -> -> 255 `i `uc ]
+[e $UE 281  ]
+[e $U 293  ]
+"515
+[e :U 292 ]
+[e $ ! < -> _ch1 `i -> _ch2 `i 294  ]
+"516
+[e ) -> -> 255 `i `uc ]
+[e $UE 281  ]
+[e $U 295  ]
+"517
+[e :U 294 ]
+[e $ ! > -> _ch1 `i -> _ch2 `i 296  ]
+"518
+[e ) -> -> 1 `i `uc ]
+[e $UE 281  ]
+[e :U 296 ]
+"520
+[e :U 295 ]
+[e :U 293 ]
+[e :U 291 ]
+[e =+ _idx -> -> 1 `i `us ]
+"521
+}
+[e :U 282 ]
+"492
+[e $ && < -> _idx `ui -> _iSrc1_len `ui < -> _idx `ui -> _iSrc2_len `ui 283  ]
+[e :U 284 ]
+"524
+[e $ ! > -> _iSrc1_len `ui -> _iSrc2_len `ui 297  ]
+"525
+{
+"526
+[e $ ! == -> *U + _sSrc1 * -> _idx `ux -> -> # *U _sSrc1 `ui `ux `i -> 0 `i 298  ]
+"527
+[e ) -> -> 0 `i `uc ]
+[e $UE 281  ]
+[e $U 299  ]
+"528
+[e :U 298 ]
+"529
+[e ) -> -> 1 `i `uc ]
+[e $UE 281  ]
+[e :U 299 ]
+"530
+}
+[e $U 300  ]
+"531
+[e :U 297 ]
+[e $ ! < -> _iSrc1_len `ui -> _iSrc2_len `ui 301  ]
+"532
+{
+"533
+[e $ ! == -> *U + _sSrc2 * -> _idx `ux -> -> # *U _sSrc2 `ui `ux `i -> 0 `i 302  ]
+"534
+[e ) -> -> 0 `i `uc ]
+[e $UE 281  ]
+[e $U 303  ]
+"535
+[e :U 302 ]
+"536
+[e ) -> -> 255 `i `uc ]
+[e $UE 281  ]
+[e :U 303 ]
+"537
+}
+[e :U 301 ]
+"538
+[e :U 300 ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 281  ]
+"539
+[e :UE 281 ]
+}
+"542
+[v _FCI_FLOAT_TO_STRING `(*uc ~T0 @X0 1 ef4`d`uc`*uc`us ]
+"543
+{
+[e :U _FCI_FLOAT_TO_STRING ]
+"542
+[v _Number `d ~T0 @X0 1 r1 ]
+[v _Precision `uc ~T0 @X0 1 r2 ]
+[v _String `*uc ~T0 @X0 1 r3 ]
+[v _MSZ_String `us ~T0 @X0 1 r4 ]
+"543
+[f ]
+"544
+[v _whole `l ~T0 @X0 1 a ]
+"545
+[v _idx `uc ~T0 @X0 1 a ]
+"546
+[v _stringidx `uc ~T0 @X0 1 a ]
+[e = _stringidx -> -> 0 `i `uc ]
+"547
+[v _temp `d ~T0 @X0 1 a ]
+[e = _temp .0.5 ]
+"548
+[v _real `d ~T0 @X0 1 a ]
+"549
+[v _temp_string `uc ~T0 @X0 -> 12 `i a ]
+"552
+{
+[e = _idx -> -> 0 `i `uc ]
+[e $U 308  ]
+[e :U 305 ]
+[e =* _temp .0.1 ]
+[e ++ _idx -> -> 1 `i `uc ]
+[e :U 308 ]
+[e $ < -> _idx `i -> _Precision `i 305  ]
+[e :U 306 ]
+}
+"554
+[e $ ! < _Number -> -> 0 `i `d 309  ]
+"555
+{
+"556
+[e = _Number -U _Number ]
+"557
+[e = *U + _String * -> ++ _stringidx -> -> 1 `i `uc `ux -> -> # *U _String `ui `ux -> -> 45 `ui `uc ]
+"558
+}
+[e :U 309 ]
+"559
+[e =+ _Number _temp ]
+"561
+[e = _temp ( _floor (1 _Number ]
+"562
+[e = _whole -> _temp `l ]
+"564
+[e = _real - _Number _temp ]
+"566
+[e ( _FCI_TOSTRING (3 , , _whole &U _temp_string -> -> # _temp_string `ui `us ]
+"568
+{
+[e = _idx -> -> 0 `i `uc ]
+[e $U 313  ]
+"569
+[e :U 310 ]
+{
+"570
+[e $ ! < -> _stringidx `ui -> _MSZ_String `ui 314  ]
+"571
+{
+"572
+[e = *U + _String * -> _stringidx `ux -> -> # *U _String `ui `ux *U + &U _temp_string * -> _idx `ux -> -> # *U &U _temp_string `ui `ux ]
+"573
+[e = _stringidx -> + -> _stringidx `i -> 1 `i `uc ]
+"574
+}
+[e :U 314 ]
+"575
+}
+"568
+[e ++ _idx -> -> 1 `i `uc ]
+[e :U 313 ]
+[e $ != -> *U + &U _temp_string * -> _idx `ux -> -> # *U &U _temp_string `ui `ux `i -> -> -> 0 `i `uc `i 310  ]
+[e :U 311 ]
+"575
+}
+"577
+[e $ ! > -> _Precision `i -> 0 `i 315  ]
+"578
+{
+"579
+[e $ ! < -> _stringidx `ui -> _MSZ_String `ui 316  ]
+"580
+{
+"581
+[e = *U + _String * -> _stringidx `ux -> -> # *U _String `ui `ux -> -> 46 `ui `uc ]
+"582
+[e = _stringidx -> + -> _stringidx `i -> 1 `i `uc ]
+"583
+}
+[e :U 316 ]
+"585
+{
+[e = _idx -> -> 0 `i `uc ]
+[e $U 320  ]
+"586
+[e :U 317 ]
+{
+"587
+[e $ ! >= -> _stringidx `ui -> _MSZ_String `ui 321  ]
+"588
+[e $U 318  ]
+[e :U 321 ]
+"590
+[e = _real * _real -> -> 10 `i `d ]
+"591
+[e = _whole -> _real `l ]
+"592
+[e = _temp -> _whole `d ]
+"593
+[e = _real - _real _temp ]
+"595
+[e = *U + _String * -> _stringidx `ux -> -> # *U _String `ui `ux -> + -> -> 48 `ui `l _whole `uc ]
+"596
+[e = _stringidx -> + -> _stringidx `i -> 1 `i `uc ]
+"597
+}
+"585
+[e ++ _idx -> -> 1 `i `uc ]
+[e :U 320 ]
+[e $ < -> _idx `i -> _Precision `i 317  ]
+[e :U 318 ]
+"597
+}
+"598
+}
+[e :U 315 ]
+"600
+[e $ ! < -> _stringidx `ui -> _MSZ_String `ui 322  ]
+"601
+{
+"602
+[e = *U + _String * -> _stringidx `ux -> -> # *U _String `ui `ux -> -> 0 `i `uc ]
+"603
+}
+[e :U 322 ]
+"605
+[e ) _String ]
+[e $UE 304  ]
+"606
+[e :UE 304 ]
+}
+"611
+[v _FCI_NUMBER_TO_HEX `(*uc ~T0 @X0 1 ef3`ul`*uc`us ]
+"612
+{
+[e :U _FCI_NUMBER_TO_HEX ]
+"611
+[v _Number `ul ~T0 @X0 1 r1 ]
+[v _String `*uc ~T0 @X0 1 r2 ]
+[v _MSZ_String `us ~T0 @X0 1 r3 ]
+"612
+[f ]
+"613
+[v _stringidx `uc ~T0 @X0 1 a ]
+"614
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> -> 0 `i `uc ]
+"615
+[v _temp `uc ~T0 @X0 1 a ]
+"616
+[v _digit `uc ~T0 @X0 -> 8 `i a ]
+"620
+[v _num `ul ~T0 @X0 1 a ]
+[e = _num _Number ]
+"625
+[e = *U + _String * -> -> 0 `i `x -> -> # *U _String `i `x -> -> 0 `i `uc ]
+"628
+[e $ ! && > >> _Number -> 8 `i -> -> -> 255 `i `l `ul < -> _MSZ_String `ui -> -> 10 `i `ui 324  ]
+"629
+[e ) _String ]
+[e $UE 323  ]
+[e :U 324 ]
+"631
+[e $ ! && > _Number -> -> -> 255 `i `l `ul < -> _MSZ_String `ui -> -> 6 `i `ui 325  ]
+"632
+[e ) _String ]
+[e $UE 323  ]
+[e :U 325 ]
+"634
+[e $ ! && <= _Number -> -> -> 255 `i `l `ul < -> _MSZ_String `ui -> -> 4 `i `ui 326  ]
+"635
+[e ) _String ]
+[e $UE 323  ]
+[e :U 326 ]
+"638
+[e = *U + _String * -> -> 0 `i `x -> -> # *U _String `i `x -> -> 48 `ui `uc ]
+"639
+[e = *U + _String * -> -> 1 `i `x -> -> # *U _String `i `x -> -> 120 `ui `uc ]
+"642
+[e :U 329 ]
+"643
+{
+"644
+[e = _temp -> % _num -> -> -> 16 `i `l `ul `uc ]
+"645
+[e = _num >> _num -> 4 `i ]
+"647
+[e $ ! > -> _temp `i -> 9 `i 330  ]
+"648
+{
+"649
+[e = _temp -> - -> _temp `i -> 10 `i `uc ]
+"650
+[e = *U + &U _digit * -> _idx `ux -> -> # *U &U _digit `ui `ux -> + -> _temp `ui -> 65 `ui `uc ]
+"651
+}
+[e $U 331  ]
+"652
+[e :U 330 ]
+"653
+[e = *U + &U _digit * -> _idx `ux -> -> # *U &U _digit `ui `ux -> + -> _temp `ui -> 48 `ui `uc ]
+[e :U 331 ]
+"655
+[e = _idx -> + -> _idx `i -> 1 `i `uc ]
+"656
+}
+[e $ > _num -> -> -> 0 `i `l `ul 329  ]
+[e :U 328 ]
+"659
+[e $ ! == -> _idx `i -> 1 `i 332  ]
+"660
+{
+"661
+[e = *U + &U _digit * -> -> -> 1 `i `ui `ux -> -> # *U &U _digit `ui `ux -> -> 48 `ui `uc ]
+"662
+[e = _idx -> -> 2 `i `uc ]
+"663
+}
+[e :U 332 ]
+"666
+{
+[e = _stringidx -> -> 2 `i `uc ]
+[e $U 336  ]
+"667
+[e :U 333 ]
+[e = *U + _String * -> _stringidx `ux -> -> # *U _String `ui `ux *U + &U _digit * -> -> - -> _idx `i - -> _stringidx `i -> 1 `i `ui `ux -> -> # *U &U _digit `ui `ux ]
+"666
+[e ++ _stringidx -> -> 1 `i `uc ]
+[e :U 336 ]
+[e $ < -> _stringidx `i + -> _idx `i -> 2 `i 333  ]
+[e :U 334 ]
+"667
+}
+"670
+[e $ ! < -> _stringidx `ui -> _MSZ_String `ui 337  ]
+"671
+{
+"672
+[e = *U + _String * -> _stringidx `ux -> -> # *U _String `ui `ux -> -> 0 `i `uc ]
+"673
+}
+[e :U 337 ]
+"675
+[e ) _String ]
+[e $UE 323  ]
+"676
+[e :UE 323 ]
+}
+"681
+[v _FCI_STRING_TO_INT `(l ~T0 @X0 1 ef2`*uc`us ]
+"682
+{
+[e :U _FCI_STRING_TO_INT ]
+"681
+[v _String `*uc ~T0 @X0 1 r1 ]
+[v _MSZ_String `us ~T0 @X0 1 r2 ]
+"682
+[f ]
+"683
+[v _bNegative `uc ~T0 @X0 1 a ]
+[e = _bNegative -> -> 0 `i `uc ]
+"684
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> -> 0 `i `uc ]
+"685
+[v _RetVal `l ~T0 @X0 1 a ]
+[e = _RetVal -> -> 0 `i `l ]
+"688
+[e $U 339  ]
+[e :U 340 ]
+"689
+{
+"691
+[e $ ! == -> *U + _String * -> _idx `ux -> -> # *U _String `ui `ux `ui -> 45 `ui 342  ]
+"692
+{
+"693
+[e = _bNegative -> -> 1 `i `uc ]
+"694
+[e = _idx -> + -> _idx `i -> 1 `i `uc ]
+"695
+[e $U 341  ]
+"696
+}
+[e :U 342 ]
+"697
+[e = _idx -> + -> _idx `i -> 1 `i `uc ]
+"698
+}
+[e :U 339 ]
+"688
+[e $ && < -> _idx `ui -> _MSZ_String `ui || < -> *U + _String * -> _idx `ux -> -> # *U _String `ui `ux `ui -> 48 `ui > -> *U + _String * -> _idx `ux -> -> # *U _String `ui `ux `ui -> 57 `ui 340  ]
+[e :U 341 ]
+"701
+[e $U 343  ]
+[e :U 344 ]
+"702
+{
+"704
+[e = _RetVal * _RetVal -> -> 10 `i `l ]
+"705
+[e = _RetVal + _RetVal -> - -> *U + _String * -> _idx `ux -> -> # *U _String `ui `ux `ui -> 48 `ui `l ]
+"706
+[e = _idx -> + -> _idx `i -> 1 `i `uc ]
+"707
+}
+[e :U 343 ]
+"701
+[e $ && && < -> _idx `ui -> _MSZ_String `ui >= -> *U + _String * -> _idx `ux -> -> # *U _String `ui `ux `ui -> 48 `ui <= -> *U + _String * -> _idx `ux -> -> # *U _String `ui `ux `ui -> 57 `ui 344  ]
+[e :U 345 ]
+"709
+[e $ ! != -> _bNegative `i -> -> -> 0 `i `uc `i 346  ]
+"710
+[e = _RetVal - -> -> 0 `i `l _RetVal ]
+[e :U 346 ]
+"712
+[e ) _RetVal ]
+[e $UE 338  ]
+"713
+[e :UE 338 ]
+}
+"718
+[v _FCI_STRING_TO_FLOAT `(d ~T0 @X0 1 ef2`*uc`us ]
+"719
+{
+[e :U _FCI_STRING_TO_FLOAT ]
+"718
+[v _String `*uc ~T0 @X0 1 r1 ]
+[v _MSZ_String `us ~T0 @X0 1 r2 ]
+"719
+[f ]
+"720
+[v _RetVal `d ~T0 @X0 1 a ]
+[e = _RetVal -> -> 0 `i `d ]
+"721
+[v _real_divider `d ~T0 @X0 1 a ]
+[e = _real_divider -> -> 1 `i `d ]
+"722
+[v _whole `ul ~T0 @X0 1 a ]
+[v _real `ul ~T0 @X0 1 a ]
+"723
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> -> 0 `i `uc ]
+"724
+[v _idx2 `uc ~T0 @X0 1 a ]
+[e = _idx2 -> -> 0 `i `uc ]
+"725
+[v _offset `uc ~T0 @X0 1 a ]
+[e = _offset -> -> 0 `i `uc ]
+"726
+[v _bNegative `uc ~T0 @X0 1 a ]
+[e = _bNegative -> -> 0 `i `uc ]
+"727
+[v _Comp_String `uc ~T0 @X0 -> 8 `i a ]
+"730
+[e $ ! == -> *U + _String * -> -> 0 `i `x -> -> # *U _String `i `x `ui -> 45 `ui 348  ]
+"731
+{
+"732
+[e = _bNegative -> -> 1 `i `uc ]
+"733
+[e = _offset -> -> 1 `i `uc ]
+"734
+}
+[e :U 348 ]
+"737
+{
+[e = _idx _offset ]
+[e $U 352  ]
+"738
+[e :U 349 ]
+{
+"739
+[e $ ! == -> *U + _String * -> _idx `ux -> -> # *U _String `ui `ux `ui -> 46 `ui 353  ]
+"740
+[e $U 350  ]
+[e :U 353 ]
+"741
+}
+"737
+[e ++ _idx -> -> 1 `i `uc ]
+[e :U 352 ]
+[e $ < -> _idx `ui -> _MSZ_String `ui 349  ]
+[e :U 350 ]
+"741
+}
+"744
+[e = _whole -> ( _FCI_STRING_TO_INT (2 , _String -> _idx `us `ul ]
+"747
+[e $ ! == -> _idx `ui -> _MSZ_String `ui 354  ]
+"748
+{
+"749
+[e = _RetVal -> _whole `d ]
+"750
+[e ) _RetVal ]
+[e $UE 347  ]
+"751
+}
+[e :U 354 ]
+"754
+[e = _offset -> + -> _idx `i -> 1 `i `uc ]
+"755
+{
+[e = _idx _offset ]
+[e $U 358  ]
+"756
+[e :U 355 ]
+{
+"757
+[e $ ! && >= -> *U + _String * -> _idx `ux -> -> # *U _String `ui `ux `ui -> 48 `ui <= -> *U + _String * -> _idx `ux -> -> # *U _String `ui `ux `ui -> 57 `ui 359  ]
+"758
+{
+"759
+[e = *U + &U _Comp_String * -> -> - -> _idx `i -> _offset `i `ui `ux -> -> # *U &U _Comp_String `ui `ux *U + _String * -> _idx `ux -> -> # *U _String `ui `ux ]
+"760
+[e = _real_divider * _real_divider .0.1 ]
+"761
+}
+[e $U 360  ]
+"762
+[e :U 359 ]
+"763
+[e $U 356  ]
+[e :U 360 ]
+"764
+}
+"755
+[e ++ _idx -> -> 1 `i `uc ]
+[e :U 358 ]
+[e $ < -> _idx `ui -> _MSZ_String `ui 355  ]
+[e :U 356 ]
+"764
+}
+"767
+[e = _real -> ( _FCI_STRING_TO_INT (2 , &U _Comp_String -> - -> _idx `i -> _offset `i `us `ul ]
+"770
+[e = _RetVal -> _real `d ]
+"771
+[e = _RetVal * _RetVal _real_divider ]
+"772
+[e = _real_divider -> _whole `d ]
+"773
+[e = _RetVal + _RetVal _real_divider ]
+"775
+[e $ ! != -> _bNegative `i -> -> -> 0 `i `uc `i 361  ]
+"776
+[e = _RetVal -U _RetVal ]
+[e :U 361 ]
+"778
+[e ) _RetVal ]
+[e $UE 347  ]
+"779
+[e :UE 347 ]
+}
+"788
+[v _FCI_STRREV `(uc ~T0 @X0 1 ef4`*uc`us`*uc`us ]
+"789
+{
+[e :U _FCI_STRREV ]
+"788
+[v _sSrc `*uc ~T0 @X0 1 r1 ]
+[v _iSrc_len `us ~T0 @X0 1 r2 ]
+[v _sDst `*uc ~T0 @X0 1 r3 ]
+[v _iDst_len `us ~T0 @X0 1 r4 ]
+"789
+[f ]
+"790
+[v _ix `us ~T0 @X0 1 a ]
+[v _len `us ~T0 @X0 1 a ]
+"791
+{
+[e = _len -> -> 0 `i `us ]
+[e $U 366  ]
+[e :U 363 ]
+[e $ ! == -> *U + _sSrc * -> _len `ux -> -> # *U _sSrc `ui `ux `i -> 0 `i 367  ]
+[e $U 364  ]
+[e :U 367 ]
+[e ++ _len -> -> 1 `i `us ]
+[e :U 366 ]
+[e $ < -> _len `ui -> _iSrc_len `ui 363  ]
+[e :U 364 ]
+"792
+}
+[e $ ! > -> _len `ui -> _iDst_len `ui 368  ]
+"793
+{
+"794
+[e = _len _iDst_len ]
+"795
+}
+[e :U 368 ]
+"796
+[e = _ix _len ]
+"797
+[e $U 369  ]
+[e :U 370 ]
+"798
+{
+"799
+[e -- _ix -> -> 1 `i `us ]
+"800
+[e = *U + _sDst * -> _ix `ux -> -> # *U _sDst `ui `ux *U + _sSrc * -> _ix `ux -> -> # *U _sSrc `ui `ux ]
+"801
+}
+[e :U 369 ]
+"797
+[e $ > -> _ix `ui -> -> 0 `i `ui 370  ]
+[e :U 371 ]
+"804
+[e ) -> _len `uc ]
+[e $UE 362  ]
+"805
+[e :UE 362 ]
+}
+"812
+[v _FCI_STRMOV `(uc ~T0 @X0 1 ef4`*uc`us`*uc`us ]
+"813
+{
+[e :U _FCI_STRMOV ]
+"812
+[v _sSrc `*uc ~T0 @X0 1 r1 ]
+[v _iSrc_len `us ~T0 @X0 1 r2 ]
+[v _sDst `*uc ~T0 @X0 1 r3 ]
+[v _iDst_len `us ~T0 @X0 1 r4 ]
+"813
+[f ]
+"814
+[v _ix `us ~T0 @X0 1 a ]
+"815
+[e = _ix -> -> 0 `i `us ]
+"816
+[e $U 373  ]
+[e :U 374 ]
+"817
+{
+"818
+[e = *U + _sDst * -> _ix `ux -> -> # *U _sDst `ui `ux *U + _sSrc * -> _ix `ux -> -> # *U _sSrc `ui `ux ]
+"819
+[e ++ _ix -> -> 1 `i `us ]
+"820
+}
+[e :U 373 ]
+"816
+[e $ && && < -> _ix `ui -> _iSrc_len `ui < -> _ix `ui -> _iDst_len `ui != -> *U + _sSrc * -> _ix `ux -> -> # *U _sSrc `ui `ux `ui -> 0 `ui 374  ]
+[e :U 375 ]
+"823
+[e ) -> _ix `uc ]
+[e $UE 372  ]
+"824
+[e :UE 372 ]
+}
+"835
+[v _FCI_SHEAD `(v ~T0 @X0 1 ef6`*uc`us`*uc`us`*uc`us ]
+"836
+{
+[e :U _FCI_SHEAD ]
+"835
+[v _sSrc1 `*uc ~T0 @X0 1 r1 ]
+[v _iSrc1_len `us ~T0 @X0 1 r2 ]
+[v _sSrc2 `*uc ~T0 @X0 1 r3 ]
+[v _iSrc2_len `us ~T0 @X0 1 r4 ]
+[v _sDst `*uc ~T0 @X0 1 r5 ]
+[v _iDst_len `us ~T0 @X0 1 r6 ]
+"836
+[f ]
+"838
+[v _len `us ~T0 @X0 1 a ]
+[v _strt `us ~T0 @X0 1 a ]
+"840
+[e $ ! == -> -> _sSrc2 `us `ui -> -> _sDst `us `ui 377  ]
+"841
+{
+"842
+{
+[e = _strt -> -> 0 `i `us ]
+[e $U 381  ]
+[e :U 378 ]
+[e $ ! == -> *U + _sSrc1 * -> _strt `ux -> -> # *U _sSrc1 `ui `ux `i -> 0 `i 382  ]
+[e $U 379  ]
+[e :U 382 ]
+[e ++ _strt -> -> 1 `i `us ]
+[e :U 381 ]
+[e $ < -> _strt `ui -> _iSrc1_len `ui 378  ]
+[e :U 379 ]
+"843
+}
+[e $ ! < -> _strt `ui -> _iDst_len `ui 383  ]
+"844
+{
+"847
+{
+[e = _len -> -> 0 `i `us ]
+[e $U 387  ]
+[e :U 384 ]
+[e $ ! == -> *U + _sSrc2 * -> _len `ux -> -> # *U _sSrc2 `ui `ux `i -> 0 `i 388  ]
+[e $U 385  ]
+[e :U 388 ]
+[e ++ _len -> -> 1 `i `us ]
+[e :U 387 ]
+[e $ < -> _len `ui -> _iSrc2_len `ui 384  ]
+[e :U 385 ]
+"848
+}
+[e $ ! > -> _len `ui - -> _iDst_len `ui -> _strt `ui 389  ]
+"849
+{
+"850
+[e = _len -> - -> _iDst_len `ui -> _strt `ui `us ]
+"851
+}
+[e :U 389 ]
+"852
+[e = _iSrc2_len -> + -> _strt `ui -> _len `ui `us ]
+"853
+[e = _strt _len ]
+"854
+[e $U 390  ]
+[e :U 391 ]
+"855
+{
+"856
+[e -- _strt -> -> 1 `i `us ]
+"857
+[e -- _iSrc2_len -> -> 1 `i `us ]
+"858
+[e = *U + _sDst * -> _iSrc2_len `ux -> -> # *U _sDst `ui `ux *U + _sSrc2 * -> _strt `ux -> -> # *U _sSrc2 `ui `ux ]
+"859
+}
+[e :U 390 ]
+"854
+[e $ > -> _strt `ui -> -> 0 `i `ui 391  ]
+[e :U 392 ]
+"861
+{
+[e = _strt -> -> 0 `i `us ]
+[e $U 396  ]
+[e :U 393 ]
+[e = *U + _sDst * -> _strt `ux -> -> # *U _sDst `ui `ux *U + _sSrc1 * -> _strt `ux -> -> # *U _sSrc1 `ui `ux ]
+[e ++ _strt -> -> 1 `i `us ]
+[e :U 396 ]
+[e $ && && < -> _strt `ui -> _iSrc1_len `ui < -> _strt `ui -> _iDst_len `ui != -> *U + _sSrc1 * -> _strt `ux -> -> # *U _sSrc1 `ui `ux `ui -> 0 `ui 393  ]
+[e :U 394 ]
+}
+"862
+[e =+ _len _strt ]
+"863
+}
+[e $U 397  ]
+"864
+[e :U 383 ]
+"865
+{
+"867
+{
+[e = _len -> -> 0 `i `us ]
+[e $U 401  ]
+[e :U 398 ]
+[e = *U + _sDst * -> _len `ux -> -> # *U _sDst `ui `ux *U + _sSrc1 * -> _len `ux -> -> # *U _sSrc1 `ui `ux ]
+[e ++ _len -> -> 1 `i `us ]
+[e :U 401 ]
+[e $ && && < -> _len `ui -> _iSrc1_len `ui < -> _len `ui -> _iDst_len `ui != -> *U + _sSrc1 * -> _len `ux -> -> # *U _sSrc1 `ui `ux `ui -> 0 `ui 398  ]
+[e :U 399 ]
+}
+"868
+}
+[e :U 397 ]
+"869
+}
+[e $U 402  ]
+"870
+[e :U 377 ]
+"871
+{
+"873
+{
+[e = _len -> -> 0 `i `us ]
+[e $U 406  ]
+[e :U 403 ]
+[e = *U + _sDst * -> _len `ux -> -> # *U _sDst `ui `ux *U + _sSrc1 * -> _len `ux -> -> # *U _sSrc1 `ui `ux ]
+[e ++ _len -> -> 1 `i `us ]
+[e :U 406 ]
+[e $ && && < -> _len `ui -> _iSrc1_len `ui < -> _len `ui -> _iDst_len `ui != -> *U + _sSrc1 * -> _len `ux -> -> # *U _sSrc1 `ui `ux `ui -> 0 `ui 403  ]
+[e :U 404 ]
+}
+"875
+[e $ ! < -> _len `ui -> _iDst_len `ui 407  ]
+"876
+{
+"877
+[v _temp_sSrc1 `*uc ~T0 @X0 1 a ]
+[e = _temp_sSrc1 + _sDst * -> _len `ux -> -> # *U _sDst `ui `ux ]
+"878
+[e = _iSrc1_len -> - -> _iDst_len `ui -> _len `ui `us ]
+"879
+{
+[e = _strt -> -> 0 `i `us ]
+[e $U 411  ]
+[e :U 408 ]
+[e = *U + _temp_sSrc1 * -> _strt `ux -> -> # *U _temp_sSrc1 `ui `ux *U + _sSrc2 * -> _strt `ux -> -> # *U _sSrc2 `ui `ux ]
+[e ++ _strt -> -> 1 `i `us ]
+[e :U 411 ]
+[e $ && && < -> _strt `ui -> _iSrc2_len `ui < -> _strt `ui -> _iSrc1_len `ui != -> *U + _sSrc2 * -> _strt `ux -> -> # *U _sSrc2 `ui `ux `ui -> 0 `ui 408  ]
+[e :U 409 ]
+}
+"880
+[e =+ _len _strt ]
+"881
+}
+[e :U 407 ]
+"882
+}
+[e :U 402 ]
+"884
+[e $ ! < -> _len `ui -> _iDst_len `ui 412  ]
+"885
+{
+"886
+[e = *U + _sDst * -> _len `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+"887
+}
+[e :U 412 ]
+"888
+[e :UE 376 ]
+}
+"896
+[v _FCI_SCOPY `(v ~T0 @X0 1 ef4`*uc`us`*uc`us ]
+"897
+{
+[e :U _FCI_SCOPY ]
+"896
+[v _sSrc `*uc ~T0 @X0 1 r1 ]
+[v _iSrc_len `us ~T0 @X0 1 r2 ]
+[v _sDst `*uc ~T0 @X0 1 r3 ]
+[v _iDst_len `us ~T0 @X0 1 r4 ]
+"897
+[f ]
+"898
+[v _len `us ~T0 @X0 1 a ]
+"901
+{
+[e = _len -> -> 0 `i `us ]
+[e $U 417  ]
+[e :U 414 ]
+[e = *U + _sDst * -> _len `ux -> -> # *U _sDst `ui `ux *U + _sSrc * -> _len `ux -> -> # *U _sSrc `ui `ux ]
+[e ++ _len -> -> 1 `i `us ]
+[e :U 417 ]
+[e $ && && < -> _len `ui -> _iSrc_len `ui < -> _len `ui -> _iDst_len `ui != -> *U + _sSrc * -> _len `ux -> -> # *U _sSrc `ui `ux `ui -> 0 `ui 414  ]
+[e :U 415 ]
+}
+"903
+[e $ ! < -> _len `ui -> _iDst_len `ui 418  ]
+"904
+{
+"905
+[e = *U + _sDst * -> _len `ux -> -> # *U _sDst `ui `ux -> -> 0 `ui `uc ]
+"906
+}
+[e :U 418 ]
+"907
+[e :UE 413 ]
+}
+"79 C:\ProgramData\MatrixTSL\FlowcodeV8\CAL\PIC\PIC_CAL_Float.c
+[v _MX_Map `(l ~T0 @X0 1 ef5`l`l`l`l`l ]
+"80
+{
+[e :U _MX_Map ]
+"79
+[v _x `l ~T0 @X0 1 r1 ]
+[v _in_min `l ~T0 @X0 1 r2 ]
+[v _in_max `l ~T0 @X0 1 r3 ]
+[v _out_min `l ~T0 @X0 1 r4 ]
+[v _out_max `l ~T0 @X0 1 r5 ]
+"80
+[f ]
+"81
+[e ) + / * - _x _in_min - _out_max _out_min - _in_max _in_min _out_min ]
+[e $UE 419  ]
+"82
+[e :UE 419 ]
+}
+"84
+[v _MX_Map_Float `(d ~T0 @X0 1 ef5`d`d`d`d`d ]
+"85
+{
+[e :U _MX_Map_Float ]
+"84
+[v _x `d ~T0 @X0 1 r1 ]
+[v _in_min `d ~T0 @X0 1 r2 ]
+[v _in_max `d ~T0 @X0 1 r3 ]
+[v _out_min `d ~T0 @X0 1 r4 ]
+[v _out_max `d ~T0 @X0 1 r5 ]
+"85
+[f ]
+"86
+[e ) + / * - _x _in_min - _out_max _out_min - _in_max _in_min _out_min ]
+[e $UE 420  ]
+"87
+[e :UE 420 ]
+}
+"91
+[v _isinf `(uc ~T0 @X0 1 ef1`f ]
+"92
+{
+[e :U _isinf ]
+"91
+[v _f `f ~T0 @X0 1 r1 ]
+"92
+[f ]
+"93
+[v _b `*uc ~T0 @X0 1 a ]
+"94
+[e = _b -> &U _f `*uc ]
+"98
+[e $ ! && && && == -> *U + _b * -> -> 0 `i `x -> -> # *U _b `i `x `i -> 0 `i == -> *U + _b * -> -> 1 `i `x -> -> # *U _b `i `x `i -> 0 `i == -> *U + _b * -> -> 2 `i `x -> -> # *U _b `i `x `i -> 128 `i == & -> *U + _b * -> -> 3 `i `x -> -> # *U _b `i `x `i -> 127 `i -> 127 `i 422  ]
+"99
+{
+"100
+[e ) -> -> 255 `i `uc ]
+[e $UE 421  ]
+"101
+}
+[e :U 422 ]
+"102
+[e ) -> -> 0 `i `uc ]
+[e $UE 421  ]
+"103
+[e :UE 421 ]
+}
+[v F1647 `(l ~T0 @X0 1 tf1`ul ]
+"120
+[v _flt_cos_i `TF1647 ~T0 @X0 1 e ]
+"121
+{
+[e :U _flt_cos_i ]
+"120
+[v _Rads12 `ul ~T0 @X0 1 r1 ]
+"121
+[f ]
+"122
+[v _x `ul ~T0 @X0 1 a ]
+[v _x2 `ul ~T0 @X0 1 a ]
+[v _x4 `ul ~T0 @X0 1 a ]
+[v _x6 `ul ~T0 @X0 1 a ]
+[v _x8 `ul ~T0 @X0 1 a ]
+[v _err `ul ~T0 @X0 1 a ]
+"123
+[v _sgn `i ~T0 @X0 1 a ]
+"125
+[e = _x _Rads12 ]
+"126
+[e $ ! && > _x -> -> -> 6433 `i `l `ul <= _x -> -> -> 19301 `i `l `ul 424  ]
+"127
+{
+"128
+[e = _sgn -U -> 1 `i ]
+"129
+}
+[e $U 425  ]
+"130
+[e :U 424 ]
+"131
+{
+"132
+[e = _sgn -> 1 `i ]
+"133
+}
+[e :U 425 ]
+"134
+[e $ ! > _x -> -> -> 12867 `i `l `ul 426  ]
+"135
+{
+"136
+[e =- _x -> -> -> 12867 `i `l `ul ]
+"137
+}
+[e :U 426 ]
+"138
+[e $ ! > _x -> -> -> 6433 `i `l `ul 427  ]
+"139
+{
+"140
+[e = _x - -> -> -> 12867 `i `l `ul _x ]
+"141
+}
+[e :U 427 ]
+"143
+[e = _x2 >> + * _x _x -> -> -> 2047 `i `l `ul -> 12 `i ]
+"144
+[e = _x4 >> * _x2 _x2 -> 12 `i ]
+"145
+[e = _x6 >> * _x4 _x2 -> 12 `i ]
+"146
+[e = _x8 >> * _x4 _x4 -> 12 `i ]
+"148
+[e =* _x2 -> -> -> 360 `i `l `ul ]
+"149
+[e =* _x4 -> -> -> 30 `i `l `ul ]
+"150
+[e =/ _x8 -> -> 90 `uc `ul ]
+"151
+[e = _err -> -> -> 250 `i `l `ul ]
+"152
+[e ) >> * -> * - + - + - -> -> 2949120 `l `ul _x2 _x4 _x6 _x8 _err -> -> _sgn `l `ul `l -> -> 7 `i `l -> 1 `i ]
+[e $UE 423  ]
+"153
+[e :UE 423 ]
+}
+[v F1658 `(l ~T0 @X0 1 tf1`ul ]
+"168
+[v _flt_sin_i `TF1658 ~T0 @X0 1 e ]
+"169
+{
+[e :U _flt_sin_i ]
+"168
+[v _Rads12 `ul ~T0 @X0 1 r1 ]
+"169
+[f ]
+"170
+[v _x `ul ~T0 @X0 1 a ]
+[v _x2 `ul ~T0 @X0 1 a ]
+[v _x3 `ul ~T0 @X0 1 a ]
+[v _x5 `ul ~T0 @X0 1 a ]
+[v _x7 `ul ~T0 @X0 1 a ]
+[v _x9 `ul ~T0 @X0 1 a ]
+[v _err `ul ~T0 @X0 1 a ]
+"171
+[v _sgn `i ~T0 @X0 1 a ]
+"173
+[e = _x _Rads12 ]
+"174
+[e $ ! > _x -> -> -> 12867 `i `l `ul 429  ]
+"175
+{
+"176
+[e = _sgn -U -> 1 `i ]
+"177
+[e =- _x -> -> -> 12867 `i `l `ul ]
+"178
+}
+[e $U 430  ]
+"179
+[e :U 429 ]
+"180
+{
+"181
+[e = _sgn -> 1 `i ]
+"182
+}
+[e :U 430 ]
+"183
+[e $ ! > _x -> -> -> 6433 `i `l `ul 431  ]
+"184
+{
+"185
+[e = _x - -> -> -> 12867 `i `l `ul _x ]
+"186
+}
+[e :U 431 ]
+"187
+[e = _x2 >> + * _x _x -> -> -> 2047 `i `l `ul -> 12 `i ]
+"188
+[e = _x3 >> * _x2 _x -> 12 `i ]
+"189
+[e = _x5 >> * _x3 _x2 -> 12 `i ]
+"190
+[e = _x7 >> * _x5 _x2 -> 12 `i ]
+"191
+[e = _x9 >> * _x7 _x2 -> 12 `i ]
+"193
+[e =* _x -> -> -> 2520 `i `l `ul ]
+"194
+[e =* _x3 -> -> -> 420 `i `l `ul ]
+"195
+[e =* _x5 -> -> -> 21 `i `l `ul ]
+"196
+[e =/ _x9 -> -> 36 `uc `ul ]
+"197
+[e = _err -> -> -> 2048 `i `l `ul ]
+"198
+[e ) * -> + + - + - _x _x3 _x5 _x7 _x9 _err `l -> _sgn `l ]
+[e $UE 428  ]
+"199
+[e :UE 428 ]
+}
+"43 test 3.c
+[v _FCLV_LOOP1 `uc ~T0 @X0 1 e ]
+"102
+[v _FCV_01531_cal_spi1__CONSOLELOG `Vul ~T0 @X0 1 e ]
+"128
+[v _FCD_00fb1_ASCIIData__INTLIST_LUT `Cuc ~T0 @X0 -> 0 `x e ]
+[i _FCD_00fb1_ASCIIData__INTLIST_LUT
+:U ..
+"131
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 6 `i `uc
+-> -> 95 `i `uc
+-> -> 6 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 3 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 3 `i `uc
+-> -> 36 `i `uc
+-> -> 126 `i `uc
+"132
+-> -> 36 `i `uc
+-> -> 126 `i `uc
+-> -> 36 `i `uc
+-> -> 36 `i `uc
+-> -> 43 `i `uc
+-> -> 106 `i `uc
+-> -> 18 `i `uc
+-> -> 0 `i `uc
+-> -> 99 `i `uc
+-> -> 19 `i `uc
+-> -> 8 `i `uc
+-> -> 100 `i `uc
+-> -> 99 `i `uc
+-> -> 54 `i `uc
+-> -> 73 `i `uc
+-> -> 86 `i `uc
+"133
+-> -> 32 `i `uc
+-> -> 80 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 3 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 62 `i `uc
+-> -> 0 `i `uc
+"134
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 62 `i `uc
+-> -> 28 `i `uc
+-> -> 62 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 62 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 224 `i `uc
+-> -> 96 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+"135
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 96 `i `uc
+-> -> 96 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 32 `i `uc
+-> -> 16 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+-> -> 62 `i `uc
+"136
+-> -> 81 `i `uc
+-> -> 73 `i `uc
+-> -> 69 `i `uc
+-> -> 62 `i `uc
+-> -> 0 `i `uc
+-> -> 66 `i `uc
+-> -> 127 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 98 `i `uc
+-> -> 81 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 70 `i `uc
+-> -> 34 `i `uc
+-> -> 73 `i `uc
+"137
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 54 `i `uc
+-> -> 24 `i `uc
+-> -> 20 `i `uc
+-> -> 18 `i `uc
+-> -> 127 `i `uc
+-> -> 16 `i `uc
+-> -> 39 `i `uc
+-> -> 69 `i `uc
+-> -> 69 `i `uc
+-> -> 69 `i `uc
+-> -> 57 `i `uc
+-> -> 60 `i `uc
+-> -> 74 `i `uc
+-> -> 73 `i `uc
+"138
+-> -> 73 `i `uc
+-> -> 48 `i `uc
+-> -> 1 `i `uc
+-> -> 113 `i `uc
+-> -> 9 `i `uc
+-> -> 5 `i `uc
+-> -> 3 `i `uc
+-> -> 54 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 54 `i `uc
+-> -> 6 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 41 `i `uc
+"139
+-> -> 30 `i `uc
+-> -> 0 `i `uc
+-> -> 108 `i `uc
+-> -> 108 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 236 `i `uc
+-> -> 108 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+-> -> 34 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+"140
+-> -> 36 `i `uc
+-> -> 36 `i `uc
+-> -> 36 `i `uc
+-> -> 36 `i `uc
+-> -> 36 `i `uc
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 34 `i `uc
+-> -> 20 `i `uc
+-> -> 8 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 89 `i `uc
+-> -> 9 `i `uc
+-> -> 6 `i `uc
+-> -> 62 `i `uc
+"141
+-> -> 65 `i `uc
+-> -> 93 `i `uc
+-> -> 85 `i `uc
+-> -> 30 `i `uc
+-> -> 126 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 126 `i `uc
+-> -> 127 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 54 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+"142
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 34 `i `uc
+-> -> 127 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 62 `i `uc
+-> -> 127 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+"143
+-> -> 9 `i `uc
+-> -> 1 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 122 `i `uc
+-> -> 127 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 127 `i `uc
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 65 `i `uc
+"144
+-> -> 0 `i `uc
+-> -> 48 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 63 `i `uc
+-> -> 127 `i `uc
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+-> -> 34 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+"145
+-> -> 127 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+-> -> 127 `i `uc
+-> -> 127 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 127 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 62 `i `uc
+-> -> 127 `i `uc
+"146
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 6 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 81 `i `uc
+-> -> 33 `i `uc
+-> -> 94 `i `uc
+-> -> 127 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 25 `i `uc
+-> -> 102 `i `uc
+-> -> 38 `i `uc
+-> -> 73 `i `uc
+"147
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 50 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 127 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 63 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 63 `i `uc
+-> -> 31 `i `uc
+-> -> 32 `i `uc
+-> -> 64 `i `uc
+"148
+-> -> 32 `i `uc
+-> -> 31 `i `uc
+-> -> 63 `i `uc
+-> -> 64 `i `uc
+-> -> 60 `i `uc
+-> -> 64 `i `uc
+-> -> 63 `i `uc
+-> -> 99 `i `uc
+-> -> 20 `i `uc
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+-> -> 99 `i `uc
+-> -> 7 `i `uc
+-> -> 8 `i `uc
+-> -> 112 `i `uc
+-> -> 8 `i `uc
+"149
+-> -> 7 `i `uc
+-> -> 113 `i `uc
+-> -> 73 `i `uc
+-> -> 69 `i `uc
+-> -> 67 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 127 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 16 `i `uc
+-> -> 32 `i `uc
+"150
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 0 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+"151
+-> -> 3 `i `uc
+-> -> 7 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 32 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 120 `i `uc
+-> -> 127 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 56 `i `uc
+-> -> 56 `i `uc
+-> -> 68 `i `uc
+"152
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 40 `i `uc
+-> -> 56 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 127 `i `uc
+-> -> 56 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 24 `i `uc
+-> -> 8 `i `uc
+-> -> 126 `i `uc
+-> -> 9 `i `uc
+"153
+-> -> 9 `i `uc
+-> -> 0 `i `uc
+-> -> 24 `i `uc
+-> -> 164 `i `uc
+-> -> 164 `i `uc
+-> -> 164 `i `uc
+-> -> 124 `i `uc
+-> -> 127 `i `uc
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 125 `i `uc
+-> -> 0 `i `uc
+"154
+-> -> 0 `i `uc
+-> -> 64 `i `uc
+-> -> 128 `i `uc
+-> -> 132 `i `uc
+-> -> 125 `i `uc
+-> -> 0 `i `uc
+-> -> 127 `i `uc
+-> -> 16 `i `uc
+-> -> 40 `i `uc
+-> -> 68 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 127 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+"155
+-> -> 124 `i `uc
+-> -> 4 `i `uc
+-> -> 24 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+-> -> 124 `i `uc
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+-> -> 0 `i `uc
+-> -> 56 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 56 `i `uc
+-> -> 252 `i `uc
+"156
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 56 `i `uc
+-> -> 56 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 252 `i `uc
+-> -> 68 `i `uc
+-> -> 120 `i `uc
+-> -> 68 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 84 `i `uc
+"157
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 32 `i `uc
+-> -> 4 `i `uc
+-> -> 62 `i `uc
+-> -> 68 `i `uc
+-> -> 36 `i `uc
+-> -> 0 `i `uc
+-> -> 60 `i `uc
+-> -> 64 `i `uc
+-> -> 32 `i `uc
+-> -> 124 `i `uc
+-> -> 0 `i `uc
+-> -> 28 `i `uc
+-> -> 32 `i `uc
+-> -> 64 `i `uc
+"158
+-> -> 32 `i `uc
+-> -> 28 `i `uc
+-> -> 60 `i `uc
+-> -> 96 `i `uc
+-> -> 48 `i `uc
+-> -> 96 `i `uc
+-> -> 60 `i `uc
+-> -> 108 `i `uc
+-> -> 16 `i `uc
+-> -> 16 `i `uc
+-> -> 108 `i `uc
+-> -> 0 `i `uc
+-> -> 156 `i `uc
+-> -> 160 `i `uc
+-> -> 96 `i `uc
+-> -> 60 `i `uc
+"159
+-> -> 0 `i `uc
+-> -> 100 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 76 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 127 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+"160
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 62 `i `uc
+-> -> 8 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+"163
+-> -> 0 `i `uc
+..
+]
+"179
+[v _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR `Vus ~T0 @X0 1 e ]
+"180
+[v _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR `Vus ~T0 @X0 1 e ]
+"181
+[v _FCV_0a2b1_gLCD_ILI9341_SPI1__ORIENTATION `Vuc ~T0 @X0 1 e ]
+[i _FCV_0a2b1_gLCD_ILI9341_SPI1__ORIENTATION
+-> -> 0 `i `uc
+]
+"204 C:\ProgramData\MatrixTSL\FlowcodeV8\CAL\PIC\PIC_CAL_SPI.c
+[v _FC_CAL_SPI_Master_Init_1 `(uc ~T0 @X0 1 ef ]
+"205
+{
+[e :U _FC_CAL_SPI_Master_Init_1 ]
+[f ]
+"206
+[v _retVal `uc ~T0 @X0 1 a ]
+[e = _retVal -> -> 1 `i `uc ]
+"208
+{
+[e =& _TRISC -> ~ << -> 1 `i -> 5 `i `uc ]
+[e =| _PORTC -> << -> 1 `i -> 5 `i `uc ]
+}
+"209
+[e =| _TRISC -> << -> 1 `i -> 4 `i `uc ]
+"212
+{
+[e =& _TRISC -> ~ << -> 1 `i -> 3 `i `uc ]
+[e =| _PORTC -> << -> 1 `i -> 3 `i `uc ]
+}
+"232
+[e = _SSPCON -> & -> 1 `i -> 3 `i `uc ]
+"233
+[e = . . _SSPCONbits 0 1 -> ? != & -> 1 `i -> 1 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"234
+[e = . . _SSPSTATbits 0 6 -> ? != & -> 1 `i -> 2 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"235
+[e = . . _SSPSTATbits 0 7 -> ? != & -> 1 `i -> 4 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"236
+[e = . . _SSPCONbits 0 2 -> -> 1 `i `uc ]
+"256
+[e ) _retVal ]
+[e $UE 432  ]
+"257
+[e :UE 432 ]
+}
+"260
+[v _FC_CAL_SPI_Master_Uninit_1 `(v ~T0 @X0 1 ef ]
+"261
+{
+[e :U _FC_CAL_SPI_Master_Uninit_1 ]
+[f ]
+"266
+[e = _SSPCON -> -> 0 `i `uc ]
+"279
+[e =| _TRISC -> << -> 1 `i -> 5 `i `uc ]
+"280
+[e =| _TRISC -> << -> 1 `i -> 4 `i `uc ]
+"281
+[e =| _TRISC -> << -> 1 `i -> 3 `i `uc ]
+"282
+[e :UE 433 ]
+}
+"285
+[v _FC_CAL_SPI_Master_Byte_1 `(uc ~T0 @X0 1 ef1`uc ]
+"286
+{
+[e :U _FC_CAL_SPI_Master_Byte_1 ]
+"285
+[v _DataOut `uc ~T0 @X0 1 r1 ]
+"286
+[f ]
+"287
+[v _retVal `uc ~T0 @X0 1 a ]
+[e = _retVal -> -> 0 `i `uc ]
+"369
+[e = _SSPBUF _DataOut ]
+"370
+[e $U 435  ]
+[e :U 436 ]
+[e :U 435 ]
+[e $ == & -> _SSPSTAT `i -> 1 `i -> 0 `i 436  ]
+[e :U 437 ]
+"371
+[e = _retVal _SSPBUF ]
+"387
+[e ) _retVal ]
+[e $UE 434  ]
+"388
+[e :UE 434 ]
+}
+"391
+[v _FC_CAL_SPI_SetPrescaler_1 `(v ~T0 @X0 1 ef1`uc ]
+"392
+{
+[e :U _FC_CAL_SPI_SetPrescaler_1 ]
+"391
+[v _Prescaler `uc ~T0 @X0 1 r1 ]
+"392
+[f ]
+"412
+[e = . . _SSPCONbits 0 2 -> -> 0 `i `uc ]
+"413
+[e = _SSPCON -> & -> _SSPCON `i -> 252 `i `uc ]
+"414
+[e = _SSPCON -> | -> _SSPCON `i & -> _Prescaler `i -> 3 `i `uc ]
+"415
+[e = . . _SSPCONbits 0 2 -> -> 1 `i `uc ]
+"429
+[e :UE 438 ]
+}
+"436
+[v _FC_CAL_SPI_Transaction_Init_1 `(uc ~T0 @X0 1 ef ]
+"437
+{
+[e :U _FC_CAL_SPI_Transaction_Init_1 ]
+[f ]
+"438
+[e ( _FC_CAL_SPI_Master_Init_1 ..  ]
+"439
+[e ) -> -> 1 `i `uc ]
+[e $UE 439  ]
+"440
+[e :UE 439 ]
+}
+"442
+[v _FC_CAL_SPI_Transaction_1 `(uc ~T0 @X0 1 ef3`*uc`us`us ]
+"443
+{
+[e :U _FC_CAL_SPI_Transaction_1 ]
+"442
+[v _Buffer `*uc ~T0 @X0 1 r1 ]
+[v _Size `us ~T0 @X0 1 r2 ]
+[v _Length `us ~T0 @X0 1 r3 ]
+"443
+[f ]
+"444
+[e $ ! > -> _Length `ui -> _Size `ui 441  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 440  ]
+[e :U 441 ]
+"445
+[v _n `us ~T0 @X0 1 a ]
+[e = _n -> -> 0 `i `us ]
+"446
+[e $U 442  ]
+[e :U 443 ]
+"447
+{
+"448
+[e = *U + _Buffer * -> _n `ux -> -> # *U _Buffer `ui `ux ( _FC_CAL_SPI_Master_Byte_1 (1 *U + _Buffer * -> _n `ux -> -> # *U _Buffer `ui `ux ]
+"449
+[e =+ _n -> -> 1 `i `us ]
+"450
+}
+[e :U 442 ]
+"446
+[e $ < -> _n `ui -> _Length `ui 443  ]
+[e :U 444 ]
+"451
+[e ) -> -> 1 `i `uc ]
+[e $UE 440  ]
+"452
+[e :UE 440 ]
+}
+"454
+[v _FC_CAL_SPI_Transaction_Uninit_1 `(v ~T0 @X0 1 ef ]
+"455
+{
+[e :U _FC_CAL_SPI_Transaction_Uninit_1 ]
+[f ]
+"456
+[e ( _FC_CAL_SPI_Master_Uninit_1 ..  ]
+"457
+[e :UE 445 ]
+}
+"231 test 3.c
+[v _FCD_01531_cal_spi1__Master_Enable_CS `(v ~T0 @X0 1 ef ]
+"232
+{
+[e :U _FCD_01531_cal_spi1__Master_Enable_CS ]
+[f ]
+"235
+[v _FCL_STR `uc ~T0 @X0 -> 20 `i a ]
+"261
+[e :UE 446 ]
+}
+"272
+[v _FCD_01531_cal_spi1__Prv_TextConsole `(v ~T0 @X0 1 ef4`*uc`us`uc`uc ]
+"273
+{
+[e :U _FCD_01531_cal_spi1__Prv_TextConsole ]
+"272
+[v _FCL_STR `*uc ~T0 @X0 1 r1 ]
+[v _FCLsz_STR `us ~T0 @X0 1 r2 ]
+[v _FCL_COLOUR `uc ~T0 @X0 1 r3 ]
+[v _FCL_APPENDTIMESTAMP `uc ~T0 @X0 1 r4 ]
+"273
+[f ]
+"276
+[v _FCL_TSTR `uc ~T0 @X0 -> 20 `i a ]
+"288
+[e :UE 447 ]
+}
+"295
+[v _FCD_01531_cal_spi1__Prv_SimShowWaveform `(v ~T0 @X0 1 ef2`uc`us ]
+"296
+{
+[e :U _FCD_01531_cal_spi1__Prv_SimShowWaveform ]
+"295
+[v _FCL_RXDATA `uc ~T0 @X0 1 r1 ]
+[v _FCL_TXDATA `us ~T0 @X0 1 r2 ]
+"296
+[f ]
+"300
+{
+[e = _FCLV_LOOP1 -> -> 0 `i `uc ]
+[e $ < -> _FCLV_LOOP1 `i -> 8 `i 449  ]
+[e $U 450  ]
+"301
+[e :U 449 ]
+{
+"311
+{
+[e =& _TRISC -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTC -> | -> _PORTC `i << -> 1 `i -> 3 `i `uc `i -> = _PORTC -> & -> _PORTC `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"320
+[e $ ! != & -> _FCL_TXDATA `ui -> -> 128 `i `ui -> -> 0 `i `ui 452  ]
+"321
+{
+"324
+{
+[e =& _TRISC -> ~ << -> 1 `i -> 5 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTC -> | -> _PORTC `i << -> 1 `i -> 5 `i `uc `i -> = _PORTC -> & -> _PORTC `i ~ << -> 1 `i -> 5 `i `uc `i ]
+}
+"326
+}
+[e $U 453  ]
+[e :U 452 ]
+{
+"329
+{
+[e =& _TRISC -> ~ << -> 1 `i -> 5 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTC -> | -> _PORTC `i << -> 1 `i -> 5 `i `uc `i -> = _PORTC -> & -> _PORTC `i ~ << -> 1 `i -> 5 `i `uc `i ]
+}
+"331
+}
+[e :U 453 ]
+"335
+[e $ ! != & -> _FCL_RXDATA `i -> 128 `i -> 0 `i 454  ]
+"336
+{
+"339
+{
+[e =& _TRISC -> ~ << -> 1 `i -> 4 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTC -> | -> _PORTC `i << -> 1 `i -> 4 `i `uc `i -> = _PORTC -> & -> _PORTC `i ~ << -> 1 `i -> 4 `i `uc `i ]
+}
+"341
+}
+[e $U 455  ]
+[e :U 454 ]
+{
+"344
+{
+[e =& _TRISC -> ~ << -> 1 `i -> 4 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTC -> | -> _PORTC `i << -> 1 `i -> 4 `i `uc `i -> = _PORTC -> & -> _PORTC `i ~ << -> 1 `i -> 4 `i `uc `i ]
+}
+"346
+}
+[e :U 455 ]
+"353
+[e ( _delay_us (1 -> -> 16 `i `uc ]
+"366
+{
+[e =& _TRISC -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTC -> | -> _PORTC `i << -> 1 `i -> 3 `i `uc `i -> = _PORTC -> & -> _PORTC `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"379
+[e ( _delay_us (1 -> -> 16 `i `uc ]
+"390
+[e = _FCL_TXDATA -> << -> _FCL_TXDATA `ui -> 1 `i `us ]
+"391
+[e = _FCL_RXDATA -> << -> _FCL_RXDATA `i -> 1 `i `uc ]
+"394
+}
+"300
+[e ++ _FCLV_LOOP1 -> -> 1 `i `uc ]
+[e $ < -> _FCLV_LOOP1 `i -> 8 `i 449  ]
+[e :U 450 ]
+"394
+}
+"401
+[e :UE 448 ]
+}
+"406
+[v _FCD_01531_cal_spi1__Master_Disable_CS `(v ~T0 @X0 1 ef ]
+"407
+{
+[e :U _FCD_01531_cal_spi1__Master_Disable_CS ]
+[f ]
+"410
+[v _FCL_STR `uc ~T0 @X0 -> 20 `i a ]
+"436
+[e :UE 456 ]
+}
+"448
+[v _FCD_00fb1_ASCIIData__GetLUTCount `(us ~T0 @X0 1 ef ]
+"449
+{
+[e :U _FCD_00fb1_ASCIIData__GetLUTCount ]
+[f ]
+"451
+[v _FCR_RETVAL `us ~T0 @X0 1 a ]
+"455
+[e = _FCR_RETVAL -> -> 475 `i `us ]
+"457
+[e ) _FCR_RETVAL ]
+[e $UE 457  ]
+"459
+[e :UE 457 ]
+}
+"475
+[v _FCD_0ba71_Base_GLCD__ReadASCIILUT `(uc ~T0 @X0 1 ef2`uc`uc ]
+"476
+{
+[e :U _FCD_0ba71_Base_GLCD__ReadASCIILUT ]
+"475
+[v _FCL_POS_STR `uc ~T0 @X0 1 r1 ]
+[v _FCL_COUNT `uc ~T0 @X0 1 r2 ]
+"476
+[f ]
+"478
+[v _FCL_POSITION `us ~T0 @X0 1 a ]
+"479
+[v _FCR_RETVAL `uc ~T0 @X0 1 a ]
+"484
+[e $ ! > -> _FCL_POS_STR `i -> 94 `i 459  ]
+"485
+{
+"488
+[e = _FCR_RETVAL -> -> 170 `i `uc ]
+"490
+}
+[e $U 460  ]
+[e :U 459 ]
+{
+"493
+[e = _FCL_POSITION -> + * -> _FCL_POS_STR `i -> 5 `i -> _FCL_COUNT `i `us ]
+"495
+[e = _FCR_RETVAL *U + &U _FCD_00fb1_ASCIIData__INTLIST_LUT * -> _FCL_POSITION `ux -> -> # *U &U _FCD_00fb1_ASCIIData__INTLIST_LUT `ui `ux ]
+"497
+}
+[e :U 460 ]
+"504
+[e ) _FCR_RETVAL ]
+[e $UE 458  ]
+"506
+[e :UE 458 ]
+}
+"517
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__BacklightOn `(v ~T0 @X0 1 ef ]
+"518
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__BacklightOn ]
+[f ]
+"527
+[e :UE 461 ]
+}
+"533
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg `(v ~T0 @X0 1 ef1`uc ]
+"534
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg ]
+"533
+[v _FCL_DATA `uc ~T0 @X0 1 r1 ]
+"534
+[f ]
+"537
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"539
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 _FCL_DATA ]
+"541
+[e :UE 462 ]
+}
+"553
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__PrintNumber `(v ~T0 @X0 1 ef5`s`us`us`uc`uc ]
+"554
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__PrintNumber ]
+"553
+[v _FCL_NUMBER `s ~T0 @X0 1 r1 ]
+[v _FCL_X `us ~T0 @X0 1 r2 ]
+[v _FCL_Y `us ~T0 @X0 1 r3 ]
+[v _FCL_FONT `uc ~T0 @X0 1 r4 ]
+[v _FCL_TRANSPARENT `uc ~T0 @X0 1 r5 ]
+"554
+[f ]
+"557
+[v _FCL_TEMP `uc ~T0 @X0 -> 8 `i a ]
+"561
+[e ( _FCI_TOSTRING (3 , , -> _FCL_NUMBER `l &U _FCL_TEMP -> -> 8 `i `us ]
+"563
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Print (4 , , , , , &U _FCL_TEMP -> -> 8 `i `us _FCL_X _FCL_Y _FCL_FONT _FCL_TRANSPARENT ]
+"567
+[e :UE 463 ]
+}
+"578
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine `(v ~T0 @X0 1 ef4`us`us`us`us ]
+"579
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine ]
+"578
+[v _FCL_X1 `us ~T0 @X0 1 r1 ]
+[v _FCL_Y1 `us ~T0 @X0 1 r2 ]
+[v _FCL_X2 `us ~T0 @X0 1 r3 ]
+[v _FCL_Y2 `us ~T0 @X0 1 r4 ]
+"579
+[f ]
+"581
+[v _FCL_C1 `s ~T0 @X0 1 a ]
+"582
+[v _FCL_M1 `s ~T0 @X0 1 a ]
+"583
+[v _FCL_D1 `s ~T0 @X0 1 a ]
+[e = _FCL_D1 -> -> 0 `i `s ]
+"584
+[v _FCL_PIXELX `s ~T0 @X0 1 a ]
+"585
+[v _FCL_PIXELY `s ~T0 @X0 1 a ]
+"586
+[v _FCL_YINC `s ~T0 @X0 1 a ]
+[e = _FCL_YINC -> -> 1 `i `s ]
+"587
+[v _FCL_XINC `s ~T0 @X0 1 a ]
+[e = _FCL_XINC -> -> 1 `i `s ]
+"588
+[v _FCL_X `s ~T0 @X0 1 a ]
+"589
+[v _FCL_Y `s ~T0 @X0 1 a ]
+"594
+[e = _FCL_PIXELX -> - -> _FCL_X2 `ui -> _FCL_X1 `ui `s ]
+"595
+[e = _FCL_PIXELY -> - -> _FCL_Y2 `ui -> _FCL_Y1 `ui `s ]
+"599
+[e = _FCL_X -> _FCL_X1 `s ]
+"600
+[e = _FCL_Y -> _FCL_Y1 `s ]
+"602
+[e $ ! < -> _FCL_PIXELX `i -> 0 `i 465  ]
+"603
+{
+"607
+[e = _FCL_XINC -> -U -> 1 `i `s ]
+"608
+[e = _FCL_PIXELX -> * -> _FCL_PIXELX `i -U -> 1 `i `s ]
+"612
+}
+[e :U 465 ]
+"614
+[e $ ! < -> _FCL_PIXELY `i -> 0 `i 466  ]
+"615
+{
+"619
+[e = _FCL_YINC -> -U -> 1 `i `s ]
+"620
+[e = _FCL_PIXELY -> * -> _FCL_PIXELY `i -U -> 1 `i `s ]
+"624
+}
+[e :U 466 ]
+"626
+[e $ ! <= -> _FCL_PIXELY `i -> _FCL_PIXELX `i 467  ]
+"627
+{
+"631
+[e = _FCL_C1 -> * -> 2 `i -> _FCL_PIXELX `i `s ]
+"632
+[e = _FCL_M1 -> * -> 2 `i -> _FCL_PIXELY `i `s ]
+"634
+[e $U 468  ]
+[e :U 469 ]
+"635
+{
+"637
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> _FCL_X `us -> _FCL_Y `us ]
+"640
+[e = _FCL_X -> + -> _FCL_X `i -> _FCL_XINC `i `s ]
+"643
+[e = _FCL_D1 -> + -> _FCL_D1 `i -> _FCL_M1 `i `s ]
+"645
+[e $ ! > -> _FCL_D1 `i -> _FCL_PIXELX `i 471  ]
+"646
+{
+"649
+[e = _FCL_Y -> + -> _FCL_Y `i -> _FCL_YINC `i `s ]
+"652
+[e = _FCL_D1 -> - -> _FCL_D1 `i -> _FCL_C1 `i `s ]
+"656
+}
+[e :U 471 ]
+"659
+}
+[e :U 468 ]
+"634
+[e $ != -> _FCL_X `ui -> _FCL_X2 `ui 469  ]
+[e :U 470 ]
+"661
+}
+[e $U 472  ]
+[e :U 467 ]
+{
+"665
+[e = _FCL_C1 -> * -> 2 `i -> _FCL_PIXELY `i `s ]
+"666
+[e = _FCL_M1 -> * -> 2 `i -> _FCL_PIXELX `i `s ]
+"668
+[e $U 473  ]
+[e :U 474 ]
+"669
+{
+"671
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> _FCL_X `us -> _FCL_Y `us ]
+"674
+[e = _FCL_Y -> + -> _FCL_Y `i -> _FCL_YINC `i `s ]
+"677
+[e = _FCL_D1 -> + -> _FCL_D1 `i -> _FCL_M1 `i `s ]
+"679
+[e $ ! > -> _FCL_D1 `i -> _FCL_PIXELY `i 476  ]
+"680
+{
+"683
+[e = _FCL_X -> + -> _FCL_X `i -> _FCL_XINC `i `s ]
+"686
+[e = _FCL_D1 -> - -> _FCL_D1 `i -> _FCL_C1 `i `s ]
+"690
+}
+[e :U 476 ]
+"693
+}
+[e :U 473 ]
+"668
+[e $ != -> _FCL_Y `ui -> _FCL_Y2 `ui 474  ]
+[e :U 475 ]
+"695
+}
+[e :U 472 ]
+"697
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> _FCL_X `us -> _FCL_Y `us ]
+"699
+[e :UE 464 ]
+}
+"705
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 `(v ~T0 @X0 1 ef1`uc ]
+"706
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 ]
+"705
+[v _FCL_DATA `uc ~T0 @X0 1 r1 ]
+"706
+[f ]
+"709
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"711
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 _FCL_DATA ]
+"713
+[e :UE 477 ]
+}
+"726
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawEllipse `(v ~T0 @X0 1 ef6`us`us`us`us`uc`uc ]
+"727
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawEllipse ]
+"726
+[v _FCL_X `us ~T0 @X0 1 r1 ]
+[v _FCL_Y `us ~T0 @X0 1 r2 ]
+[v _FCL_XRADIUS `us ~T0 @X0 1 r3 ]
+[v _FCL_YRADIUS `us ~T0 @X0 1 r4 ]
+[v _FCL_TRANSPARENT `uc ~T0 @X0 1 r5 ]
+[v _FCL_SOLID `uc ~T0 @X0 1 r6 ]
+"727
+[f ]
+"729
+[v _FCL_ERR `s ~T0 @X0 1 a ]
+"730
+[v _FCL_CURX `s ~T0 @X0 1 a ]
+"731
+[v _FCL_CURY `s ~T0 @X0 1 a ]
+"732
+[v _FCL_BGCOL `ul ~T0 @X0 1 a ]
+"733
+[v _FCL_FGCOL `ul ~T0 @X0 1 a ]
+"734
+[v _FCL_REP `uc ~T0 @X0 1 a ]
+[e = _FCL_REP -> -> 0 `i `uc ]
+"735
+[v _FCL_E2 `s ~T0 @X0 1 a ]
+"736
+[v _FCL_K `d ~T0 @X0 1 a ]
+"739
+[e $ ! == -> _FCL_SOLID `i -> 1 `i 479  ]
+"740
+{
+"742
+[e :U 480 ]
+"747
+[e = _FCL_CURX -> -> 0 `i `s ]
+"748
+[e = _FCL_CURY -> - -> -> 0 `i `ui -> _FCL_YRADIUS `ui `s ]
+"751
+[e = _FCL_ERR -> - -> -> 2 `i `ui * -> -> 2 `i `ui -> _FCL_XRADIUS `ui `s ]
+"754
+[e = _FCL_K -> / -> _FCL_YRADIUS `f -> _FCL_XRADIUS `f `d ]
+"756
+[e :U 482 ]
+"757
+{
+"759
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine (4 , , , -> -> - -> _FCL_X `f / -> _FCL_CURX `f -> _FCL_K `f `l `us -> + -> _FCL_Y `ui -> _FCL_CURY `ui `us -> -> + -> _FCL_X `f / -> _FCL_CURX `f -> _FCL_K `f `l `us -> + -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"761
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine (4 , , , -> -> - -> _FCL_X `f / -> _FCL_CURX `f -> _FCL_K `f `l `us -> - -> _FCL_Y `ui -> _FCL_CURY `ui `us -> -> + -> _FCL_X `f / -> _FCL_CURX `f -> _FCL_K `f `l `us -> - -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"764
+[e = _FCL_E2 _FCL_ERR ]
+"766
+[e $ ! <= -> _FCL_E2 `i -> _FCL_CURX `i 484  ]
+"767
+{
+"771
+[e = _FCL_CURX -> + -> _FCL_CURX `i -> 1 `i `s ]
+"772
+[e = _FCL_ERR -> + -> _FCL_ERR `i + * -> _FCL_CURX `i -> 2 `i -> 1 `i `s ]
+"774
+[e $ ! && == - -> 0 `i -> _FCL_CURY `i -> _FCL_CURX `i <= -> _FCL_E2 `i -> _FCL_CURY `i 485  ]
+"775
+{
+"778
+[e = _FCL_E2 -> -> 0 `i `s ]
+"782
+}
+[e :U 485 ]
+"786
+}
+[e :U 484 ]
+"788
+[e $ ! > -> _FCL_E2 `i -> _FCL_CURY `i 486  ]
+"789
+{
+"793
+[e = _FCL_CURY -> + -> _FCL_CURY `i -> 1 `i `s ]
+"794
+[e = _FCL_ERR -> + -> _FCL_ERR `i + * -> _FCL_CURY `i -> 2 `i -> 1 `i `s ]
+"798
+}
+[e :U 486 ]
+"801
+[e $ ! == -> <= -> _FCL_CURY `i -> 0 `i `i -> 0 `i 487  ]
+[e $U 483  ]
+[e :U 487 ]
+"802
+}
+[e :U 481 ]
+"756
+[e $U 482  ]
+[e :U 483 ]
+"804
+}
+[e $U 488  ]
+[e :U 479 ]
+{
+"806
+[e $ ! == -> _FCL_TRANSPARENT `i -> 1 `i 489  ]
+"807
+{
+"809
+[e :U 490 ]
+"814
+[e = _FCL_CURX -> -> 0 `i `s ]
+"815
+[e = _FCL_CURY -> - -> -> 0 `i `ui -> _FCL_YRADIUS `ui `s ]
+"818
+[e = _FCL_ERR -> - -> -> 2 `i `ui * -> -> 2 `i `ui -> _FCL_XRADIUS `ui `s ]
+"821
+[e = _FCL_K -> / -> _FCL_YRADIUS `f -> _FCL_XRADIUS `f `d ]
+"823
+[e :U 492 ]
+"824
+{
+"826
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> -> - -> _FCL_X `f / -> _FCL_CURX `f -> _FCL_K `f `l `us -> + -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"828
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> -> + -> _FCL_X `f / -> _FCL_CURX `f -> _FCL_K `f `l `us -> + -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"830
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> -> + -> _FCL_X `f / -> _FCL_CURX `f -> _FCL_K `f `l `us -> - -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"832
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> -> - -> _FCL_X `f / -> _FCL_CURX `f -> _FCL_K `f `l `us -> - -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"835
+[e = _FCL_E2 _FCL_ERR ]
+"837
+[e $ ! <= -> _FCL_E2 `i -> _FCL_CURX `i 494  ]
+"838
+{
+"842
+[e = _FCL_CURX -> + -> _FCL_CURX `i -> 1 `i `s ]
+"843
+[e = _FCL_ERR -> + -> _FCL_ERR `i + * -> _FCL_CURX `i -> 2 `i -> 1 `i `s ]
+"845
+[e $ ! && == - -> 0 `i -> _FCL_CURY `i -> _FCL_CURX `i <= -> _FCL_E2 `i -> _FCL_CURY `i 495  ]
+"846
+{
+"849
+[e = _FCL_E2 -> -> 0 `i `s ]
+"853
+}
+[e :U 495 ]
+"857
+}
+[e :U 494 ]
+"859
+[e $ ! > -> _FCL_E2 `i -> _FCL_CURY `i 496  ]
+"860
+{
+"864
+[e = _FCL_CURY -> + -> _FCL_CURY `i -> 1 `i `s ]
+"865
+[e = _FCL_ERR -> + -> _FCL_ERR `i + * -> _FCL_CURY `i -> 2 `i -> 1 `i `s ]
+"869
+}
+[e :U 496 ]
+"872
+[e $ ! == -> <= -> _FCL_CURY `i -> 0 `i `i -> 0 `i 497  ]
+[e $U 493  ]
+[e :U 497 ]
+"873
+}
+[e :U 491 ]
+"823
+[e $U 492  ]
+[e :U 493 ]
+"875
+}
+[e $U 498  ]
+[e :U 489 ]
+{
+"879
+[e = _FCL_FGCOL -> _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR `ul ]
+"880
+[e = _FCL_BGCOL -> _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR `ul ]
+"883
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR -> _FCL_BGCOL `us ]
+"886
+[e = _FCL_REP -> -> 1 `i `uc ]
+"888
+[e $U 480  ]
+"890
+}
+[e :U 498 ]
+"892
+}
+[e :U 488 ]
+"894
+[e $ ! == -> _FCL_REP `i -> 1 `i 499  ]
+"895
+{
+"898
+[e = _FCL_REP -> + -> _FCL_REP `i -> 1 `i `uc ]
+"901
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR -> _FCL_FGCOL `us ]
+"903
+[e $U 490  ]
+"907
+}
+[e :U 499 ]
+"909
+[e :UE 478 ]
+}
+"918
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot `(v ~T0 @X0 1 ef2`us`us ]
+"919
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot ]
+"918
+[v _FCL_X1 `us ~T0 @X0 1 r1 ]
+[v _FCL_Y1 `us ~T0 @X0 1 r2 ]
+"919
+[f ]
+"921
+[v _FCL_TEMP `us ~T0 @X0 1 a ]
+"924
+[e $U 502  ]
+"925
+{
+"926
+[e :U 503 ]
+"927
+{
+"931
+[e = _FCL_TEMP -> - -> -> 240 `i `ui + -> _FCL_Y1 `ui -> -> 1 `i `ui `us ]
+"932
+[e = _FCL_Y1 _FCL_X1 ]
+"933
+[e = _FCL_X1 _FCL_TEMP ]
+"935
+[e $U 501  ]
+"936
+}
+"937
+[e :U 504 ]
+"938
+{
+"941
+[e = _FCL_X1 -> - -> -> 240 `i `ui + -> _FCL_X1 `ui -> -> 1 `i `ui `us ]
+"942
+[e = _FCL_Y1 -> - -> -> 320 `i `ui + -> _FCL_Y1 `ui -> -> 1 `i `ui `us ]
+"944
+[e $U 501  ]
+"945
+}
+"946
+[e :U 505 ]
+"947
+{
+"951
+[e = _FCL_TEMP _FCL_Y1 ]
+"952
+[e = _FCL_Y1 -> - -> -> 320 `i `ui + -> _FCL_X1 `ui -> -> 1 `i `ui `us ]
+"953
+[e = _FCL_X1 _FCL_TEMP ]
+"955
+[e $U 501  ]
+"956
+}
+"959
+}
+[e $U 501  ]
+"924
+[e :U 502 ]
+[e [\ _FCV_0a2b1_gLCD_ILI9341_SPI1__ORIENTATION , $ -> -> 1 `i `uc 503
+ , $ -> -> 2 `i `uc 504
+ , $ -> -> 3 `i `uc 505
+ 501 ]
+"959
+[e :U 501 ]
+"961
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Window (4 , , , _FCL_X1 _FCL_Y1 _FCL_X1 _FCL_Y1 ]
+"970
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> >> -> _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR `ui -> 8 `i `uc ]
+"972
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR `uc ]
+"981
+[e :UE 500 ]
+}
+"987
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__FastPlot `(v ~T0 @X0 1 ef ]
+"988
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__FastPlot ]
+[f ]
+"997
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> >> -> _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR `ui -> 8 `i `uc ]
+"999
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR `uc ]
+"1008
+[e :UE 506 ]
+}
+"1016
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__SetDisplayOrientation `(v ~T0 @X0 1 ef1`uc ]
+"1017
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__SetDisplayOrientation ]
+"1016
+[v _FCL_ORIENTATION `uc ~T0 @X0 1 r1 ]
+"1017
+[f ]
+"1020
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__ORIENTATION _FCL_ORIENTATION ]
+"1022
+[e :UE 507 ]
+}
+"1028
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__BacklightOff `(v ~T0 @X0 1 ef ]
+"1029
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__BacklightOff ]
+[f ]
+"1038
+[e :UE 508 ]
+}
+"1047
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__BPlot `(v ~T0 @X0 1 ef2`us`us ]
+"1048
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__BPlot ]
+"1047
+[v _FCL_X1 `us ~T0 @X0 1 r1 ]
+[v _FCL_Y1 `us ~T0 @X0 1 r2 ]
+"1048
+[f ]
+"1050
+[v _FCL_TEMP `us ~T0 @X0 1 a ]
+"1053
+[e $U 511  ]
+"1054
+{
+"1055
+[e :U 512 ]
+"1056
+{
+"1060
+[e = _FCL_TEMP -> - -> -> 240 `i `ui + -> _FCL_Y1 `ui -> -> 1 `i `ui `us ]
+"1061
+[e = _FCL_Y1 _FCL_X1 ]
+"1062
+[e = _FCL_X1 _FCL_TEMP ]
+"1064
+[e $U 510  ]
+"1065
+}
+"1066
+[e :U 513 ]
+"1067
+{
+"1070
+[e = _FCL_X1 -> - -> -> 240 `i `ui + -> _FCL_X1 `ui -> -> 1 `i `ui `us ]
+"1071
+[e = _FCL_Y1 -> - -> -> 320 `i `ui + -> _FCL_Y1 `ui -> -> 1 `i `ui `us ]
+"1073
+[e $U 510  ]
+"1074
+}
+"1075
+[e :U 514 ]
+"1076
+{
+"1080
+[e = _FCL_TEMP _FCL_Y1 ]
+"1081
+[e = _FCL_Y1 -> - -> -> 320 `i `ui + -> _FCL_X1 `ui -> -> 1 `i `ui `us ]
+"1082
+[e = _FCL_X1 _FCL_TEMP ]
+"1084
+[e $U 510  ]
+"1085
+}
+"1088
+}
+[e $U 510  ]
+"1053
+[e :U 511 ]
+[e [\ _FCV_0a2b1_gLCD_ILI9341_SPI1__ORIENTATION , $ -> -> 1 `i `uc 512
+ , $ -> -> 2 `i `uc 513
+ , $ -> -> 3 `i `uc 514
+ 510 ]
+"1088
+[e :U 510 ]
+"1090
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Window (4 , , , _FCL_X1 _FCL_Y1 _FCL_X1 _FCL_Y1 ]
+"1093
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 2 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 2 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 2 `i `uc `i ]
+}
+"1095
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> >> -> _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR `ui -> 8 `i `uc ]
+"1097
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR `uc ]
+"1100
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 2 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 2 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 2 `i `uc `i ]
+}
+"1102
+[e :UE 509 ]
+}
+"1111
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__Window `(v ~T0 @X0 1 ef4`us`us`us`us ]
+"1112
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__Window ]
+"1111
+[v _FCL_X1 `us ~T0 @X0 1 r1 ]
+[v _FCL_Y1 `us ~T0 @X0 1 r2 ]
+[v _FCL_X2 `us ~T0 @X0 1 r3 ]
+[v _FCL_Y2 `us ~T0 @X0 1 r4 ]
+"1112
+[f ]
+"1125
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"1127
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> -> 42 `i `uc ]
+"1130
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"1132
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> >> -> _FCL_X1 `ui -> 8 `i `uc ]
+"1134
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> _FCL_X1 `uc ]
+"1136
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> >> -> _FCL_X2 `ui -> 8 `i `uc ]
+"1138
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> _FCL_X2 `uc ]
+"1144
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"1146
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> -> 43 `i `uc ]
+"1149
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"1151
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> >> -> _FCL_Y1 `ui -> 8 `i `uc ]
+"1153
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> _FCL_Y1 `uc ]
+"1155
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> >> -> _FCL_Y2 `ui -> 8 `i `uc ]
+"1157
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> _FCL_Y2 `uc ]
+"1163
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"1165
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> -> 44 `i `uc ]
+"1168
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"1177
+[e :UE 515 ]
+}
+"1189
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__Print `(v ~T0 @X0 1 ef6`*uc`us`us`us`uc`uc ]
+"1190
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__Print ]
+"1189
+[v _FCL_STR `*uc ~T0 @X0 1 r1 ]
+[v _FCLsz_STR `us ~T0 @X0 1 r2 ]
+[v _FCL_X1 `us ~T0 @X0 1 r3 ]
+[v _FCL_Y1 `us ~T0 @X0 1 r4 ]
+[v _FCL_FONT `uc ~T0 @X0 1 r5 ]
+[v _FCL_TRANSPARENT `uc ~T0 @X0 1 r6 ]
+"1190
+[f ]
+"1192
+[v _FCL_XPIX `uc ~T0 @X0 1 a ]
+"1193
+[v _FCL_YPIX `uc ~T0 @X0 1 a ]
+"1194
+[v _FCL_POS_STR `uc ~T0 @X0 1 a ]
+"1195
+[v _FCL_LEN_STR `uc ~T0 @X0 1 a ]
+"1196
+[v _FCL_COUNT `uc ~T0 @X0 1 a ]
+"1197
+[v _FCL_XCOUNT `uc ~T0 @X0 1 a ]
+"1198
+[v _FCL_YCOUNT `uc ~T0 @X0 1 a ]
+"1199
+[v _FCL_HEIGHT `uc ~T0 @X0 1 a ]
+"1200
+[v _FCL_WIDTH `uc ~T0 @X0 1 a ]
+"1201
+[v _FCL_IDX `uc ~T0 @X0 1 a ]
+"1202
+[v _FCL_FONT_WIDTH `uc ~T0 @X0 1 a ]
+[e = _FCL_FONT_WIDTH -> -> 1 `i `uc ]
+"1203
+[v _FCL_FONT_HEIGHT `uc ~T0 @X0 1 a ]
+[e = _FCL_FONT_HEIGHT -> -> 1 `i `uc ]
+"1204
+[v _FCL_POSITION `uc ~T0 @X0 1 a ]
+"1206
+[v _FCL_TEMP `uc ~T0 @X0 -> 6 `i a ]
+"1207
+[v _FCL_DAT `uc ~T0 @X0 1 a ]
+"1210
+[e $U 518  ]
+"1211
+{
+"1212
+[e :U 519 ]
+"1213
+{
+"1215
+[e = _FCL_FONT_WIDTH -> -> 2 `i `uc ]
+"1217
+[e $U 517  ]
+"1218
+}
+"1219
+[e :U 520 ]
+"1220
+{
+"1223
+[e = _FCL_FONT_WIDTH -> -> 2 `i `uc ]
+"1224
+[e = _FCL_FONT_HEIGHT -> -> 2 `i `uc ]
+"1226
+[e $U 517  ]
+"1227
+}
+"1228
+[e :U 521 ]
+"1229
+{
+"1231
+[e = _FCL_FONT_HEIGHT -> -> 2 `i `uc ]
+"1233
+[e $U 517  ]
+"1234
+}
+"1235
+[e :U 522 ]
+"1236
+{
+"1239
+[e = _FCL_FONT_WIDTH -> -> 2 `i `uc ]
+"1240
+[e = _FCL_FONT_HEIGHT -> -> 3 `i `uc ]
+"1242
+[e $U 517  ]
+"1243
+}
+"1244
+[e :U 523 ]
+"1245
+{
+"1248
+[e = _FCL_FONT_WIDTH -> -> 2 `i `uc ]
+"1249
+[e = _FCL_FONT_HEIGHT -> -> 4 `i `uc ]
+"1251
+[e $U 517  ]
+"1252
+}
+"1253
+[e :U 524 ]
+"1254
+{
+"1257
+[e = _FCL_FONT_WIDTH -> -> 2 `i `uc ]
+"1258
+[e = _FCL_FONT_HEIGHT -> -> 5 `i `uc ]
+"1260
+[e $U 517  ]
+"1261
+}
+"1262
+[e :U 525 ]
+"1263
+{
+"1266
+[e = _FCL_FONT_WIDTH -> -> 2 `i `uc ]
+"1267
+[e = _FCL_FONT_HEIGHT -> -> 6 `i `uc ]
+"1269
+[e $U 517  ]
+"1270
+}
+"1271
+[e :U 526 ]
+"1272
+{
+"1275
+[e = _FCL_FONT_WIDTH -> -> 3 `i `uc ]
+"1276
+[e = _FCL_FONT_HEIGHT -> -> 1 `i `uc ]
+"1278
+[e $U 517  ]
+"1279
+}
+"1280
+[e :U 527 ]
+"1281
+{
+"1284
+[e = _FCL_FONT_WIDTH -> -> 3 `i `uc ]
+"1285
+[e = _FCL_FONT_HEIGHT -> -> 2 `i `uc ]
+"1287
+[e $U 517  ]
+"1288
+}
+"1289
+[e :U 528 ]
+"1290
+{
+"1293
+[e = _FCL_FONT_WIDTH -> -> 3 `i `uc ]
+"1294
+[e = _FCL_FONT_HEIGHT -> -> 3 `i `uc ]
+"1296
+[e $U 517  ]
+"1297
+}
+"1300
+}
+[e $U 517  ]
+"1210
+[e :U 518 ]
+[e [\ _FCL_FONT , $ -> -> 1 `i `uc 519
+ , $ -> -> 2 `i `uc 520
+ , $ -> -> 3 `i `uc 521
+ , $ -> -> 4 `i `uc 522
+ , $ -> -> 5 `i `uc 523
+ , $ -> -> 6 `i `uc 524
+ , $ -> -> 7 `i `uc 525
+ , $ -> -> 8 `i `uc 526
+ , $ -> -> 9 `i `uc 527
+ , $ -> -> 10 `i `uc 528
+ 517 ]
+"1300
+[e :U 517 ]
+"1302
+[e $U 530  ]
+"1303
+{
+"1304
+[e :U 531 ]
+"1305
+{
+"1308
+[e = _FCL_FONT_WIDTH -> -> 3 `i `uc ]
+"1309
+[e = _FCL_FONT_HEIGHT -> -> 4 `i `uc ]
+"1311
+[e $U 529  ]
+"1312
+}
+"1313
+[e :U 532 ]
+"1314
+{
+"1317
+[e = _FCL_FONT_WIDTH -> -> 3 `i `uc ]
+"1318
+[e = _FCL_FONT_HEIGHT -> -> 5 `i `uc ]
+"1320
+[e $U 529  ]
+"1321
+}
+"1322
+[e :U 533 ]
+"1323
+{
+"1326
+[e = _FCL_FONT_WIDTH -> -> 3 `i `uc ]
+"1327
+[e = _FCL_FONT_HEIGHT -> -> 6 `i `uc ]
+"1329
+[e $U 529  ]
+"1330
+}
+"1331
+[e :U 534 ]
+"1332
+{
+"1335
+[e = _FCL_FONT_WIDTH -> -> 4 `i `uc ]
+"1336
+[e = _FCL_FONT_HEIGHT -> -> 1 `i `uc ]
+"1338
+[e $U 529  ]
+"1339
+}
+"1340
+[e :U 535 ]
+"1341
+{
+"1344
+[e = _FCL_FONT_WIDTH -> -> 4 `i `uc ]
+"1345
+[e = _FCL_FONT_HEIGHT -> -> 2 `i `uc ]
+"1347
+[e $U 529  ]
+"1348
+}
+"1349
+[e :U 536 ]
+"1350
+{
+"1353
+[e = _FCL_FONT_WIDTH -> -> 4 `i `uc ]
+"1354
+[e = _FCL_FONT_HEIGHT -> -> 3 `i `uc ]
+"1356
+[e $U 529  ]
+"1357
+}
+"1358
+[e :U 537 ]
+"1359
+{
+"1362
+[e = _FCL_FONT_WIDTH -> -> 4 `i `uc ]
+"1363
+[e = _FCL_FONT_HEIGHT -> -> 4 `i `uc ]
+"1365
+[e $U 529  ]
+"1366
+}
+"1367
+[e :U 538 ]
+"1368
+{
+"1371
+[e = _FCL_FONT_WIDTH -> -> 4 `i `uc ]
+"1372
+[e = _FCL_FONT_HEIGHT -> -> 5 `i `uc ]
+"1374
+[e $U 529  ]
+"1375
+}
+"1376
+[e :U 539 ]
+"1377
+{
+"1380
+[e = _FCL_FONT_WIDTH -> -> 4 `i `uc ]
+"1381
+[e = _FCL_FONT_HEIGHT -> -> 6 `i `uc ]
+"1383
+[e $U 529  ]
+"1384
+}
+"1385
+[e :U 540 ]
+"1386
+{
+"1389
+[e = _FCL_FONT_WIDTH -> -> 5 `i `uc ]
+"1390
+[e = _FCL_FONT_HEIGHT -> -> 1 `i `uc ]
+"1392
+[e $U 529  ]
+"1393
+}
+"1396
+}
+[e $U 529  ]
+"1302
+[e :U 530 ]
+[e [\ _FCL_FONT , $ -> -> 11 `i `uc 531
+ , $ -> -> 12 `i `uc 532
+ , $ -> -> 13 `i `uc 533
+ , $ -> -> 14 `i `uc 534
+ , $ -> -> 15 `i `uc 535
+ , $ -> -> 16 `i `uc 536
+ , $ -> -> 17 `i `uc 537
+ , $ -> -> 18 `i `uc 538
+ , $ -> -> 19 `i `uc 539
+ , $ -> -> 20 `i `uc 540
+ 529 ]
+"1396
+[e :U 529 ]
+"1398
+[e $U 542  ]
+"1399
+{
+"1400
+[e :U 543 ]
+"1401
+{
+"1404
+[e = _FCL_FONT_WIDTH -> -> 5 `i `uc ]
+"1405
+[e = _FCL_FONT_HEIGHT -> -> 2 `i `uc ]
+"1407
+[e $U 541  ]
+"1408
+}
+"1409
+[e :U 544 ]
+"1410
+{
+"1413
+[e = _FCL_FONT_WIDTH -> -> 5 `i `uc ]
+"1414
+[e = _FCL_FONT_HEIGHT -> -> 3 `i `uc ]
+"1416
+[e $U 541  ]
+"1417
+}
+"1418
+[e :U 545 ]
+"1419
+{
+"1422
+[e = _FCL_FONT_WIDTH -> -> 5 `i `uc ]
+"1423
+[e = _FCL_FONT_HEIGHT -> -> 4 `i `uc ]
+"1425
+[e $U 541  ]
+"1426
+}
+"1427
+[e :U 546 ]
+"1428
+{
+"1431
+[e = _FCL_FONT_WIDTH -> -> 5 `i `uc ]
+"1432
+[e = _FCL_FONT_HEIGHT -> -> 5 `i `uc ]
+"1434
+[e $U 541  ]
+"1435
+}
+"1436
+[e :U 547 ]
+"1437
+{
+"1440
+[e = _FCL_FONT_WIDTH -> -> 5 `i `uc ]
+"1441
+[e = _FCL_FONT_HEIGHT -> -> 6 `i `uc ]
+"1443
+[e $U 541  ]
+"1444
+}
+"1445
+[e :U 548 ]
+"1446
+{
+"1449
+[e = _FCL_FONT_WIDTH -> -> 6 `i `uc ]
+"1450
+[e = _FCL_FONT_HEIGHT -> -> 1 `i `uc ]
+"1452
+[e $U 541  ]
+"1453
+}
+"1454
+[e :U 549 ]
+"1455
+{
+"1458
+[e = _FCL_FONT_WIDTH -> -> 6 `i `uc ]
+"1459
+[e = _FCL_FONT_HEIGHT -> -> 2 `i `uc ]
+"1461
+[e $U 541  ]
+"1462
+}
+"1463
+[e :U 550 ]
+"1464
+{
+"1467
+[e = _FCL_FONT_WIDTH -> -> 6 `i `uc ]
+"1468
+[e = _FCL_FONT_HEIGHT -> -> 3 `i `uc ]
+"1470
+[e $U 541  ]
+"1471
+}
+"1472
+[e :U 551 ]
+"1473
+{
+"1476
+[e = _FCL_FONT_WIDTH -> -> 6 `i `uc ]
+"1477
+[e = _FCL_FONT_HEIGHT -> -> 4 `i `uc ]
+"1479
+[e $U 541  ]
+"1480
+}
+"1481
+[e :U 552 ]
+"1482
+{
+"1485
+[e = _FCL_FONT_WIDTH -> -> 6 `i `uc ]
+"1486
+[e = _FCL_FONT_HEIGHT -> -> 5 `i `uc ]
+"1488
+[e $U 541  ]
+"1489
+}
+"1492
+}
+[e $U 541  ]
+"1398
+[e :U 542 ]
+[e [\ _FCL_FONT , $ -> -> 21 `i `uc 543
+ , $ -> -> 22 `i `uc 544
+ , $ -> -> 23 `i `uc 545
+ , $ -> -> 24 `i `uc 546
+ , $ -> -> 25 `i `uc 547
+ , $ -> -> 26 `i `uc 548
+ , $ -> -> 27 `i `uc 549
+ , $ -> -> 28 `i `uc 550
+ , $ -> -> 29 `i `uc 551
+ , $ -> -> 30 `i `uc 552
+ 541 ]
+"1492
+[e :U 541 ]
+"1494
+[e $U 554  ]
+"1495
+{
+"1496
+[e :U 555 ]
+"1497
+{
+"1500
+[e = _FCL_FONT_WIDTH -> -> 6 `i `uc ]
+"1501
+[e = _FCL_FONT_HEIGHT -> -> 6 `i `uc ]
+"1503
+[e $U 553  ]
+"1504
+}
+"1507
+}
+[e $U 553  ]
+"1494
+[e :U 554 ]
+[e [\ _FCL_FONT , $ -> -> 31 `i `uc 555
+ 553 ]
+"1507
+[e :U 553 ]
+"1512
+[e = _FCL_XCOUNT -> -> 0 `i `uc ]
+"1513
+[e = _FCL_IDX -> -> 0 `i `uc ]
+"1514
+[e = *U + &U _FCL_TEMP * -> -> -> 5 `i `ui `ux -> -> # *U &U _FCL_TEMP `ui `ux -> -> 0 `i `uc ]
+"1517
+[e = _FCL_LEN_STR -> ( _FCI_GETLENGTH (2 , _FCL_STR _FCLsz_STR `uc ]
+"1519
+[e $U 556  ]
+[e :U 557 ]
+"1520
+{
+"1523
+[e = _FCL_POS_STR -> - -> *U + _FCL_STR * -> _FCL_IDX `ux -> -> # *U _FCL_STR `ui `ux `i -> 32 `i `uc ]
+"1526
+[e = _FCL_COUNT -> -> 0 `i `uc ]
+"1528
+[e $U 559  ]
+[e :U 560 ]
+"1529
+{
+"1531
+[e = *U + &U _FCL_TEMP * -> _FCL_COUNT `ux -> -> # *U &U _FCL_TEMP `ui `ux ( _FCD_0ba71_Base_GLCD__ReadASCIILUT (2 , _FCL_POS_STR _FCL_COUNT ]
+"1534
+[e = _FCL_COUNT -> + -> _FCL_COUNT `i -> 1 `i `uc ]
+"1537
+}
+[e :U 559 ]
+"1528
+[e $ < -> _FCL_COUNT `i -> 5 `i 560  ]
+[e :U 561 ]
+"1540
+[e = *U + &U _FCL_TEMP * -> _FCL_COUNT `ux -> -> # *U &U _FCL_TEMP `ui `ux -> -> 0 `i `uc ]
+"1543
+[e = _FCL_XPIX -> -> 0 `i `uc ]
+"1545
+[e $U 562  ]
+[e :U 563 ]
+"1546
+{
+"1549
+[e = _FCL_WIDTH -> -> 0 `i `uc ]
+"1551
+[e $U 565  ]
+[e :U 566 ]
+"1552
+{
+"1555
+[e = _FCL_YCOUNT -> -> 0 `i `uc ]
+"1558
+[e = _FCL_YPIX -> -> 0 `i `uc ]
+"1561
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"1564
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 2 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 2 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 2 `i `uc `i ]
+}
+"1566
+[e $U 568  ]
+[e :U 569 ]
+"1567
+{
+"1570
+[e = _FCL_HEIGHT -> -> 0 `i `uc ]
+"1572
+[e $U 571  ]
+[e :U 572 ]
+"1573
+{
+"1575
+[e $ ! != & -> *U + &U _FCL_TEMP * -> _FCL_XPIX `ux -> -> # *U &U _FCL_TEMP `ui `ux `i << -> 1 `i _FCL_YPIX -> 0 `i 574  ]
+"1576
+{
+"1578
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> + -> _FCL_X1 `ui -> _FCL_XCOUNT `ui `us -> + -> _FCL_Y1 `ui -> _FCL_YCOUNT `ui `us ]
+"1580
+}
+[e $U 575  ]
+[e :U 574 ]
+{
+"1582
+[e $ ! == -> _FCL_TRANSPARENT `i -> 0 `i 576  ]
+"1583
+{
+"1585
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__BPlot (2 , -> + -> _FCL_X1 `ui -> _FCL_XCOUNT `ui `us -> + -> _FCL_Y1 `ui -> _FCL_YCOUNT `ui `us ]
+"1589
+}
+[e :U 576 ]
+"1591
+}
+[e :U 575 ]
+"1595
+[e = _FCL_HEIGHT -> + -> _FCL_HEIGHT `i -> 1 `i `uc ]
+"1596
+[e = _FCL_YCOUNT -> + -> _FCL_YCOUNT `i -> 1 `i `uc ]
+"1599
+}
+[e :U 571 ]
+"1572
+[e $ < -> _FCL_HEIGHT `i -> _FCL_FONT_HEIGHT `i 572  ]
+[e :U 573 ]
+"1602
+[e = _FCL_YPIX -> + -> _FCL_YPIX `i -> 1 `i `uc ]
+"1605
+}
+[e :U 568 ]
+"1566
+[e $ < -> _FCL_YPIX `i -> 8 `i 569  ]
+[e :U 570 ]
+"1614
+[e = _FCL_WIDTH -> + -> _FCL_WIDTH `i -> 1 `i `uc ]
+"1615
+[e = _FCL_XCOUNT -> + -> _FCL_XCOUNT `i -> 1 `i `uc ]
+"1618
+}
+[e :U 565 ]
+"1551
+[e $ < -> _FCL_WIDTH `i -> _FCL_FONT_WIDTH `i 566  ]
+[e :U 567 ]
+"1621
+[e = _FCL_XPIX -> + -> _FCL_XPIX `i -> 1 `i `uc ]
+"1624
+}
+[e :U 562 ]
+"1545
+[e $ < -> _FCL_XPIX `i -> 6 `i 563  ]
+[e :U 564 ]
+"1627
+[e = _FCL_IDX -> + -> _FCL_IDX `i -> 1 `i `uc ]
+"1630
+}
+[e :U 556 ]
+"1519
+[e $ < -> _FCL_IDX `i -> _FCL_LEN_STR `i 557  ]
+[e :U 558 ]
+"1634
+[e :UE 516 ]
+}
+"1639
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__ClearDisplay `(v ~T0 @X0 1 ef ]
+"1640
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__ClearDisplay ]
+[f ]
+"1642
+[v _FCL_Y `us ~T0 @X0 1 a ]
+[e = _FCL_Y -> -> 0 `i `us ]
+"1643
+[v _FCL_X `us ~T0 @X0 1 a ]
+[e = _FCL_X -> -> 0 `i `us ]
+"1646
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Window (4 , , , -> -> 0 `i `us -> -> 0 `i `us -> - -> 240 `i -> 1 `i `us -> - -> 320 `i -> 1 `i `us ]
+"1649
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"1658
+[e $U 578  ]
+[e :U 579 ]
+"1659
+{
+"1662
+[e = _FCL_X -> -> 0 `i `us ]
+"1664
+[e $U 581  ]
+[e :U 582 ]
+"1665
+{
+"1667
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> >> -> _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR `ui -> 8 `i `uc ]
+"1669
+[e ( _FC_CAL_SPI_Master_Byte_1 (1 -> _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR `uc ]
+"1672
+[e = _FCL_X -> + -> _FCL_X `ui -> -> 1 `i `ui `us ]
+"1675
+}
+[e :U 581 ]
+"1664
+[e $ < -> _FCL_X `ui -> -> 240 `i `ui 582  ]
+[e :U 583 ]
+"1678
+[e = _FCL_Y -> + -> _FCL_Y `ui -> -> 1 `i `ui `us ]
+"1681
+}
+[e :U 578 ]
+"1658
+[e $ < -> _FCL_Y `ui -> -> 320 `i `ui 579  ]
+[e :U 580 ]
+"1690
+[e :UE 577 ]
+}
+"1700
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__SetBackgroundColour `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+"1701
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__SetBackgroundColour ]
+"1700
+[v _FCL_RED `uc ~T0 @X0 1 r1 ]
+[v _FCL_GREEN `uc ~T0 @X0 1 r2 ]
+[v _FCL_BLUE `uc ~T0 @X0 1 r3 ]
+"1701
+[f ]
+"1706
+[e = _FCL_RED -> >> -> _FCL_RED `i - -> 8 `i -> 5 `i `uc ]
+"1707
+[e = _FCL_GREEN -> >> -> _FCL_GREEN `i - -> 8 `i -> 6 `i `uc ]
+"1708
+[e = _FCL_BLUE -> >> -> _FCL_BLUE `i - -> 8 `i -> 5 `i `uc ]
+"1712
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR -> | -> _FCL_BLUE `i << -> _FCL_GREEN `i -> 5 `i `us ]
+"1713
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR -> | -> _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR `ui -> << -> _FCL_RED `i + -> 6 `i -> 5 `i `ui `us ]
+"1715
+[e :UE 584 ]
+}
+"1727
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawCircle `(v ~T0 @X0 1 ef5`us`us`us`uc`uc ]
+"1728
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawCircle ]
+"1727
+[v _FCL_X `us ~T0 @X0 1 r1 ]
+[v _FCL_Y `us ~T0 @X0 1 r2 ]
+[v _FCL_RADIUS `us ~T0 @X0 1 r3 ]
+[v _FCL_TRANSPARENT `uc ~T0 @X0 1 r4 ]
+[v _FCL_SOLID `uc ~T0 @X0 1 r5 ]
+"1728
+[f ]
+"1730
+[v _FCL_D `s ~T0 @X0 1 a ]
+"1731
+[v _FCL_CURX `s ~T0 @X0 1 a ]
+"1732
+[v _FCL_CURY `s ~T0 @X0 1 a ]
+"1733
+[v _FCL_BGCOL `ul ~T0 @X0 1 a ]
+"1734
+[v _FCL_FGCOL `ul ~T0 @X0 1 a ]
+"1735
+[v _FCL_REP `uc ~T0 @X0 1 a ]
+[e = _FCL_REP -> -> 0 `i `uc ]
+"1738
+[e $ ! == -> _FCL_SOLID `i -> 1 `i 586  ]
+"1739
+{
+"1741
+[e :U 587 ]
+"1745
+[e = _FCL_D -> - -> -> 3 `i `ui << -> _FCL_RADIUS `ui -> 1 `i `s ]
+"1749
+[e = _FCL_CURX -> -> 0 `i `s ]
+"1750
+[e = _FCL_CURY -> _FCL_RADIUS `s ]
+"1752
+[e $U 588  ]
+[e :U 589 ]
+"1753
+{
+"1755
+[e $ ! > -> _FCL_CURY `i -> 0 `i 591  ]
+"1756
+{
+"1758
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine (4 , , , -> - -> _FCL_X `ui -> _FCL_CURY `ui `us -> + -> _FCL_Y `ui -> _FCL_CURX `ui `us -> + -> _FCL_X `ui -> _FCL_CURY `ui `us -> + -> _FCL_Y `ui -> _FCL_CURX `ui `us ]
+"1760
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine (4 , , , -> - -> _FCL_X `ui -> _FCL_CURY `ui `us -> - -> _FCL_Y `ui -> _FCL_CURX `ui `us -> + -> _FCL_X `ui -> _FCL_CURY `ui `us -> - -> _FCL_Y `ui -> _FCL_CURX `ui `us ]
+"1764
+}
+[e :U 591 ]
+"1766
+[e $ ! > -> _FCL_CURX `i -> 0 `i 592  ]
+"1767
+{
+"1769
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine (4 , , , -> - -> _FCL_X `ui -> _FCL_CURX `ui `us -> - -> _FCL_Y `ui -> _FCL_CURY `ui `us -> + -> _FCL_X `ui -> _FCL_CURX `ui `us -> - -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"1771
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine (4 , , , -> - -> _FCL_X `ui -> _FCL_CURX `ui `us -> + -> _FCL_Y `ui -> _FCL_CURY `ui `us -> + -> _FCL_X `ui -> _FCL_CURX `ui `us -> + -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"1775
+}
+[e :U 592 ]
+"1777
+[e $ ! < -> _FCL_D `i -> 0 `i 593  ]
+"1778
+{
+"1781
+[e = _FCL_D -> + -> _FCL_D `i + << -> _FCL_CURX `i -> 2 `i -> 6 `i `s ]
+"1783
+}
+[e $U 594  ]
+[e :U 593 ]
+{
+"1786
+[e = _FCL_D -> + -> _FCL_D `i + << - -> _FCL_CURX `i -> _FCL_CURY `i -> 2 `i -> 10 `i `s ]
+"1789
+[e = _FCL_CURY -> - -> _FCL_CURY `i -> 1 `i `s ]
+"1791
+}
+[e :U 594 ]
+"1794
+[e = _FCL_CURX -> + -> _FCL_CURX `i -> 1 `i `s ]
+"1797
+}
+[e :U 588 ]
+"1752
+[e $ <= -> _FCL_CURX `i -> _FCL_CURY `i 589  ]
+[e :U 590 ]
+"1799
+}
+[e $U 595  ]
+[e :U 586 ]
+{
+"1801
+[e $ ! == -> _FCL_TRANSPARENT `i -> 1 `i 596  ]
+"1802
+{
+"1804
+[e :U 597 ]
+"1808
+[e = _FCL_D -> - -> -> 3 `i `ui << -> _FCL_RADIUS `ui -> 1 `i `s ]
+"1812
+[e = _FCL_CURX -> -> 0 `i `s ]
+"1813
+[e = _FCL_CURY -> _FCL_RADIUS `s ]
+"1815
+[e $U 598  ]
+[e :U 599 ]
+"1816
+{
+"1818
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> + -> _FCL_X `ui -> _FCL_CURX `ui `us -> - -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"1820
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> - -> _FCL_X `ui -> _FCL_CURX `ui `us -> - -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"1822
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> + -> _FCL_X `ui -> _FCL_CURY `ui `us -> - -> _FCL_Y `ui -> _FCL_CURX `ui `us ]
+"1824
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> - -> _FCL_X `ui -> _FCL_CURY `ui `us -> - -> _FCL_Y `ui -> _FCL_CURX `ui `us ]
+"1826
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> + -> _FCL_X `ui -> _FCL_CURX `ui `us -> + -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"1828
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> - -> _FCL_X `ui -> _FCL_CURX `ui `us -> + -> _FCL_Y `ui -> _FCL_CURY `ui `us ]
+"1830
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> + -> _FCL_X `ui -> _FCL_CURY `ui `us -> + -> _FCL_Y `ui -> _FCL_CURX `ui `us ]
+"1832
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , -> - -> _FCL_X `ui -> _FCL_CURY `ui `us -> + -> _FCL_Y `ui -> _FCL_CURX `ui `us ]
+"1834
+[e $ ! < -> _FCL_D `i -> 0 `i 601  ]
+"1835
+{
+"1838
+[e = _FCL_D -> + -> _FCL_D `i + << -> _FCL_CURX `i -> 2 `i -> 6 `i `s ]
+"1840
+}
+[e $U 602  ]
+[e :U 601 ]
+{
+"1843
+[e = _FCL_D -> + -> _FCL_D `i + << - -> _FCL_CURX `i -> _FCL_CURY `i -> 2 `i -> 10 `i `s ]
+"1846
+[e = _FCL_CURY -> - -> _FCL_CURY `i -> 1 `i `s ]
+"1848
+}
+[e :U 602 ]
+"1851
+[e = _FCL_CURX -> + -> _FCL_CURX `i -> 1 `i `s ]
+"1854
+}
+[e :U 598 ]
+"1815
+[e $ <= -> _FCL_CURX `i -> _FCL_CURY `i 599  ]
+[e :U 600 ]
+"1856
+}
+[e $U 603  ]
+[e :U 596 ]
+{
+"1860
+[e = _FCL_FGCOL -> _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR `ul ]
+"1861
+[e = _FCL_BGCOL -> _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR `ul ]
+"1864
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR -> _FCL_BGCOL `us ]
+"1867
+[e = _FCL_REP -> -> 1 `i `uc ]
+"1869
+[e $U 587  ]
+"1871
+}
+[e :U 603 ]
+"1873
+}
+[e :U 595 ]
+"1875
+[e $ ! == -> _FCL_REP `i -> 1 `i 604  ]
+"1876
+{
+"1879
+[e = _FCL_REP -> + -> _FCL_REP `i -> 1 `i `uc ]
+"1882
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR -> _FCL_FGCOL `us ]
+"1884
+[e $U 597  ]
+"1888
+}
+[e :U 604 ]
+"1890
+[e :UE 585 ]
+}
+"1900
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__SetForegroundColour `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+"1901
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__SetForegroundColour ]
+"1900
+[v _FCL_RED `uc ~T0 @X0 1 r1 ]
+[v _FCL_GREEN `uc ~T0 @X0 1 r2 ]
+[v _FCL_BLUE `uc ~T0 @X0 1 r3 ]
+"1901
+[f ]
+"1906
+[e = _FCL_RED -> >> -> _FCL_RED `i - -> 8 `i -> 5 `i `uc ]
+"1907
+[e = _FCL_GREEN -> >> -> _FCL_GREEN `i - -> 8 `i -> 6 `i `uc ]
+"1908
+[e = _FCL_BLUE -> >> -> _FCL_BLUE `i - -> 8 `i -> 5 `i `uc ]
+"1912
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR -> | -> _FCL_BLUE `i << -> _FCL_GREEN `i -> 5 `i `us ]
+"1913
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR -> | -> _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR `ui -> << -> _FCL_RED `i + -> 6 `i -> 5 `i `ui `us ]
+"1915
+[e :UE 605 ]
+}
+"1928
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawRectangle `(v ~T0 @X0 1 ef6`us`us`us`us`uc`uc ]
+"1929
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawRectangle ]
+"1928
+[v _FCL_X1 `us ~T0 @X0 1 r1 ]
+[v _FCL_Y1 `us ~T0 @X0 1 r2 ]
+[v _FCL_X2 `us ~T0 @X0 1 r3 ]
+[v _FCL_Y2 `us ~T0 @X0 1 r4 ]
+[v _FCL_TRANSPARENT `uc ~T0 @X0 1 r5 ]
+[v _FCL_SOLID `uc ~T0 @X0 1 r6 ]
+"1929
+[f ]
+"1931
+[v _FCL_XMIN `us ~T0 @X0 1 a ]
+"1932
+[v _FCL_XMAX `us ~T0 @X0 1 a ]
+"1933
+[v _FCL_YMIN `us ~T0 @X0 1 a ]
+"1934
+[v _FCL_YMAX `us ~T0 @X0 1 a ]
+"1937
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine (4 , , , _FCL_X1 _FCL_Y1 _FCL_X2 _FCL_Y1 ]
+"1939
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine (4 , , , _FCL_X2 _FCL_Y1 _FCL_X2 _FCL_Y2 ]
+"1941
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine (4 , , , _FCL_X1 _FCL_Y2 _FCL_X2 _FCL_Y2 ]
+"1943
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawLine (4 , , , _FCL_X1 _FCL_Y1 _FCL_X1 _FCL_Y2 ]
+"1945
+[e $ ! == -> _FCL_TRANSPARENT `i -> 0 `i 607  ]
+"1946
+{
+"1948
+[e $ ! > -> _FCL_X1 `ui -> _FCL_X2 `ui 608  ]
+"1949
+{
+"1953
+[e = _FCL_XMAX _FCL_X1 ]
+"1954
+[e = _FCL_XMIN -> + -> _FCL_X2 `ui -> -> 1 `i `ui `us ]
+"1956
+}
+[e $U 609  ]
+[e :U 608 ]
+{
+"1960
+[e = _FCL_XMAX _FCL_X2 ]
+"1961
+[e = _FCL_XMIN -> + -> _FCL_X1 `ui -> -> 1 `i `ui `us ]
+"1963
+}
+[e :U 609 ]
+"1965
+[e $ ! > -> _FCL_Y1 `ui -> _FCL_Y2 `ui 610  ]
+"1966
+{
+"1970
+[e = _FCL_YMAX _FCL_Y1 ]
+"1971
+[e = _FCL_YMIN -> + -> _FCL_Y2 `ui -> -> 1 `i `ui `us ]
+"1973
+}
+[e $U 611  ]
+[e :U 610 ]
+{
+"1977
+[e = _FCL_YMAX _FCL_Y2 ]
+"1978
+[e = _FCL_YMIN -> + -> _FCL_Y1 `ui -> -> 1 `i `ui `us ]
+"1980
+}
+[e :U 611 ]
+"1983
+[e = _FCL_Y1 _FCL_YMIN ]
+"1985
+[e $U 612  ]
+[e :U 613 ]
+"1986
+{
+"1989
+[e = _FCL_X1 _FCL_XMIN ]
+"1991
+[e $U 615  ]
+[e :U 616 ]
+"1992
+{
+"1994
+[e $ ! != -> _FCL_SOLID `i -> -> -> 0 `i `uc `i 618  ]
+"1995
+{
+"1997
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Plot (2 , _FCL_X1 _FCL_Y1 ]
+"1999
+}
+[e $U 619  ]
+[e :U 618 ]
+{
+"2001
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__BPlot (2 , _FCL_X1 _FCL_Y1 ]
+"2003
+}
+[e :U 619 ]
+"2006
+[e = _FCL_X1 -> + -> _FCL_X1 `ui -> -> 1 `i `ui `us ]
+"2009
+}
+[e :U 615 ]
+"1991
+[e $ < -> _FCL_X1 `ui -> _FCL_XMAX `ui 616  ]
+[e :U 617 ]
+"2012
+[e = _FCL_Y1 -> + -> _FCL_Y1 `ui -> -> 1 `i `ui `us ]
+"2015
+}
+[e :U 612 ]
+"1985
+[e $ < -> _FCL_Y1 `ui -> _FCL_YMAX `ui 613  ]
+[e :U 614 ]
+"2019
+}
+[e :U 607 ]
+"2021
+[e :UE 606 ]
+}
+"2026
+[v _FCD_0a2b1_gLCD_ILI9341_SPI1__Initialise `(v ~T0 @X0 1 ef ]
+"2027
+{
+[e :U _FCD_0a2b1_gLCD_ILI9341_SPI1__Initialise ]
+[f ]
+"2029
+[e ( _FC_CAL_SPI_Master_Init_1 ..  ]
+"2032
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 4 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 4 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 4 `i `uc `i ]
+}
+"2034
+[e ( _delay_ms (1 -> -> 5 `i `uc ]
+"2037
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 4 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 4 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 4 `i `uc `i ]
+}
+"2039
+[e ( _delay_ms (1 -> -> 5 `i `uc ]
+"2043
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 3 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 3 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 3 `i `uc `i ]
+}
+"2044
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 2 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 2 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 2 `i `uc `i ]
+}
+"2047
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 4 `i `uc ]
+[e ? != -> 1 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 4 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 4 `i `uc `i ]
+}
+"2049
+[e ( _delay_ms (1 -> -> 5 `i `uc ]
+"2052
+{
+[e =& _TRISB -> ~ << -> 1 `i -> 2 `i `uc ]
+[e ? != -> 0 `i -> 0 `i : -> = _PORTB -> | -> _PORTB `i << -> 1 `i -> 2 `i `uc `i -> = _PORTB -> & -> _PORTB `i ~ << -> 1 `i -> 2 `i `uc `i ]
+}
+"2054
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 203 `i `uc ]
+"2056
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 57 `i `uc ]
+"2058
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 44 `i `uc ]
+"2060
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 0 `i `uc ]
+"2062
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 52 `i `uc ]
+"2064
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 2 `i `uc ]
+"2066
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 207 `i `uc ]
+"2068
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 0 `i `uc ]
+"2070
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 193 `i `uc ]
+"2072
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 48 `i `uc ]
+"2074
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 232 `i `uc ]
+"2076
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 133 `i `uc ]
+"2078
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 0 `i `uc ]
+"2080
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 120 `i `uc ]
+"2082
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 234 `i `uc ]
+"2084
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 0 `i `uc ]
+"2086
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 0 `i `uc ]
+"2088
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 237 `i `uc ]
+"2090
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 100 `i `uc ]
+"2092
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 3 `i `uc ]
+"2094
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 18 `i `uc ]
+"2096
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 129 `i `uc ]
+"2098
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 247 `i `uc ]
+"2100
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 32 `i `uc ]
+"2102
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 192 `i `uc ]
+"2104
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 35 `i `uc ]
+"2106
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 193 `i `uc ]
+"2108
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 16 `i `uc ]
+"2110
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 197 `i `uc ]
+"2112
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 62 `i `uc ]
+"2114
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 40 `i `uc ]
+"2116
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 199 `i `uc ]
+"2118
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 134 `i `uc ]
+"2120
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 54 `i `uc ]
+"2122
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 72 `i `uc ]
+"2124
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 58 `i `uc ]
+"2126
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 85 `i `uc ]
+"2128
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 177 `i `uc ]
+"2130
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 0 `i `uc ]
+"2132
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 24 `i `uc ]
+"2134
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 182 `i `uc ]
+"2136
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 8 `i `uc ]
+"2138
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 130 `i `uc ]
+"2140
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 39 `i `uc ]
+"2142
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 242 `i `uc ]
+"2144
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 0 `i `uc ]
+"2146
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 38 `i `uc ]
+"2148
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 1 `i `uc ]
+"2150
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 224 `i `uc ]
+"2152
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 15 `i `uc ]
+"2154
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 49 `i `uc ]
+"2156
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 43 `i `uc ]
+"2158
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 12 `i `uc ]
+"2160
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 14 `i `uc ]
+"2162
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 8 `i `uc ]
+"2164
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 78 `i `uc ]
+"2166
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 241 `i `uc ]
+"2168
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 55 `i `uc ]
+"2170
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 7 `i `uc ]
+"2172
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 16 `i `uc ]
+"2174
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 3 `i `uc ]
+"2176
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 14 `i `uc ]
+"2178
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 9 `i `uc ]
+"2180
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 0 `i `uc ]
+"2182
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 225 `i `uc ]
+"2184
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 0 `i `uc ]
+"2186
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 14 `i `uc ]
+"2188
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 20 `i `uc ]
+"2190
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 3 `i `uc ]
+"2192
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 17 `i `uc ]
+"2194
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 7 `i `uc ]
+"2196
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 49 `i `uc ]
+"2198
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 193 `i `uc ]
+"2200
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 72 `i `uc ]
+"2202
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 8 `i `uc ]
+"2204
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 15 `i `uc ]
+"2206
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 12 `i `uc ]
+"2208
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 49 `i `uc ]
+"2210
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 54 `i `uc ]
+"2212
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Data8 (1 -> -> 15 `i `uc ]
+"2214
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 17 `i `uc ]
+"2216
+[e ( _delay_ms (1 -> -> 120 `i `uc ]
+"2218
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 41 `i `uc ]
+"2220
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__LCD_Write_Reg (1 -> -> 44 `i `uc ]
+"2231
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__FOREGROUND_COL_VAR -> -> 0 `i `us ]
+"2232
+[e = _FCV_0a2b1_gLCD_ILI9341_SPI1__BACKGROUND_COL_VAR -> -> 65535 `l `us ]
+"2234
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__ClearDisplay ..  ]
+"2236
+[e :UE 620 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"2248
+[v _main `(v ~T0 @X0 1 ef ]
+"2249
+{
+[e :U _main ]
+[f ]
+"2250
+[e = _ADCON1 -> -> 7 `i `uc ]
+"2252
+[e = _OPTION_REG -> -> 192 `i `uc ]
+"2256
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Initialise ..  ]
+"2259
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__SetDisplayOrientation (1 -> -> 2 `i `uc ]
+"2262
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__SetBackgroundColour (3 , , -> -> 210 `i `uc -> -> 200 `i `uc -> -> 190 `i `uc ]
+"2265
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__ClearDisplay ..  ]
+"2268
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__DrawRectangle (4 , , , , , -> -> 0 `i `us -> -> 0 `i `us -> -> 239 `i `us -> -> 319 `i `us -> -> 0 `i `uc -> -> 0 `i `uc ]
+"2271
+[e ( _FCD_0a2b1_gLCD_ILI9341_SPI1__Print (4 , , , , , -> :s 1C `*uc -> -> 13 `i `us -> -> 30 `i `us -> -> 50 `i `us -> -> 2 `i `uc -> -> 0 `i `uc ]
+"2273
+[e :U 622 ]
+[e $U 622  ]
+"2274
+[e :UE 621 ]
+}
+[v $root$_myisr `(v ~T0 @X0 0 e ]
+[v F1985 `(v ~T0 @X0 1 tf ]
+"2281
+[v _myisr `IF1985 ~T0 @X0 1 e ]
+"2282
+{
+[e :U _myisr ]
+[f ]
+"2284
+[e :UE 623 ]
+}
+[a 1C 67 97 32 109 97 114 99 104 101 32 58 41 0 ]
+

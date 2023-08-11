@@ -1,0 +1,1021 @@
+<root>
+<document scada='0' schema='102' license='1, LYC-LORITZ54-V8,UJJ0K6' title='' description='' fcversion='524802' target='PIC.16F.16F877A' >
+	<config data='!0,3f71%0,1%2,0%3,0%6,1%7,0%9,3%b,1%8,1%d,1' clkspd='20000000' simspd='1' usewdt='0' constif='0' Use3V3='0' />
+	<plugins >
+		<dll_models enabled='1' />
+	</plugins>
+	<supplement use='0' head='' body='' />
+	<debug />
+	<traces />
+	<ghost >
+		<FK2 >
+			<data name='FK2D0' port='4294967295' pin='4294967295' />
+			<data name='FK2D1' port='4294967295' pin='4294967295' />
+			<data name='FK2D2' port='4294967295' pin='4294967295' />
+			<data name='FK2D3' port='4294967295' pin='4294967295' />
+			<data name='FK2D4' port='4294967295' pin='4294967295' />
+			<data name='FK2D5' port='4294967295' pin='4294967295' />
+			<data name='FK2D6' port='4294967295' pin='4294967295' />
+			<data name='FK2D7' port='4294967295' pin='4294967295' />
+			<data name='FK2D8' port='4294967295' pin='4294967295' />
+			<data name='FK2D9' port='4294967295' pin='4294967295' />
+			<data name='FK2D10' port='4294967295' pin='4294967295' />
+			<data name='FK2D11' port='4294967295' pin='4294967295' />
+			<data name='FK2D12' port='4294967295' pin='4294967295' />
+			<data name='FK2D13' port='4294967295' pin='4294967295' />
+			<data name='FK2D14' port='4294967295' pin='4294967295' />
+			<data name='FK2D15' port='4294967295' pin='4294967295' />
+			<data name='FK2A0' port='4294967295' pin='4294967295' />
+			<data name='FK2A1' port='4294967295' pin='4294967295' />
+			<data name='FK2A2' port='4294967295' pin='4294967295' />
+			<data name='FK2A3' port='4294967295' pin='4294967295' />
+			<data name='FK2A4' port='4294967295' pin='4294967295' />
+			<data name='FK2A5' port='4294967295' pin='4294967295' />
+		</FK2>
+		<ICD >
+			<data name='AnalogPrescaleValue' value='19' />
+			<data name='DigitalSampleRate' value='100000' />
+			<data name='BreakpointCount' value='8' />
+			<data name='CallStackDepthCount' value='8' />
+			<data name='ClockPort' value='1' />
+			<data name='ClockPin' value='6' />
+			<data name='DataPort' value='1' />
+			<data name='DataPin' value='7' />
+			<data name='UseDefaultPins' value='1' />
+			<data name='WrapEnabled' value='1' />
+			<data name='CommsDelayOverridden' value='0' />
+			<data name='CommsDelay' value='9' />
+			<data name='CalculatedCommsDelay' value='9' />
+			<data name='AnalogEB2PrescaleValue' value='2' />
+			<data name='DigitalEB2SampleRate' value='100000' />
+		</ICD>
+		<pins >
+			<digital A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+			<analog A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+		</pins>
+	</ghost>
+	<components >
+		<settings autoimg='1' center='1' unitscale='0' fixedscale='0' fixedx='1' fixedy='1' fixedz='1' headcode='0' />
+		<definition guid='23f3f0ba-380d-4d2e-979d-f44f8413aa30' vstate='40' vmin='0' vmaj='1' srcleaf='' visiblename='' description='' category='' catenable='1' author='' manuname='' manucode='' sysinfo='0' keywords='' dynamic='1' scadaCompatible='0' embeddedCompatible='1' iconpath='' />
+		<component class_type='root' codename='panel' x='0' y='0' z='0' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' >
+			<resources />
+			<properties />
+			<values />
+			<events />
+			<apis />
+			<variables >
+				<variable public='0' >
+					<def class_type='variable' name='colState' type='b1' description='' isconst='0' isinit='0' usrinit='0' setinit='' >
+						<array size='8' />
+					</def>
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='sommeDemandeEuro' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='isRecordingEuro' type='b1' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='false' type='b1' description='' isconst='1' isinit='1' usrinit='0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='lastKey' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='password' type='u8' description='' isconst='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+						<array size='4' />
+					</def>
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='pieces' type='u8' description='' isconst='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+						<array size='8' />
+					</def>
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='sommeDemandeCent' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='antiRebond' type='b1' description='' isconst='0' isinit='0' usrinit='0' setinit='' >
+						<array size='8' />
+					</def>
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='recordedKey' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='IsPressingKey' type='b1' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='pressedKey' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='has_set_password' type='b1' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='true' type='b1' description='' isconst='1' isinit='1' usrinit='1' setinit='1' />
+				</variable>
+			</variables>
+			<macros >
+				<macro >
+					<flowline name='Withdraw' description='' >
+						<return name='Return' type='v0' description='' isconst='0' isinit='0' usrinit='' setinit='' />
+						<local name='intOutput' type='u16' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='sendData' >
+							<argument exp='sommeDemandeCent' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='sendData' >
+							<argument exp='isRecordingEuro' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='sendData' >
+							<argument exp='pieces[0]' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='sendData' >
+							<argument exp='pieces[1]' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='sendData' >
+							<argument exp='pieces[2]' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='sendData' >
+							<argument exp='pieces[3]' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='sendData' >
+							<argument exp='pieces[4]' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='sendData' >
+							<argument exp='pieces[5]' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='sendData' >
+							<argument exp='pieces[6]' />
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='sendData' >
+							<argument exp='pieces[7]' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='sendData' description='' >
+						<return name='Return' type='v0' description='' isconst='0' isinit='0' usrinit='' setinit='' />
+						<param name='dataToSend' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<local name='data_binary' type='b1' description='' isconst='0' isinit='0' usrinit='0' setinit='' >
+							<array size='9' />
+						</local>
+						<local name='i' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='.i = 0' />
+							<exp exp='.data_binary[0] = 0' />
+							<exp exp='.data_binary[1] = 0' />
+							<exp exp='.data_binary[2] = 0' />
+							<exp exp='.data_binary[3] = 0' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='.data_binary[4] = 0' />
+							<exp exp='.data_binary[5] = 0' />
+							<exp exp='.data_binary[6] = 0' />
+							<exp exp='.data_binary[7] = 0' />
+							<exp exp='.data_binary[8] = 0' />
+						</command>
+						<command class_type='loop' title='Loop' cmdcolor='12615680' cmdcolor_sec='15376912' type='0' exp='.dataToSend &gt; 0' >
+							<flowline >
+								<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+									<exp exp='.data_binary[8 - .i] = .dataToSend % 2' />
+								</command>
+								<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='.dataToSend % 2 == 0' swap='1' >
+									<flowline >
+										<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+											<exp exp='.dataToSend = (.dataToSend - 1) / 2' />
+										</command>
+									</flowline>
+									<flowline >
+										<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+											<exp exp='.dataToSend = .dataToSend / 2' />
+										</command>
+									</flowline>
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+									<exp exp='.i = .i + 1' />
+								</command>
+							</flowline>
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='.i = 0' />
+						</command>
+						<command class_type='loop' title='Loop' cmdcolor='12615680' cmdcolor_sec='15376912' type='0' exp='.i &lt;= 8' >
+							<flowline >
+								<command class_type='output' title='Output' cmdcolor='16762795' cmdcolor_sec='13879979' mode='1' port='1048576' mask='2' exp='.data_binary[.i]' />
+								<command class_type='delay' title='Delay' cmdcolor='12632064' cmdcolor_sec='16769676' exp='800' type='0' />
+								<command class_type='output' title='Output' cmdcolor='16762795' cmdcolor_sec='13879979' mode='1' port='1048576' mask='1' exp='1' />
+								<command class_type='delay' title='Delay' cmdcolor='12632064' cmdcolor_sec='16769676' exp='800' type='0' />
+								<command class_type='output' title='Output' cmdcolor='16762795' cmdcolor_sec='13879979' mode='1' port='1048576' mask='1' exp='0' />
+								<command class_type='delay' title='Delay' cmdcolor='12632064' cmdcolor_sec='16769676' exp='800' type='0' />
+								<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+									<exp exp='.i = .i + 1' />
+								</command>
+							</flowline>
+						</command>
+						<command class_type='delay' title='Delay' cmdcolor='12632064' cmdcolor_sec='16769676' exp='800' type='0' />
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='setPassword' description='' >
+						<return name='Return' type='v0' description='' isconst='0' isinit='0' usrinit='' setinit='' />
+						<local name='validation' type='b1' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<local name='nbChiffreRentre' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<local name='keyPressed' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+							<argument exp='&quot;Entrez un&quot;' />
+							<argument exp='4' />
+							<argument exp='4' />
+							<argument exp='2' />
+							<argument exp='1' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+							<argument exp='&quot;mot de passe&quot;' />
+							<argument exp='4' />
+							<argument exp='24' />
+							<argument exp='2' />
+							<argument exp='1' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='.nbChiffreRentre = 0' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='.validation = 0' />
+						</command>
+						<command class_type='loop' title='Loop' cmdcolor='12615680' cmdcolor_sec='15376912' type='0' exp='.validation == 0' >
+							<flowline >
+								<command class_type='loop' title='Loop' cmdcolor='12615680' cmdcolor_sec='15376912' type='0' exp='.nbChiffreRentre &lt; 4' >
+									<flowline >
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='WaitPressed' />
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='GetNumber' >
+											<return exp='.keyPressed' />
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='.keyPressed &lt; 10' swap='1' >
+											<flowline />
+											<flowline >
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='password[.nbChiffreRentre] = .keyPressed' />
+												</command>
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='PrintNumber' >
+													<argument exp='.keyPressed' />
+													<argument exp='4+.nbChiffreRentre*20' />
+													<argument exp='84' />
+													<argument exp='2' />
+													<argument exp='0' />
+												</command>
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='.nbChiffreRentre = .nbChiffreRentre + 1' />
+												</command>
+											</flowline>
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='.keyPressed == 14 &amp;&amp; .nbChiffreRentre &gt; 0' swap='1' >
+											<flowline />
+											<flowline >
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='.nbChiffreRentre = .nbChiffreRentre - 1' />
+												</command>
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='password[.nbChiffreRentre] = 0' />
+												</command>
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+													<argument exp='255' />
+													<argument exp='255' />
+													<argument exp='255' />
+												</command>
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='PrintNumber' >
+													<argument exp='.keyPressed' />
+													<argument exp='4+.nbChiffreRentre*20' />
+													<argument exp='84' />
+													<argument exp='2' />
+													<argument exp='0' />
+												</command>
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+													<argument exp='0' />
+													<argument exp='0' />
+													<argument exp='0' />
+												</command>
+											</flowline>
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='WaitReleased' />
+									</flowline>
+								</command>
+								<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='WaitPressed' />
+								<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='GetNumber' >
+									<return exp='.keyPressed' />
+								</command>
+								<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='.keyPressed == 15' swap='1' >
+									<flowline />
+									<flowline >
+										<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+											<exp exp='.validation = 1' />
+										</command>
+									</flowline>
+								</command>
+								<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='.keyPressed == 14' swap='1' >
+									<flowline />
+									<flowline >
+										<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+											<exp exp='.nbChiffreRentre = .nbChiffreRentre - 1' />
+										</command>
+										<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+											<exp exp='password[.nbChiffreRentre] = 0' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+											<argument exp='255' />
+											<argument exp='255' />
+											<argument exp='255' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='PrintNumber' >
+											<argument exp='.keyPressed' />
+											<argument exp='4+.nbChiffreRentre*20' />
+											<argument exp='84' />
+											<argument exp='2' />
+											<argument exp='0' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+											<argument exp='0' />
+											<argument exp='0' />
+											<argument exp='0' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='WaitReleased' />
+									</flowline>
+								</command>
+							</flowline>
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='has_set_password = true' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Write' >
+							<argument exp='8' />
+							<argument exp='has_set_password' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Write' >
+							<argument exp='9' />
+							<argument exp='password[0]' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Write' >
+							<argument exp='10' />
+							<argument exp='password[1]' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Write' >
+							<argument exp='11' />
+							<argument exp='password[2]' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Write' >
+							<argument exp='12' />
+							<argument exp='password[3]' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='clearSommeDemande' description='' >
+						<return name='Return' type='v0' description='' isconst='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+							<argument exp='255' />
+							<argument exp='255' />
+							<argument exp='255' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='PrintNumber' >
+							<argument exp='sommeDemandeEuro' />
+							<argument exp='10' />
+							<argument exp='90' />
+							<argument exp='2' />
+							<argument exp='0' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+							<argument exp='&quot;.&quot;' />
+							<argument exp='40' />
+							<argument exp='90' />
+							<argument exp='2' />
+							<argument exp='0' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='PrintNumber' >
+							<argument exp='sommeDemandeCent' />
+							<argument exp='50' />
+							<argument exp='90' />
+							<argument exp='2' />
+							<argument exp='0' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+							<argument exp='0' />
+							<argument exp='0' />
+							<argument exp='0' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='detectColumn' description='' >
+						<return name='Return' type='v0' description='' isconst='0' isinit='0' usrinit='' setinit='' />
+						<local name='i' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='input' title='Input' cmdcolor='4664832' cmdcolor_sec='4470784' mode='1' port='1048576' mask='1' exp='colState[0]' />
+						<command class_type='input' title='Input' cmdcolor='4664832' cmdcolor_sec='4470784' mode='1' port='1048576' mask='2' exp='colState[1]' />
+						<command class_type='input' title='Input' cmdcolor='4664832' cmdcolor_sec='4470784' mode='1' port='1048576' mask='4' exp='colState[2]' />
+						<command class_type='input' title='Input' cmdcolor='4664832' cmdcolor_sec='4470784' mode='1' port='1048576' mask='8' exp='colState[3]' />
+						<command class_type='input' title='Input' cmdcolor='4664832' cmdcolor_sec='4470784' mode='1' port='1048576' mask='16' exp='colState[4]' />
+						<command class_type='input' title='Input' cmdcolor='4664832' cmdcolor_sec='4470784' mode='1' port='1048576' mask='32' exp='colState[5]' />
+						<command class_type='input' title='Input' cmdcolor='4664832' cmdcolor_sec='4470784' mode='1' port='1048580' mask='1' exp='colState[6]' />
+						<command class_type='input' title='Input' cmdcolor='4664832' cmdcolor_sec='4470784' mode='1' port='1048580' mask='2' exp='colState[7]' />
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='.i = 0' />
+						</command>
+						<command class_type='loop' title='Loop' cmdcolor='12615680' cmdcolor_sec='15376912' type='0' exp='.i &lt; 8' >
+							<flowline >
+								<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='antiRebond[.i] == 0 &amp;&amp; colState[.i]' swap='1' >
+									<flowline />
+									<flowline >
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+											<argument exp='255' />
+											<argument exp='255' />
+											<argument exp='255' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='PrintNumber' >
+											<argument exp='pieces[.i]' />
+											<argument exp='10+.i*12' />
+											<argument exp='190' />
+											<argument exp='2' />
+											<argument exp='0' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+											<argument exp='0' />
+											<argument exp='0' />
+											<argument exp='0' />
+										</command>
+										<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+											<exp exp='antiRebond[.i] = 1' />
+											<exp exp='pieces[.i] = pieces[.i] + 1' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='PrintNumber' >
+											<argument exp='pieces[.i]' />
+											<argument exp='10+.i*12' />
+											<argument exp='190' />
+											<argument exp='2' />
+											<argument exp='0' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Write' >
+											<argument exp='.i' />
+											<argument exp='pieces[.i]' />
+										</command>
+									</flowline>
+								</command>
+								<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='antiRebond[.i] == 1 &amp;&amp; colState[.i] == 0' swap='1' >
+									<flowline />
+									<flowline >
+										<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+											<exp exp='antiRebond[.i] = 0' />
+										</command>
+									</flowline>
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+									<exp exp='.i = .i + 1' />
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='readWithdrawalValue' description='' >
+						<return name='Return' type='v0' description='' isconst='0' isinit='0' usrinit='' setinit='' />
+						<local name='i' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='GetNumber' >
+							<return exp='pressedKey' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='pressedKey != 255 &amp;&amp; IsPressingKey == 0' swap='0' >
+							<flowline >
+								<command class_type='comment' title='' comment='Key Press' textarea='12,0,12,0' cmdcolor='10944511' cmdcolor_sec='11465458' />
+								<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+									<exp exp='IsPressingKey = 1' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+									<exp exp='recordedKey = pressedKey' />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='IsPressingKey &amp;&amp; pressedKey == 255' swap='0' >
+									<flowline >
+										<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+											<exp exp='IsPressingKey = 0' />
+										</command>
+										<command class_type='comment' title='' comment='Key Released' textarea='12,0,12,0' cmdcolor='10944511' cmdcolor_sec='11465458' />
+										<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='recordedKey &lt; 10' swap='0' >
+											<flowline >
+												<command class_type='comment' title='' comment='Number press 0-9' textarea='12,0,12,0' cmdcolor='10944511' cmdcolor_sec='11465458' />
+												<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='isRecordingEuro' swap='0' >
+													<flowline >
+														<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+															<exp exp='sommeDemandeEuro = sommeDemandeEuro * 10 + recordedKey' />
+														</command>
+													</flowline>
+													<flowline >
+														<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+															<exp exp='sommeDemandeCent = sommeDemandeCent * 10 + recordedKey' />
+														</command>
+													</flowline>
+												</command>
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='lastKey = recordedKey' />
+												</command>
+											</flowline>
+											<flowline >
+												<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='recordedKey == 13' swap='0' >
+													<flowline >
+														<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='clearSommeDemande' />
+														<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='isRecordingEuro' swap='0' >
+															<flowline >
+																<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+																	<exp exp='sommeDemandeEuro = (sommeDemandeEuro - lastKey) / 10' />
+																</command>
+															</flowline>
+															<flowline >
+																<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+																	<exp exp='sommeDemandeCent = (sommeDemandeCent - lastKey) / 10' />
+																</command>
+															</flowline>
+														</command>
+													</flowline>
+													<flowline />
+												</command>
+												<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='recordedKey == 14' swap='0' >
+													<flowline >
+														<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+															<exp exp='isRecordingEuro = 1 - isRecordingEuro' />
+														</command>
+														<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+															<argument exp='&quot;.&quot;' />
+															<argument exp='40' />
+															<argument exp='90' />
+															<argument exp='2' />
+															<argument exp='0' />
+														</command>
+													</flowline>
+													<flowline />
+												</command>
+											</flowline>
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='sommeDemandeEuro &gt;= 10' swap='0' >
+											<flowline >
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='isRecordingEuro = 1 - isRecordingEuro' />
+												</command>
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+													<argument exp='&quot;.&quot;' />
+													<argument exp='40' />
+													<argument exp='90' />
+													<argument exp='2' />
+													<argument exp='0' />
+												</command>
+											</flowline>
+											<flowline />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='PrintNumber' >
+											<argument exp='sommeDemandeEuro' />
+											<argument exp='10' />
+											<argument exp='90' />
+											<argument exp='2' />
+											<argument exp='0' />
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='isRecordingEuro' swap='0' >
+											<flowline />
+											<flowline >
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='PrintNumber' >
+													<argument exp='sommeDemandeCent' />
+													<argument exp='50' />
+													<argument exp='90' />
+													<argument exp='2' />
+													<argument exp='0' />
+												</command>
+											</flowline>
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='recordedKey == 15 || (isRecordingEuro == 0 &amp;&amp; sommeDemandeCent &gt;= 10)' swap='0' >
+											<flowline >
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+													<argument exp='&quot;sommeDemande :&quot;' />
+													<argument exp='25' />
+													<argument exp='70' />
+													<argument exp='2' />
+													<argument exp='0' />
+												</command>
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='sommeDemandeCent = sommeDemandeCent * 10' />
+												</command>
+												<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='Withdraw' />
+												<command class_type='delay' title='Delay' cmdcolor='12632064' cmdcolor_sec='16769676' exp='5' type='2' />
+												<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='clearSommeDemande' />
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='sommeDemandeEuro = 0' />
+													<exp exp='sommeDemandeCent = 0' />
+													<exp exp='isRecordingEuro = 1' />
+													<exp exp='lastKey = 0' />
+												</command>
+											</flowline>
+											<flowline />
+										</command>
+									</flowline>
+									<flowline />
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Main' description='' >
+						<return name='Return' type='v0' description='' isconst='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Initialise' />
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+							<return exp='pieces[0]' />
+							<argument exp='0' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+							<return exp='pieces[1]' />
+							<argument exp='1' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+							<return exp='pieces[2]' />
+							<argument exp='2' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+							<return exp='pieces[3]' />
+							<argument exp='3' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+							<return exp='pieces[4]' />
+							<argument exp='4' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+							<return exp='pieces[5]' />
+							<argument exp='5' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+							<return exp='pieces[6]' />
+							<argument exp='6' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+							<return exp='pieces[7]' />
+							<argument exp='7' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+							<return exp='has_set_password' />
+							<argument exp='8' />
+						</command>
+						<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='has_set_password' swap='0' >
+							<flowline >
+								<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+									<return exp='password[0]' />
+									<argument exp='9' />
+								</command>
+								<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+									<return exp='password[1]' />
+									<argument exp='10' />
+								</command>
+								<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+									<return exp='password[2]' />
+									<argument exp='11' />
+								</command>
+								<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='eeprom1' macro='Read' >
+									<return exp='password[3]' />
+									<argument exp='12' />
+								</command>
+							</flowline>
+							<flowline >
+								<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='setPassword' />
+							</flowline>
+						</command>
+						<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='login' />
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='IsPressingKey = 0' />
+						</command>
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='IsPressingKey = 0' />
+							<exp exp='isRecordingEuro = 1' />
+							<exp exp='lastKey = 0' />
+							<exp exp='sommeDemandeEuro = 0' />
+							<exp exp='sommeDemandeCent = 0' />
+						</command>
+						<command class_type='loop' title='Loop' cmdcolor='12615680' cmdcolor_sec='15376912' type='0' exp='1' >
+							<flowline >
+								<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='readWithdrawalValue' />
+								<command class_type='call' title='Call Macro' cmdcolor='1879295' cmdcolor_sec='5751039' macro='detectColumn' />
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='login' description='' >
+						<return name='Return' type='v0' description='' isconst='0' isinit='0' usrinit='' setinit='' />
+						<local name='loginInput' type='u8' description='' isconst='0' isinit='0' usrinit='&quot;&quot;' setinit='' >
+							<array size='4' />
+						</local>
+						<local name='nbChiffreRentre' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<local name='validation' type='b1' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<local name='keyPressed' type='u8' description='' isconst='0' isinit='0' usrinit='0' setinit='' />
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='.loginInput[0] = 20' />
+							<exp exp='.loginInput[1] = 20' />
+							<exp exp='.loginInput[2] = 20' />
+							<exp exp='.loginInput[3] = 20' />
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='ClearDisplay' />
+						<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+							<exp exp='.validation = 0' />
+						</command>
+						<command class_type='loop' title='Loop' cmdcolor='12615680' cmdcolor_sec='15376912' type='0' exp='.loginInput[0] != password[0] || .loginInput[1] != password[1] || .loginInput[2] != password[2] || .loginInput[3] != password[3]' >
+							<flowline >
+								<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+									<argument exp='&quot;Identifiez vous&quot;' />
+									<argument exp='4' />
+									<argument exp='4' />
+									<argument exp='2' />
+									<argument exp='1' />
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+									<exp exp='.nbChiffreRentre = 0' />
+								</command>
+								<command class_type='loop' title='Loop' cmdcolor='12615680' cmdcolor_sec='15376912' type='0' exp='.validation == 0' >
+									<flowline >
+										<command class_type='loop' title='Loop' cmdcolor='12615680' cmdcolor_sec='15376912' type='0' exp='.nbChiffreRentre &lt; 4' >
+											<flowline >
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='WaitPressed' />
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='GetNumber' >
+													<return exp='.keyPressed' />
+												</command>
+												<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='.keyPressed &lt; 10' swap='1' >
+													<flowline />
+													<flowline >
+														<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+															<exp exp='.loginInput[.nbChiffreRentre] = .keyPressed' />
+														</command>
+														<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+															<argument exp='&quot;*&quot;' />
+															<argument exp='4+.nbChiffreRentre*20' />
+															<argument exp='84' />
+															<argument exp='2' />
+															<argument exp='0' />
+														</command>
+														<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+															<exp exp='.nbChiffreRentre = .nbChiffreRentre + 1' />
+														</command>
+													</flowline>
+												</command>
+												<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='.keyPressed == 14 &amp;&amp; .nbChiffreRentre &gt; 0' swap='1' >
+													<flowline />
+													<flowline >
+														<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+															<exp exp='.nbChiffreRentre = .nbChiffreRentre - 1' />
+														</command>
+														<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+															<exp exp='.loginInput[.nbChiffreRentre] = 0' />
+														</command>
+														<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+															<argument exp='255' />
+															<argument exp='255' />
+															<argument exp='255' />
+														</command>
+														<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+															<argument exp='&quot;*&quot;' />
+															<argument exp='4+.nbChiffreRentre*20' />
+															<argument exp='84' />
+															<argument exp='2' />
+															<argument exp='0' />
+														</command>
+														<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+															<argument exp='0' />
+															<argument exp='0' />
+															<argument exp='0' />
+														</command>
+													</flowline>
+												</command>
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='WaitReleased' />
+											</flowline>
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='WaitPressed' />
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='GetNumber' >
+											<return exp='.keyPressed' />
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='.keyPressed == 15' swap='1' >
+											<flowline />
+											<flowline >
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='.validation = 1' />
+												</command>
+											</flowline>
+										</command>
+										<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='.keyPressed == 14' swap='1' >
+											<flowline />
+											<flowline >
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='.nbChiffreRentre = .nbChiffreRentre - 1' />
+												</command>
+												<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+													<exp exp='.loginInput[.nbChiffreRentre] = 0' />
+												</command>
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+													<argument exp='255' />
+													<argument exp='255' />
+													<argument exp='255' />
+												</command>
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+													<argument exp='&quot;*&quot;' />
+													<argument exp='4+.nbChiffreRentre*20' />
+													<argument exp='84' />
+													<argument exp='2' />
+													<argument exp='0' />
+												</command>
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+													<argument exp='0' />
+													<argument exp='0' />
+													<argument exp='0' />
+												</command>
+												<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='keypad_4x4' macro='WaitReleased' />
+											</flowline>
+										</command>
+									</flowline>
+								</command>
+								<command class_type='decision' title='Decision' cmdcolor='12615680' cmdcolor_sec='15376912' exp='.loginInput[0] != password[0] || .loginInput[1] != password[1] || .loginInput[2] != password[2] || .loginInput[3] != password[3]' swap='1' >
+									<flowline />
+									<flowline >
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+											<argument exp='255' />
+											<argument exp='255' />
+											<argument exp='255' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+											<argument exp='&quot;Identifiez vous&quot;' />
+											<argument exp='4' />
+											<argument exp='4' />
+											<argument exp='2' />
+											<argument exp='1' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+											<argument exp='&quot;*&quot;' />
+											<argument exp='4+0*20' />
+											<argument exp='84' />
+											<argument exp='2' />
+											<argument exp='0' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+											<argument exp='&quot;*&quot;' />
+											<argument exp='4+1*20' />
+											<argument exp='84' />
+											<argument exp='2' />
+											<argument exp='0' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+											<argument exp='&quot;*&quot;' />
+											<argument exp='4+2*20' />
+											<argument exp='84' />
+											<argument exp='2' />
+											<argument exp='0' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+											<argument exp='&quot;*&quot;' />
+											<argument exp='4+3*20' />
+											<argument exp='84' />
+											<argument exp='2' />
+											<argument exp='0' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+											<argument exp='0' />
+											<argument exp='0' />
+											<argument exp='0' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+											<argument exp='&quot;code faux&quot;' />
+											<argument exp='4' />
+											<argument exp='4' />
+											<argument exp='2' />
+											<argument exp='1' />
+										</command>
+										<command class_type='delay' title='Delay' cmdcolor='12632064' cmdcolor_sec='16769676' exp='2' type='2' />
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+											<argument exp='255' />
+											<argument exp='255' />
+											<argument exp='255' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+											<argument exp='&quot;code faux&quot;' />
+											<argument exp='4' />
+											<argument exp='4' />
+											<argument exp='2' />
+											<argument exp='1' />
+										</command>
+										<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='SetForegroundColour' >
+											<argument exp='0' />
+											<argument exp='0' />
+											<argument exp='0' />
+										</command>
+									</flowline>
+								</command>
+								<command class_type='calculation' title='Calculation' cmdcolor='16760919' cmdcolor_sec='16760832' >
+									<exp exp='.validation = 0' />
+								</command>
+							</flowline>
+						</command>
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='ClearDisplay' />
+						<command class_type='call' title='Call Component Macro' cmdcolor='1879295' cmdcolor_sec='5751039' component='gLCD_ILI9341_SPI1' macro='Print' >
+							<argument exp='&quot;Bienvenue&quot;' />
+							<argument exp='4' />
+							<argument exp='4' />
+							<argument exp='2' />
+							<argument exp='1' />
+						</command>
+						<command class_type='delay' title='Delay' cmdcolor='12632064' cmdcolor_sec='16769676' exp='1' type='2' />
+					</flowline>
+				</macro>
+			</macros>
+			<component class_type='ref' guid='dcbf571f-a6fa-402d-bdd4-be00cca4070f' vmin='1' vmaj='1' codename='eeprom1' x='0' y='10' z='0' xsz='20' ysz='20' zsz='20' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='1' poslock='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='EESize' data='256 byte' />
+					<value target='EEbitdepth' data='8 bit' />
+					<value target='InitialValues' data='0,0,0,0,0,0,0,0,0' />
+					<value target='InitValsParsed' data='0,0,0,0,0,0,0,0,0' />
+					<value target='ResetValues' data='0' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='7bd84555-ae51-40cc-8e1a-a7bcba661e52' vmin='0' vmaj='2' codename='gLCD_ILI9341_SPI1' x='0' y='-40' z='10.1189' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='1' poslock='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='pixel_height' data='320' />
+					<value target='pixel_width' data='240' />
+					<value target='monochrome' data='0' />
+					<value target='foreground_colour' data='0' />
+					<value target='background_colour' data='16777215' />
+					<value target='BGCOL' data='65535' />
+					<value target='FGCOL' data='0' />
+					<value target='colour_bit_depth' data='16' />
+					<value target='red_bit_depth' data='5' />
+					<value target='green_bit_depth' data='6' />
+					<value target='blue_bit_depth' data='5' />
+					<value target='cal_spi1::CHANNEL' data='001' />
+					<value target='cal_spi1::PR_SCALE' data='004' />
+					<value target='cal_spi1::MOSI' data='$PORTC.5' />
+					<value target='cal_spi1::MOSIPins' data='008' />
+					<value target='cal_spi1::MISO' data='$PORTC.4' />
+					<value target='cal_spi1::MISOPins' data='013' />
+					<value target='cal_spi1::CLK' data='$PORTC.3' />
+					<value target='cal_spi1::CLKPins' data='004' />
+					<value target='ToggleCS' data='0' />
+					<value target='chip_sel_pin' data='$PORTC.0' />
+					<value target='dc_pin' data='$PORTC.1' />
+					<value target='reset_pin' data='$PORTC.2' />
+					<value target='led_pin' data='$PORTB.5' />
+					<value target='UseBacklight' data='0' />
+					<value target='DisplayMethod' data='000' />
+					<value target='SimComms' data='0' />
+					<value target='cal_spi1::ConsoleData' data='1' />
+					<value target='cal_spi1::ScopeTraces' data='1' />
+					<value target='cal_spi1::Injector' data='000' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='6c74b9ee-2907-4b1e-8a9b-80fc192b6027' vmin='0' vmaj='1' codename='keypad_4x4' x='60' y='-40' z='15.1239' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='1' poslock='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='keypad_base::pin_col1' data='$PORTB.3' />
+					<value target='keypad_base::pin_col2' data='$PORTB.2' />
+					<value target='keypad_base::pin_col3' data='$PORTB.1' />
+					<value target='keypad_base::pin_col4' data='$PORTB.0' />
+					<value target='keypad_base::pin_row1' data='$PORTB.7' />
+					<value target='keypad_base::pin_row2' data='$PORTB.5' />
+					<value target='keypad_base::pin_row3' data='$PORTB.6' />
+					<value target='keypad_base::pin_row4' data='$PORTB.4' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+		</component>
+	</components>
+	<scadaresourcelookup />
+	<keymap />
+	<panel2d shadows='0' lighting='2' brightness='0' >
+		<background rgb='7292207' img='' style='0' />
+		<camera xe='24.6264' ye='-41.612' ze='149.906' xt='24.6264' yt='-41.612' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+	</panel2d>
+	<panel3d shadows='0' lighting='2' brightness='0' perspective='1' >
+		<background rgb='8409120' img='' style='0' />
+		<table rgb='7360576' img='' style='0' size='0' />
+		<camera xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey0 xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey1 xe='-3.67394e-14' ye='0' ze='-300' xt='0' yt='0' zt='0' xquat='0' yquat='1' zquat='0' wquat='6.12323e-17' />
+		<camerakey2 xe='0' ye='-300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.707107' yquat='0' zquat='0' wquat='0.707107' />
+		<camerakey3 xe='-3.67394e-14' ye='300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-4.32978e-17' yquat='0.707107' zquat='0.707107' wquat='4.32978e-17' />
+		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
+		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
+		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
+	</panel3d>
+	<layout >
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAsgMAAEACAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='readWithdrawalValue' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAsgMAAEACAAA' zoom='75' scrollx='0' scrolly='0' flags='0' />
+	</layout>
+</document>
+</root>
